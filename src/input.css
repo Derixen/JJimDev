@@ -1,2 +1,56 @@
 @import "tailwindcss";
 @source "../index.html";
+
+/* --- 1. Global Element Overrides --- */
+h1 {
+  @apply text-3xl font-extrabold tracking-tight text-slate-600;
+}
+h2 {
+  @apply text-2xl font-extrabold tracking-tight text-slate-500;
+}
+h3 {
+  @apply text-xl font-extrabold tracking-tight text-slate-400;
+}
+
+/* --- 2. Custom Utility Classes --- */
+.highlight-text {
+  @apply text-sky-400 font-extrabold tracking-tight;
+}
+.jimbg {
+  @apply bg-slate-200;
+}
+.jimboxbg {
+  @apply bg-slate-300;
+}
+.jimtextcolor {
+  @apply text-slate-500;
+}
+
+/* --- 3. Custom Button Components --- */
+.btn-jim {
+  /* Layout & Alignment */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  /* Spacing & Typography */
+  @apply py-3 px-6 text-sm font-semibold text-slate-900;
+
+  /* Aesthetics & Shadow */
+  @apply rounded-xl shadow-lg;
+
+  /* --- Smooth Hover Transition --- */
+  /* 1. We tell it what to transition (all changing properties like colors and shadows) */
+  /* 2. We set a standard duration (300ms is perfect for hover) */
+  /* 3. We set the easing curve to ease-in */
+  @apply transition-all duration-300 ease-in;
+
+  /* Accessibility & State Defaults */
+  @apply cursor-pointer select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+}
+
+/* Your color classes (Tailwind applies these on hover) */
+.btn-jim-slate {
+  @apply bg-slate-400 hover:bg-slate-300 shadow-slate-500/20;
+}

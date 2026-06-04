@@ -1,0 +1,16 @@
+{
+  "heading": "Welcome to Jim's Profile",
+  "subheading": "Front-End Developer & Designer",
+  "buttons": [
+    {
+      "text": "View My GitHub",
+      "url": "https://github.com/your-username",
+      "styleClass": "btn-jim btn-jim-sky"
+    },
+    {
+      "text": "View My Portfolio",
+      "url": "site.html",
+      "styleClass": "btn-jim btn-jim-slate"
+    }
+  ]
+}
