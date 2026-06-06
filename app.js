@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
           anchor.target = "_self"; // Retain contextual window focus for execution
         } else {
           anchor.href = btn.url || "#";
-          anchor.target = "_blank"; // Open external resources in a fresh tab environment
+          // anchor.target = "_blank"; // Open external resources in a fresh tab environment
         }
 
         btnWrapper.appendChild(anchor);
@@ -70,11 +70,34 @@ document.addEventListener("DOMContentLoaded", () => {
           // Process and populate nested navigation node links
           btn.dropdownItems.forEach((item) => {
             const menuLink = document.createElement("a");
-            menuLink.href = item.url || "#";
-            menuLink.target = "_blank";
+            menuLink.href = "#"; // Prevent default navigation away from page
             menuLink.innerText = item.text;
             menuLink.className =
               "block w-full rounded-lg px-4 py-2 text-sm font-medium text-slate-300 hover:bg-slate-700 hover:text-white transition-colors text-center";
+
+            // 🌟 DYNAMIC CONTENT CLICK HANDLER 🌟
+            menuLink.addEventListener("click", (e) => {
+              e.preventDefault(); // Stop the page from jumping up to href="#"
+              e.stopPropagation(); // Stop click from bubbling up and instantly closing the menu
+
+              const displayZone = document.getElementById(
+                "main-content-display",
+              );
+              if (displayZone && item.content) {
+                // Inject the matching content from our data object into Box 3
+                displayZone.innerHTML = item.content;
+
+                // Clean up styling on content headings dynamically
+                const heading = displayZone.querySelector("h3");
+                if (heading)
+                  heading.className =
+                    "text-xl font-bold mb-2 text-white border-b border-slate-700 pb-2";
+
+                const paragraph = displayZone.querySelector("p");
+                if (paragraph)
+                  paragraph.className = "text-slate-300 mt-2 leading-relaxed";
+              }
+            });
             dropdownMenu.appendChild(menuLink);
           });
 

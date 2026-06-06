@@ -14,9 +14,16 @@
       "styleClass": "btn-jim btn-jim-slate",
       "page": "site",
       "dropdownItems": [
-        { "text": "App Deployments", "url": "#sccm-apps" },
-        { "text": "OSD Task Sequences", "url": "#sccm-osd" },
-        { "text": "Patch Compliance", "url": "#sccm-patching" }
+        {
+          "id": "sccm-apps",
+          "text": "App Deployments",
+          "content": "<h3 class='jim-text-title'>SCCM Application Deployments</h3><p>This section outlines silent installations, MSI wrapper configurations, and automated application deployment rules within Configuration Manager.</p>"
+        },
+        {
+          "id": "sccm-osd",
+          "text": "OSD Task Sequences",
+          "content": "<h3>OSD Task Sequences</h3><p>Documentation for custom Windows 11 reference images, driver injection injection tasks, and automated provisioning steps.</p>"
+        }
       ]
     },
     {

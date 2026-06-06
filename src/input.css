@@ -9,12 +9,26 @@ h2 {
   @apply text-2xl font-extrabold tracking-tight text-slate-500;
 }
 h3 {
-  @apply text-xl font-extrabold tracking-tight text-slate-400;
+  @apply text-xl font-extrabold tracking-tight text-slate-500;
 }
-
+p {
+  @apply text-sm md:text-base font-normal leading-relaxed antialiased text-slate-500;
+}
 /* --- 2. Custom Utility Classes --- */
-.highlight-text {
-  @apply text-sky-400 font-extrabold tracking-tight;
+.highlight-text-h1 {
+  @apply text-3xl font-extrabold tracking-tight text-sky-400;
+}
+.highlight-text-h2 {
+  @apply text-2xl font-extrabold tracking-tight text-sky-400;
+}
+.highlight-text-h3 {
+  @apply text-xl font-extrabold tracking-tight text-sky-400;
+}
+.jim-title-text {
+  @apply text-xl font-extrabold tracking-tight text-sky-400;
+}
+.jim-subtitle-text {
+  @apply text-lg font-bold tracking-tight text-slate-500;
 }
 .jimbg {
   @apply bg-slate-200;
@@ -22,10 +36,16 @@ h3 {
 .jimboxbg {
   @apply bg-slate-300;
 }
-.jimtextcolor {
-  @apply text-slate-500;
+.jim-text-title {
+  @apply text-xl font-extrabold tracking-tight text-slate-600;
 }
+.jim-text {
+  /* Inherit standard paragraph flow mechanics */
+  @apply text-sm md:text-base font-normal leading-relaxed antialiased;
 
+  /* Set your unique, custom text color (e.g., a nice bright sky or slate tint) */
+  color: var(--color-slate-500); /* Or use an explicit hex like #cbd5e1 */
+}
 /* --- 3. Custom Button Components --- */
 .btn-jim {
   /* Layout & Alignment */
