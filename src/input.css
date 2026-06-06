@@ -54,3 +54,7 @@ h3 {
 .btn-jim-slate {
   @apply bg-slate-400 hover:bg-slate-300 shadow-slate-500/20;
 }
+
+.btn-jim-sky {
+  @apply bg-sky-400 hover:bg-sky-300 shadow-sky-500/20;
+}

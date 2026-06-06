@@ -3,14 +3,54 @@
   "subheading": "Front-End Developer & Designer",
   "buttons": [
     {
-      "text": "View My GitHub",
-      "url": "https://github.com/your-username",
-      "styleClass": "btn-jim btn-jim-sky"
+      "text": "Enter",
+      "url": "site.html",
+      "styleClass": "btn-jim btn-jim-slate",
+      "page": "index"
     },
     {
-      "text": "View My Portfolio",
-      "url": "site.html",
-      "styleClass": "btn-jim btn-jim-slate"
+      "text": "SCCM Management",
+      "url": "#",
+      "styleClass": "btn-jim btn-jim-slate",
+      "page": "site",
+      "dropdownItems": [
+        { "text": "App Deployments", "url": "#sccm-apps" },
+        { "text": "OSD Task Sequences", "url": "#sccm-osd" },
+        { "text": "Patch Compliance", "url": "#sccm-patching" }
+      ]
+    },
+    {
+      "text": "PowerShell Automation",
+      "url": "#",
+      "styleClass": "btn-jim btn-jim-slate",
+      "page": "site",
+      "dropdownItems": [
+        { "text": "Active Directory Scripts", "url": "#ps-ad" },
+        { "text": "API Integrations", "url": "#ps-api" },
+        { "text": "Module Repository", "url": "#ps-modules" }
+      ]
+    },
+    {
+      "text": "Group Policy (GPO)",
+      "url": "#",
+      "styleClass": "btn-jim btn-jim-slate",
+      "page": "site",
+      "dropdownItems": [
+        { "text": "Security Baselines", "url": "#gpo-security" },
+        { "text": "Drive Mapping Layouts", "url": "#gpo-drives" },
+        { "text": "Registry Optimizations", "url": "#gpo-reg" }
+      ]
+    },
+    {
+      "text": "Advanced Scripting",
+      "url": "#",
+      "styleClass": "btn-jim btn-jim-slate",
+      "page": "site",
+      "dropdownItems": [
+        { "text": "Bash Automation", "url": "#script-bash" },
+        { "text": "Python Utilities", "url": "#script-py" },
+        { "text": "WMI & CIM Queries", "url": "#script-wmi" }
+      ]
     }
   ]
 }

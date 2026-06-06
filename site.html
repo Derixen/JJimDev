@@ -3,38 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JJim.dev | Full-Stack Developer</title>
-
+    <title>JJim.dev | Site Layout</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body
-    class="jimbg text-slate-200 min-h-screen flex items-center justify-center font-sans antialiased"
+    class="jimbg min-h-screen flex items-start justify-center font-sans antialiased"
   >
-    <div class="flex flex-wrap gap-4 max-w-5xl mx-auto w-full px-4">
+    <div
+      class="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-5xl mx-auto w-full px-4 mt-8"
+    >
       <div
-        class="w-full jimboxbg p-6 rounded-xl border border-slate-700 text-center text-slate-200"
+        class="md:col-span-4 jimboxbg p-4 rounded-xl border border-slate-700 text-center"
       >
-        <h1>Box 1 (Top - Full Width)</h1>
-        <h2>Box 1 (Top - Full Width)</h2>
-        <h3>Box 1 (Top - Full Width)</h3>
+        <h1 class="text-2xl font-bold text-slate-200">
+          Box 1 (Top - Full Width)
+        </h1>
+        <h2 class="text-xl text-slate-400">Box 1 (Top - Full Width)</h2>
+        <h3 class="text-lg text-slate-500">Box 1 (Top - Full Width)</h3>
       </div>
 
       <div
-        class="flex-1 min-w-0 jimboxbg p-6 rounded-xl border border-slate-700 text-center jimtextcolor flex flex-col gap-4"
+        class="md:col-span-1 jimboxbg p-6 rounded-xl border border-slate-700"
       >
-        <a href="site.html" target="_blank" class="btn-jim btn-jim-slate">
-          View My GitHub
-        </a>
-        <a href="site.html" target="_blank" class="btn-jim btn-jim-slate">
-          View My GitHub
-        </a>
+        <div id="button-container" class="flex flex-col gap-4 w-full"></div>
       </div>
 
       <div
-        class="w-[70%] jimboxbg p-6 rounded-xl border border-slate-700 text-center text-slate-200"
+        class="md:col-span-3 jimboxbg p-6 rounded-xl border border-slate-700 text-slate-200"
       >
-        Box 3 (Middle - 70%)
+        <p>Box 3 (Middle - 70%)</p>
       </div>
     </div>
+
+    <script src="app.js"></script>
   </body>
 </html>
