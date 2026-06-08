@@ -9,6 +9,12 @@
       "page": "index"
     },
     {
+      "text": "General",
+      "url": "#General",
+      "styleClass": "btn-jim btn-jim-slate",
+      "page": "site"
+    },
+    {
       "text": "SCCM Management",
       "url": "#",
       "styleClass": "btn-jim btn-jim-slate",

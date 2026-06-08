@@ -16,7 +16,7 @@ p {
 }
 /* --- 2. Custom Utility Classes --- */
 .highlight-text-h1 {
-  @apply text-3xl font-extrabold tracking-tight text-sky-400;
+  @apply text-3xl font-extrabold tracking-wider text-sky-400;
 }
 .highlight-text-h2 {
   @apply text-2xl font-extrabold tracking-tight text-sky-400;
@@ -25,7 +25,7 @@ p {
   @apply text-xl font-extrabold tracking-tight text-sky-400;
 }
 .jim-title-text {
-  @apply text-xl font-extrabold tracking-tight text-sky-400;
+  @apply text-3xl font-extrabold tracking-wider text-slate-600;
 }
 .jim-subtitle-text {
   @apply text-lg font-bold tracking-tight text-slate-500;

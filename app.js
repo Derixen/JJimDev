@@ -20,6 +20,10 @@ document.addEventListener("DOMContentLoaded", () => {
         mainHeading.textContent = data.heading;
       }
 
+      const general = document.getElementById("general");
+      if (general && indow.location.pathname.includes("general")) {
+      }
+
       const subHeading = document.getElementById("sub-heading");
       if (subHeading && data.subheading) {
         subHeading.textContent = data.subheading;
