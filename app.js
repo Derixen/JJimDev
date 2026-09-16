@@ -15,10 +15,10 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .then((data) => {
       // 2. Inject Page Metadata (Safely guarded against missing elements)
-      const mainHeading = document.getElementById("main-heading");
+      /*       const mainHeading = document.getElementById("main-heading");
       if (mainHeading && data.heading) {
         mainHeading.textContent = data.heading;
-      }
+      } */
 
       const general = document.getElementById("general");
       if (general && indow.location.pathname.includes("general")) {
