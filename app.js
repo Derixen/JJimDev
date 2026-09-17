@@ -45,8 +45,12 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!buttonContainer) return;
       buttonContainer.innerHTML = "";
 
-      // Clean helper function: Handles strings and array-based bullet lists cleanly
-      const renderContentToDisplay = (titleText, descriptionData) => {
+      // Clean helper function: Handles strings, images, links, and array-based bullet lists cleanly
+      const renderContentToDisplay = (
+        titleText,
+        descriptionData,
+        imagePath = null,
+      ) => {
         const subtitle = document.getElementById("site-subtitle");
         const subdescription = document.getElementById("site-subdescription");
 
@@ -54,7 +58,30 @@ document.addEventListener("DOMContentLoaded", () => {
           subtitle.textContent = titleText;
         }
 
-        if (subdescription && descriptionData) {
+        if (subdescription) {
+          subdescription.innerHTML = ""; // Clear current display container
+
+          // A. Render Image if present
+          if (imagePath) {
+            const imgElement = document.createElement("img");
+            imgElement.src = imagePath;
+            imgElement.alt = titleText || "Tool Screenshot";
+            imgElement.className =
+              "w-full h-auto max-h-[600px] object-contain rounded-xl border border-slate-700 bg-slate-900/50 p-2 shadow-md mb-4 mt-2";
+            subdescription.appendChild(imgElement);
+          }
+
+          // B. Helper to turn plain URLs into clickable links
+          const formatTextWithLinks = (text) => {
+            const urlRegex = /(https?:\/\/[^\s]+)/g;
+            return text.replace(
+              urlRegex,
+              (url) =>
+                `<a href="${url}" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:underline font-semibold break-all">${url}</a>`,
+            );
+          };
+
+          // C. Render Array or String Content
           if (Array.isArray(descriptionData)) {
             const listItems = descriptionData
               .map((item) => {
@@ -62,16 +89,23 @@ document.addEventListener("DOMContentLoaded", () => {
                   return `
               <div class="mb-5 text-left">
                 <div class="font-bold text-slate-800 text-base">${item.role}</div>
-                <div class="text-slate-600 text-sm italic mt-1 leading-relaxed">${item.desc}</div>
+                <div class="text-slate-600 text-sm italic mt-1 leading-relaxed">${formatTextWithLinks(item.desc)}</div>
               </div>`;
                 }
-                return `<div class="text-left text-slate-700">${item}</div>`;
+                return `<div class="text-left text-slate-700">${formatTextWithLinks(item)}</div>`;
               })
               .join("");
 
-            subdescription.innerHTML = `<div class="flex flex-col gap-2 mt-4">${listItems}</div>`;
-          } else {
-            subdescription.textContent = descriptionData;
+            const listContainer = document.createElement("div");
+            listContainer.className = "flex flex-col gap-2 mt-4";
+            listContainer.innerHTML = listItems;
+            subdescription.appendChild(listContainer);
+          } else if (typeof descriptionData === "string") {
+            const textContainer = document.createElement("div");
+            textContainer.className =
+              "text-left text-slate-700 whitespace-pre-line leading-relaxed";
+            textContainer.innerHTML = formatTextWithLinks(descriptionData);
+            subdescription.appendChild(textContainer);
           }
         }
       };
@@ -105,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // Otherwise, update the static display elements with clean data
             if (btn.title || btn.description) {
               e.preventDefault();
-              renderContentToDisplay(btn.title, btn.description);
+              renderContentToDisplay(btn.title, btn.description, btn.image);
             }
           });
         }
@@ -128,7 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
             menuLink.addEventListener("click", (e) => {
               e.preventDefault();
               e.stopPropagation();
-              renderContentToDisplay(item.title, item.description);
+              renderContentToDisplay(item.title, item.description, item.image);
             });
             dropdownMenu.appendChild(menuLink);
           });
@@ -159,6 +193,7 @@ document.addEventListener("DOMContentLoaded", () => {
           renderContentToDisplay(
             defaultButton.title,
             defaultButton.description,
+            defaultButton.image,
           );
         }
       }

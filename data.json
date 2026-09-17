@@ -48,15 +48,15 @@
       ]
     },
     {
-      "text": "SCCM Management",
-      "url": "#",
+      "text": "My Scripts",
+      "url": "#Scripts",
       "styleClass": "btn-jim btn-jim-slate",
       "page": "site",
       "dropdownItems": [
         {
-          "id": "sccm-apps",
-          "text": "App Deployments",
-          "title": "SCCM Application Deployments",
+          "id": "StartupLogonScriptHandler",
+          "text": "Logon Script",
+          "title": "StartUp / LogonScript Handler",
           "description": "This section outlines silent installations, MSI wrapper configurations, and automated application deployment rules within Configuration Manager."
         },
         {
@@ -68,54 +68,84 @@
       ]
     },
     {
-      "text": "Automation Showcase",
-      "url": "#",
+      "text": "My Tools",
+      "url": "#Tools",
       "styleClass": "btn-jim btn-jim-slate",
       "page": "site",
       "dropdownItems": [
         {
-          "id": "ps-ad",
-          "text": "Active Directory Scripts",
-          "title": "Active Directory Automation",
-          "description": "PowerShell tooling built to automate user onboarding, permission audits, and stale account cleanup routines across hybrid environments."
+          "id": "tool-pc-info",
+          "text": "PC Info Tool",
+          "title": "PC Information Tool (v1.01)",
+          "image": "images/pc-info-tool.png",
+          "description": "Distributed to enterprise endpoint devices to empower end-users with instant self-service system visibility. Aggregates critical General, Hardware, and Network parameters (IP, MAC, Serial, OS version) into a clear interface.\n\nFeatures a prominent 'Copy Information to clipboard' action to eliminate ticket back-and-forth by letting users instantly paste diagnostics into support requests. Includes built-in Quick-Fix, Software inventory, and Diagnostic tabs for automated issue remediation.\n\nDocumentation: https://peskyjim.blogspot.com/p/pc-info-tool.html"
         },
         {
-          "id": "ps-api",
-          "text": "API Integrations",
-          "title": "API Integration Scripts",
-          "description": "REST API scripts connecting endpoint management systems with internal ticketing dashboards for automated reporting."
+          "id": "tool-ad-query",
+          "text": "AD Query Tool",
+          "title": "Ultimate Active Directory Search Tool (UADST)",
+          "image": "images/ad-query-tool.png",
+          "description": "Streamlined administrative utility designed as a lightweight alternative to native Active Directory Users and Computers (ADUC). Enables rapid object discovery across Users, Computers, and Groups within the domain.\n\nFeatures customizable 'Column Select' controls to extract only relevant AD attributes (e.g., operatingSystem, lastLogonTimestamp), secondary filtering options, and group membership lookups. Includes one-click output export and clipboard copying complete with headers for easy documentation.\n\nDocumentation: https://peskyjim.blogspot.com/p/ad-query-tool.html"
         },
         {
-          "id": "ps-modules",
-          "text": "Module Repository",
-          "title": "PowerShell Module Library",
-          "description": "Custom reusable PowerShell modules built for standardizing internal logging, error handling, and configuration management."
+          "id": "tool-ping",
+          "text": "Ping Tool",
+          "title": "IT - Ping & Remote Action Tool",
+          "image": "images/ping-tool.png",
+          "description": "Multi-threaded reachability and remote administration utility for helpdesk and sysadmins. Allows bulk monitoring of computer lists, resolving real-time IP addresses, Online/Offline status, and FQDNs.\n\nSelecting any target host automatically populates the quick-action panel to execute instant remote administration tasks: pull detailed system info via WMI ('Get Info'), open the administrative share ('Open C$'), or spawn a remote PowerShell session ('PSSession').\n\nDocumentation: https://peskyjim.blogspot.com/p/ping-tool.html"
+        },
+        {
+          "id": "tool-adsgu",
+          "text": "AD Security Group Updater",
+          "title": "Active Directory Security Group Updater",
+          "image": "images/adsgu-tool.png",
+          "description": "Bulk administration utility built to perform safe, high-speed Active Directory security group membership updates. Enables administrators to add or remove multiple target user/computer objects across multiple groups simultaneously in a single execution pass.\n\nIncludes a dedicated real-time Error Handling & Reporting Grid that tracks individual operation statuses (e.g., User Added, User Not Found, Already a Member). Provides immediate visual confirmation and instant audit feedback for ticket documentation.\n\nDocumentation: https://peskyjim.blogspot.com/p/ad-security-group-updater.html"
         }
       ]
     },
     {
-      "text": "Key Achievements",
-      "url": "#",
+      "text": "Trainings",
+      "url": "#Trainings",
       "styleClass": "btn-jim btn-jim-slate",
       "page": "site",
-      "dropdownItems": [
+      "title": "Professional Training & Coursework",
+      "description": [
         {
-          "id": "gpo-security",
-          "text": "Security Baselines",
-          "title": "Enterprise Security Baselines",
-          "description": "Implementation of CIS security benchmarks and zero-trust Group Policy administrative templates across corporate domain environments."
+          "role": "2018: The Complete ASP.NET MVC 5 Course | Udemy (Mosh Hamedani)",
+          "desc": "Mastered full-stack web development using ASP.NET MVC 5, focusing on C# backend architecture, RESTful APIs, Entity Framework ORM, SQL database integration, and responsive frontend design."
         },
         {
-          "id": "gpo-drives",
-          "text": "Drive Mapping Layouts",
-          "title": "Automated Share & Drive Mappings",
-          "description": "Group Policy Preferences framework for dynamic drive mappings based on Active Directory group membership."
+          "role": "2025: The Complete JavaScript Course: From Zero to Expert! | Udemy (Jonas Schmedtmann)",
+          "desc": "Deepening core JavaScript mastery covering modern ES6+ features, asynchronous programming (Promises, Async/Await), OOP principles, DOM manipulation, and modern web application architecture."
+        }
+      ]
+    },
+    {
+      "text": "Certifications",
+      "url": "#Certifications",
+      "styleClass": "btn-jim btn-jim-slate",
+      "page": "site",
+      "title": "Licenses & Certifications",
+      "description": [
+        {
+          "role": "2009 - Microsoft Certified Desktop Support Technician (MCDST) | ControllTraining Kft.",
+          "desc": "Demonstrated core competency in troubleshooting Windows desktop environments, client operating systems, and remote user support protocols."
         },
         {
-          "id": "gpo-reg",
-          "text": "Registry Optimizations",
-          "title": "Registry & OS Optimizations",
-          "description": "Centralized registry policies designed to disable bloatware, enforce browser policies, and optimize Windows 11 system performance."
+          "role": "2013 - System Center 2012 Configuration Manager | Training360",
+          "desc": "Completed formal enterprise training covering SCCM 2012 infrastructure deployment, site administration, software packaging, and centralized patch management."
+        },
+        {
+          "role": "2015 - Client Management Suite 7.5: Administration | Symantec / HPE",
+          "desc": "Acquired comprehensive administration expertise in Symantec Altiris Client Management Suite 7.5, specializing in automated endpoint management, asset tracking, and software delivery pipelines."
+        },
+        {
+          "role": "2018 - System Center Configuration Manager: Current Branch | Evosoft (Siemens)",
+          "desc": "Completed advanced enterprise training on modern SCCM/MECM Current Branch architecture, focusing on continuous infrastructure updates, cloud management gateway (CMG), and modern endpoint management."
+        },
+        {
+          "role": "2019 - System Center Configuration Manager: Troubleshooting | Evosoft (Siemens)",
+          "desc": "Specialized deep-dive technical training focused on expert-level diagnostics, log analysis (WMI, SQL, client/server logs), and rapid remediation of complex SCCM deployment and agent failures."
         }
       ]
     }
