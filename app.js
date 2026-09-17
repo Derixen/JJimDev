@@ -58,20 +58,18 @@ document.addEventListener("DOMContentLoaded", () => {
           if (Array.isArray(descriptionData)) {
             const listItems = descriptionData
               .map((item) => {
-                // If the item is an object with role and desc
                 if (typeof item === "object") {
                   return `
-              <li class="mb-3">
-                <div class="font-bold text-slate-800">${item.role}</div>
-                <div class="text-slate-400 text-sm mt-0.5">${item.desc}</div>
-              </li>`;
+              <div class="mb-5 text-left">
+                <div class="font-bold text-slate-800 text-base">${item.role}</div>
+                <div class="text-slate-600 text-sm italic mt-1 leading-relaxed">${item.desc}</div>
+              </div>`;
                 }
-                // Standard fallback string
-                return `<li class="mb-2">${item}</li>`;
+                return `<div class="text-left text-slate-700">${item}</div>`;
               })
               .join("");
 
-            subdescription.innerHTML = `<ul class="list-disc list-inside space-y-2 text-left mt-2">${listItems}</ul>`;
+            subdescription.innerHTML = `<div class="flex flex-col gap-2 mt-4">${listItems}</div>`;
           } else {
             subdescription.textContent = descriptionData;
           }
