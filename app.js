@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (typeof item === "object") {
                   return `
               <li class="mb-3">
-                <div class="font-semibold text-slate-200">${item.role}</div>
+                <div class="font-bold text-slate-800">${item.role}</div>
                 <div class="text-slate-400 text-sm mt-0.5">${item.desc}</div>
               </li>`;
                 }
