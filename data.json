@@ -2,7 +2,7 @@
   "mainheading": "Welcome to Jim's Profile",
   "mainsubheading": "Front-End Developer & Designer",
   "siteheading": "Janos Robert Friedrich",
-  "sitedescription": "From Tier-1 support to Systems Architect—specializing in enterprise automation, SCCM, and infrastructure optimization.",
+  "sitedescription": "From Tier-1 Support to Enterprise Systems Architect — driven by C# tooling, PowerShell automation, and infrastructure optimization.",
   "buttons": [
     {
       "text": "Enter",
@@ -18,32 +18,32 @@
       "title": "My Career Journey",
       "description": [
         {
-          "role": "Education",
-          "desc": "Studied machine engineering in middle school and in the university"
+          "role": "2008 – 2010: L1 Support & Shared Desk | Getronics",
+          "desc": "Began in L1 support at Getronics, rapidly advancing to a multi-account Shared Desk servicing major enterprise clients including a Fortune 100 industrial tech conglomerate, and a tier-1 global bank amongs others. Applied bilingual fluency (Native German, Fluent English) and intuitive root-cause analysis to resolve complex technical issues."
         },
         {
-          "role": "2008 – 2012: Service Desk & Technical Support",
-          "desc": "Started in IT providing multi-lingual support across IT Services Hungary, Getronics, and HPE."
+          "role": "2010 – 2012: L2 Lead & Technical Escalation | HP",
+          "desc": "Elevated to L2 Technical Lead at HP, steering support operations for Monier and Panasonic. Specialized in deciphering systemic infrastructure issues from minimal diagnostics and mentoring cross-functional team members."
         },
         {
-          "role": "2012 – 2017: ITO Service Delivery Consultant II (HPE)",
-          "desc": "Acted as Technical Lead for Software Distribution, managing SCCM/Altiris infrastructures."
+          "role": "2012 – 2015: L3 Infrastructure, SCCM & GPO | HPE (SKF)",
+          "desc": "Transitioned to L3 infrastructure support at HPE dedicated to SKF. Managed SCCM architecture, Group Policies, and enterprise scripts. Optimized logon/startup scripts using VBScript and Batch to significantly reduce boot times and implemented standardized endpoint logging. Modernized GPO architecture using Loopback Processing (LSAD) and GPO Preferences, establishing dedicated test OU structures to ensure targeted policy enforcement."
         },
         {
-          "role": "2017: Software Distribution Engineer L2 (DXC Technology)",
-          "desc": "Led customer infrastructure optimizations and OS image deployments."
+          "role": "2015 – 2018: Systems Tooling & Technical Enablement | DXC (SKF)",
+          "desc": "Engineered custom object-oriented VB.NET GUI tools at DXC Technology to automate remote Active Directory management and bulk-endpoint remediation for SKF, drastically cutting resolution times. Served as a Technical Trainer, developing curriculum to upskill teams in Advanced PowerShell automation, VBScripting, T-SQL Reporting, and GPO optimization."
         },
         {
-          "role": "2017 – 2020: System Administrator (evosoft)",
-          "desc": "Managed SCCM 2012 R2 infrastructure for 100k+ endpoints."
+          "role": "2018 – 2020: Technical Lead & Global Automation | Evosoft (Siemens)",
+          "desc": "Appointed Technical Lead at Evosoft within the Siemens domain. Modernized software packaging by introducing the PowerShell App Deployment Toolkit (PSADT) to standardize deployment workflows. Engineered a dynamic AD-group-driven automation framework to trigger targeted logon/startup scripts globally, integrating automated completion-time logging to drive domain-wide performance optimization."
         },
         {
-          "role": "2020 – 2023: SCCM Infrastructure Engineer L3 (SwiconGroup)",
-          "desc": "Overseeing enterprise systems for 100,000+ endpoints."
+          "role": "2020 – 2022: OSD, VDI & Infrastructure | DXC",
+          "desc": "Owned OS Deployment (OSD) and Windows In-Place Upgrade pipelines at DXC supporting a major European automotive manufacturer. Engineered custom WinPE HTA tools for pre-PXE customization and architected Zero-Touch Installations (ZTI). Handled physical datacenter rack installations while managing VMware Horizon VDI infrastructure—authoring optimized master images and maintaining storage redundancy across virtualized environments."
         },
         {
-          "role": "2022 – Present: Technical Architect (CGF)",
-          "desc": "Architecting high-availability internal portals using ASP.NET MVC and .NET microservices."
+          "role": "2022 – Present: Enterprise Web Applications & C#.NET Engineering | CGF",
+          "desc": "Lead developer at CGF managing an in-house ASP.NET MVC deployment platform for a major European automotive manufacturer. Engineered direct API/SDK integrations with Matrix42 Enterprise Manager and SCCM inside Visual Studio Enterprise, enabling real-time application deployment tasks that trigger immediate endpoint agent installations—bypassing traditional SCCM/Intune polling delays while managing full-stack C# backend logic, database operations, and frontend UI."
         }
       ]
     },
