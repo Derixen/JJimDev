@@ -15,15 +15,11 @@
       <div
         class="md:col-span-4 jimboxbg p-4 rounded-xl border border-slate-700 text-center"
       >
-        <div class="jim-title-text tracking-wider">
-          Website of
-          <span class="highlight-text-h1">Jim</span>
-        </div>
-        <div class="jim-subtitle-text">
-          From tier-1 technical support to software architect—documenting
-          automation workflows, system configurations, and IT engineering best
-          practices.
-        </div>
+        <div
+          id="site-heading"
+          class="jim-title-text tracking-wider text-slate-500"
+        ></div>
+        <div id="site-description" class="jim-subtitle-text"></div>
       </div>
 
       <div
@@ -36,11 +32,16 @@
         class="md:col-span-3 jimboxbg p-6 rounded-xl border border-slate-700 text-slate-200"
       >
         <div id="main-content-display">
-          <h2>Select a Topic</h2>
-          <p class="text-slate-500">
-            Click a sub-item from the navigation panel on the left to load
-            documentation and scripting parameters.
-          </p>
+          <h3
+            id="site-subtitle"
+            class="text-xl font-bold mb-2 text-white border-b border-slate-700 pb-2"
+          ></h3>
+
+          <!-- Added 'whitespace-pre-line' here -->
+          <p
+            id="site-subdescription"
+            class="text-slate-300 mt-2 leading-relaxed whitespace-pre-line"
+          ></p>
         </div>
       </div>
     </div>

@@ -1,6 +1,8 @@
 {
-  "heading": "Welcome to Jim's Profile",
-  "subheading": "Front-End Developer & Designer",
+  "mainheading": "Welcome to Jim's Profile",
+  "mainsubheading": "Front-End Developer & Designer",
+  "siteheading": "Janos Robert Friedrich",
+  "sitedescription": "From Tier-1 support to Systems Architect—specializing in enterprise automation, SCCM, and infrastructure optimization.",
   "buttons": [
     {
       "text": "Enter",
@@ -9,10 +11,41 @@
       "page": "index"
     },
     {
-      "text": "General",
+      "text": "About / Career Journey",
       "url": "#General",
       "styleClass": "btn-jim btn-jim-slate",
-      "page": "site"
+      "page": "site",
+      "title": "My Career Journey",
+      "description": [
+        {
+          "role": "Education",
+          "desc": "Studied machine engineering in middle school and in the university<br><br>"
+        },
+        {
+          "role": "2008 – 2012: Service Desk & Technical Support",
+          "desc": "Started in IT providing multi-lingual support across IT Services Hungary, Getronics, and HPE.<br><br>"
+        },
+        {
+          "role": "2012 – 2017: ITO Service Delivery Consultant II (HPE)",
+          "desc": "Acted as Technical Lead for Software Distribution, managing SCCM/Altiris infrastructures.<br><br>"
+        },
+        {
+          "role": "2017: Software Distribution Engineer L2 (DXC Technology)",
+          "desc": "Led customer infrastructure optimizations and OS image deployments.<br><br>"
+        },
+        {
+          "role": "2017 – 2020: System Administrator (evosoft)",
+          "desc": "Managed SCCM 2012 R2 infrastructure for 100k+ endpoints.<br><br>"
+        },
+        {
+          "role": "2020 – 2023: SCCM Infrastructure Engineer L3 (SwiconGroup)",
+          "desc": "Overseeing enterprise systems for 100,000+ endpoints.<br><br>"
+        },
+        {
+          "role": "2022 – Present: Technical Architect (CGF)",
+          "desc": "Architecting high-availability internal portals using ASP.NET MVC and .NET microservices."
+        }
+      ]
     },
     {
       "text": "SCCM Management",
@@ -23,46 +56,67 @@
         {
           "id": "sccm-apps",
           "text": "App Deployments",
-          "content": "<h3 class='jim-text-title'>SCCM Application Deployments</h3><p>This section outlines silent installations, MSI wrapper configurations, and automated application deployment rules within Configuration Manager.</p>"
+          "title": "SCCM Application Deployments",
+          "description": "This section outlines silent installations, MSI wrapper configurations, and automated application deployment rules within Configuration Manager."
         },
         {
           "id": "sccm-osd",
           "text": "OSD Task Sequences",
-          "content": "<h3>OSD Task Sequences</h3><p>Documentation for custom Windows 11 reference images, driver injection injection tasks, and automated provisioning steps.</p>"
+          "title": "OSD Task Sequences",
+          "description": "Documentation for custom Windows 11 reference images, driver injection tasks, and automated provisioning steps."
         }
       ]
     },
     {
-      "text": "PowerShell Automation",
+      "text": "Automation Showcase",
       "url": "#",
       "styleClass": "btn-jim btn-jim-slate",
       "page": "site",
       "dropdownItems": [
-        { "text": "Active Directory Scripts", "url": "#ps-ad" },
-        { "text": "API Integrations", "url": "#ps-api" },
-        { "text": "Module Repository", "url": "#ps-modules" }
+        {
+          "id": "ps-ad",
+          "text": "Active Directory Scripts",
+          "title": "Active Directory Automation",
+          "description": "PowerShell tooling built to automate user onboarding, permission audits, and stale account cleanup routines across hybrid environments."
+        },
+        {
+          "id": "ps-api",
+          "text": "API Integrations",
+          "title": "API Integration Scripts",
+          "description": "REST API scripts connecting endpoint management systems with internal ticketing dashboards for automated reporting."
+        },
+        {
+          "id": "ps-modules",
+          "text": "Module Repository",
+          "title": "PowerShell Module Library",
+          "description": "Custom reusable PowerShell modules built for standardizing internal logging, error handling, and configuration management."
+        }
       ]
     },
     {
-      "text": "Group Policy (GPO)",
+      "text": "Key Achievements",
       "url": "#",
       "styleClass": "btn-jim btn-jim-slate",
       "page": "site",
       "dropdownItems": [
-        { "text": "Security Baselines", "url": "#gpo-security" },
-        { "text": "Drive Mapping Layouts", "url": "#gpo-drives" },
-        { "text": "Registry Optimizations", "url": "#gpo-reg" }
-      ]
-    },
-    {
-      "text": "Advanced Scripting",
-      "url": "#",
-      "styleClass": "btn-jim btn-jim-slate",
-      "page": "site",
-      "dropdownItems": [
-        { "text": "Bash Automation", "url": "#script-bash" },
-        { "text": "Python Utilities", "url": "#script-py" },
-        { "text": "WMI & CIM Queries", "url": "#script-wmi" }
+        {
+          "id": "gpo-security",
+          "text": "Security Baselines",
+          "title": "Enterprise Security Baselines",
+          "description": "Implementation of CIS security benchmarks and zero-trust Group Policy administrative templates across corporate domain environments."
+        },
+        {
+          "id": "gpo-drives",
+          "text": "Drive Mapping Layouts",
+          "title": "Automated Share & Drive Mappings",
+          "description": "Group Policy Preferences framework for dynamic drive mappings based on Active Directory group membership."
+        },
+        {
+          "id": "gpo-reg",
+          "text": "Registry Optimizations",
+          "title": "Registry & OS Optimizations",
+          "description": "Centralized registry policies designed to disable bloatware, enforce browser policies, and optimize Windows 11 system performance."
+        }
       ]
     }
   ]
