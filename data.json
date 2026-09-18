@@ -130,11 +130,11 @@
       "title": "Professional Training & Coursework",
       "description": [
         {
-          "role": "2018: The Complete ASP.NET MVC 5 Course | Udemy (Mosh Hamedani)",
+          "role": "<div class='flex items-center gap-2'><span class='px-2 py-0.5 text-[10px] font-bold tracking-wider text-sky-800 bg-sky-100 rounded border border-sky-300 uppercase'>UDemy</span> <span>2018: The Complete ASP.NET MVC 5 Course (Mosh Hamedani)</span></div>",
           "desc": "Mastered full-stack web development using ASP.NET MVC 5, focusing on C# backend architecture, RESTful APIs, Entity Framework ORM, SQL database integration, and responsive frontend design."
         },
         {
-          "role": "2025: The Complete JavaScript Course: From Zero to Expert! | Udemy (Jonas Schmedtmann)",
+          "role": "<div class='flex items-center gap-2'><span class='px-2 py-0.5 text-[10px] font-bold tracking-wider text-sky-800 bg-sky-100 rounded border border-sky-300 uppercase'>UDemy</span> <span>2025: The Complete JavaScript Course: From Zero to Expert! (Jonas Schmedtmann)</span></div>",
           "desc": "Deepening core JavaScript mastery covering modern ES6+ features, asynchronous programming (Promises, Async/Await), OOP principles, DOM manipulation, and modern web application architecture."
         }
       ]
