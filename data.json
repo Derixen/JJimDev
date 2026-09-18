@@ -56,14 +56,33 @@
         {
           "id": "StartupLogonScriptHandler",
           "text": "Logon Script",
-          "title": "StartUp / LogonScript Handler",
-          "description": "This section outlines silent installations, MSI wrapper configurations, and automated application deployment rules within Configuration Manager."
+          "title": "StartUp / LogonScript Handler Framework",
+          "image": "images/logonscript.png",
+          "description": [
+            {
+              "role": "Modular Master Controller",
+              "desc": "Engineered a centralized VBScript master controller that automatically orchestrates and executes child scripts (VBScript and Batch) placed within designated target directories."
+            },
+            {
+              "role": "Active Directory Group Targeting",
+              "desc": "Implemented dynamic membership checking that cross-references the client computer's AD groups against script filenames (omitting extension) to conditionally run targeted scripts only for authorized endpoints."
+            },
+            {
+              "role": "Standardized Logging Template",
+              "desc": "Enforced a uniform script template across all modules, automatically writing local client log files to streamline troubleshooting during execution failures."
+            },
+            {
+              "role": "Performance Monitoring & Optimization",
+              "desc": "Integrated a centralized execution log that calculates individual script runtimes and outputs total elapsed time per session to benchmark and optimize overall user logon duration."
+            }
+          ]
         },
         {
-          "id": "sccm-osd",
-          "text": "OSD Task Sequences",
-          "title": "OSD Task Sequences",
-          "description": "Documentation for custom Windows 11 reference images, driver injection tasks, and automated provisioning steps."
+          "id": "sccm-matrix42-framework-tester",
+          "text": "Framework Tester",
+          "title": "SCCM & Matrix42 Infrastructure Health Tester",
+          "image": "images/framework-tester-flow.png",
+          "description": "An automated PowerShell diagnostic tool scheduled for daily morning execution to evaluate core endpoint infrastructure health. It performs automated WMI connectivity verification between managed servers and the SCCM environment, while simultaneously scanning Matrix42 Enterprise Manager event logs for operational errors. Upon detecting system anomalies, the framework automatically triggers alerts to the central enterprise monitoring platform and initiates automated IT Service Management ticket creation for immediate engineering remediation."
         }
       ]
     },
@@ -128,24 +147,46 @@
       "title": "Licenses & Certifications",
       "description": [
         {
-          "role": "2009 - Microsoft Certified Desktop Support Technician (MCDST) | ControllTraining Kft.",
-          "desc": "Demonstrated core competency in troubleshooting Windows desktop environments, client operating systems, and remote user support protocols."
+          "role": "<div class='flex items-center gap-2'><span class='px-2 py-0.5 text-[10px] font-bold tracking-wider text-sky-800 bg-sky-100 rounded border border-sky-300 uppercase'>Microsoft</span> <span>2018 — System Center Configuration Manager: Current Branch</span></div>",
+          "desc": "Evosoft (Siemens) — Advanced enterprise training on modern SCCM/MECM Current Branch architecture, CMG deployment, and endpoint management."
         },
         {
-          "role": "2013 - System Center 2012 Configuration Manager | Training360",
-          "desc": "Completed formal enterprise training covering SCCM 2012 infrastructure deployment, site administration, software packaging, and centralized patch management."
+          "role": "<div class='flex items-center gap-2'><span class='px-2 py-0.5 text-[10px] font-bold tracking-wider text-slate-700 bg-slate-200 rounded border border-slate-300 uppercase'>Symantec / HPE</span> <span>2015 — Client Management Suite 7.5: Administration</span></div>",
+          "desc": "Acquired comprehensive administration expertise in Altiris Client Management Suite 7.5, specializing in endpoint management and software delivery pipelines."
         },
         {
-          "role": "2015 - Client Management Suite 7.5: Administration | Symantec / HPE",
-          "desc": "Acquired comprehensive administration expertise in Symantec Altiris Client Management Suite 7.5, specializing in automated endpoint management, asset tracking, and software delivery pipelines."
+          "role": "<div class='flex items-center gap-2'><span class='px-2 py-0.5 text-[10px] font-bold tracking-wider text-sky-800 bg-sky-100 rounded border border-sky-300 uppercase'>Microsoft</span> <span>2013 — System Center 2012 Configuration Manager</span></div>",
+          "desc": "Training360 — Formal enterprise training covering SCCM 2012 site deployment, software packaging, and centralized patch management."
         },
         {
-          "role": "2018 - System Center Configuration Manager: Current Branch | Evosoft (Siemens)",
-          "desc": "Completed advanced enterprise training on modern SCCM/MECM Current Branch architecture, focusing on continuous infrastructure updates, cloud management gateway (CMG), and modern endpoint management."
+          "role": "<div class='flex items-center gap-2'><span class='px-2 py-0.5 text-[10px] font-bold tracking-wider text-sky-800 bg-sky-100 rounded border border-sky-300 uppercase'>Microsoft</span> <span>2009 — Desktop Support Technician (MCDST)</span></div>",
+          "desc": "ControllTraining Kft. — Demonstrated core competency in troubleshooting Windows desktop environments, client OS, and remote support."
+        }
+      ]
+    },
+    {
+      "text": "About",
+      "url": "#About",
+      "styleClass": "btn-jim btn-jim-slate",
+      "page": "site",
+      "title": "About This Site",
+      "image": "images/about.jif",
+      "description": [
+        {
+          "role": "Architecture & Data Flow",
+          "desc": "Built with a lightweight, data-driven architecture that completely separates layout from content. All site metadata, navigation buttons, and tool project entries are stored externally in a structured data.json file."
         },
         {
-          "role": "2019 - System Center Configuration Manager: Troubleshooting | Evosoft (Siemens)",
-          "desc": "Specialized deep-dive technical training focused on expert-level diagnostics, log analysis (WMI, SQL, client/server logs), and rapid remediation of complex SCCM deployment and agent failures."
+          "role": "Frontend & Styling",
+          "desc": "Engineered using HTML5 and Tailwind CSS v4 for a responsive, dark-mode dashboard. Utilizes utility-first CSS components to maintain consistent typography, button states, and hover effects across desktop and mobile devices."
+        },
+        {
+          "role": "Dynamic Rendering",
+          "desc": "Powered by a custom vanilla JavaScript engine (app.js) that fetches data.json asynchronously on page load to dynamically render interface elements, populate project details, and build interactive dropdown context menus."
+        },
+        {
+          "role": "Hosting & Deployment",
+          "desc": "Zero-framework overhead delivering instant page loads. Version-controlled on GitHub and deployed via GitHub Pages with custom domain integration (jjim.dev)."
         }
       ]
     }
