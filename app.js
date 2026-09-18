@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
                   return `
               <div class="mb-5 text-left">
                 <div class="font-bold text-slate-800 text-base">${item.role}</div>
-                <div class="text-slate-600 text-sm italic mt-1 leading-relaxed">${formatTextWithLinks(item.desc)}</div>
+                <div class="text-slate-700 text-sm italic mt-1 leading-relaxed">${formatTextWithLinks(item.desc)}</div>
               </div>`;
                 }
                 return `<div class="text-left text-slate-700">${formatTextWithLinks(item)}</div>`;
@@ -150,14 +150,14 @@ document.addEventListener("DOMContentLoaded", () => {
         if (hasDropdown) {
           const dropdownMenu = document.createElement("div");
           dropdownMenu.className =
-            "hidden absolute left-0 z-50 mt-2 w-full rounded-xl border border-slate-700 bg-slate-800 p-2 shadow-xl flex flex-col gap-1";
+            "hidden absolute left-0 z-50 mt-2 w-full rounded-xl border border-slate-300/80 bg-slate-500/95 backdrop-blur-md p-1.5 shadow-xl shadow-slate-400/20 flex flex-col gap-1";
 
           btn.dropdownItems.forEach((item) => {
             const menuLink = document.createElement("a");
             menuLink.href = "#";
             menuLink.innerText = item.text;
             menuLink.className =
-              "block w-full rounded-lg px-4 py-2 text-sm font-medium text-slate-300 hover:bg-slate-700 hover:text-white transition-colors text-center";
+              "block w-full rounded-lg px-3 py-2 text-sm font-semibold text-slate-200 hover:bg-sky-500 hover:text-white transition-all duration-150 text-center cursor-pointer";
 
             menuLink.addEventListener("click", (e) => {
               e.preventDefault();

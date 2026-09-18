@@ -28,13 +28,32 @@ p {
   @apply text-3xl font-extrabold tracking-wider text-slate-500;
 }
 .jim-subtitle-text {
-  @apply text-lg tracking-tight text-slate-400;
+  @apply text-lg tracking-tight text-slate-900;
 }
 .jimbg {
-  @apply bg-slate-100;
+  min-height: 100vh;
+  /* Distinct Sky Blue to Slate Gradient */
+  background: linear-gradient(
+    135deg,
+    #dffaf7 0%,
+    #dffaf7 50%,
+    #dffaf7 100%
+  ) !important;
+  color: #0f172a;
 }
 .jimboxbg {
-  @apply bg-slate-200;
+  background: linear-gradient(
+    135deg,
+    #dfeffa 29%,
+    #f1f5f9 30%,
+    #dfeffa 30%,
+    #dfeffa 69%,
+    #f1f5f9 70%,
+    #dfeffa 70%,
+    #f1f5f9 80%,
+    #dfeffa 80%
+  ) !important;
+  @apply bg-slate-200/80 rounded-xl border border-slate-300 shadow-xl shadow-slate-300/30;
 }
 .jim-text-title {
   @apply text-xl font-extrabold tracking-tight text-slate-600;
@@ -55,24 +74,21 @@ p {
   width: 100%;
 
   /* Spacing & Typography */
-  @apply py-3 px-6 text-sm font-semibold text-slate-900;
+  @apply py-3 px-6 text-sm font-semibold;
 
-  /* Aesthetics & Shadow */
-  @apply rounded-xl shadow-lg;
+  /* Aesthetics & Smooth Transitions */
+  @apply rounded-xl transition-all duration-200 ease-out;
 
-  /* --- Smooth Hover Transition --- */
-  /* 1. We tell it what to transition (all changing properties like colors and shadows) */
-  /* 2. We set a standard duration (300ms is perfect for hover) */
-  /* 3. We set the easing curve to ease-in */
-  @apply transition-all duration-300 ease-in;
-
-  /* Accessibility & State Defaults */
-  @apply cursor-pointer select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+  /* Accessibility & Tactile Micro-Interactions */
+  @apply cursor-pointer select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 active:scale-[0.98];
 }
 
-/* Your color classes (Tailwind applies these on hover) */
+/* Color & Hover State */
 .btn-jim-slate {
-  @apply bg-slate-300 hover:bg-slate-200 shadow-slate-500/20;
+  @apply bg-slate-300/80 text-slate-800 border border-slate-400/50 
+         shadow-md shadow-slate-500/10 
+         hover:bg-sky-500 hover:text-white hover:border-sky-400 
+         hover:shadow-lg hover:shadow-sky-500/25 hover:-translate-y-0.5;
 }
 
 .btn-jim-sky {
