@@ -704,7 +704,7 @@ p {
 }
 .jimbg {
   min-height: 100vh;
-  background: linear-gradient( 135deg, #dffaf7 0%, #dffaf7 50%, #dffaf7 100% ) !important;
+  background: linear-gradient( 135deg, #dffaf7 0%, #f8f8fc 50%, #dffaf7 100% ) !important;
   color: #0f172a;
 }
 .jimboxbg {
