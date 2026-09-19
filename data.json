@@ -172,7 +172,6 @@
       "text": "About This Site",
       "url": "#About",
       "styleClass": "btn-jim btn-jim-slate",
-      "page": "site",
       "title": "About This Site",
       "image": "images/about.jif",
       "description": [
@@ -187,6 +186,10 @@
         {
           "role": "Dynamic Rendering",
           "desc": "Powered by a custom vanilla JavaScript engine (app.js) that fetches data.json asynchronously on page load to dynamically render interface elements, populate project details, and build interactive dropdown context menus."
+        },
+        {
+          "role": "AI Assistance & Development",
+          "desc": "Designed and refactored with the help of AI assistance (Gemini) to accelerate code iteration, optimize Tailwind CSS utility layouts, refine dynamic JSON parsing, and polish responsive UI styling."
         },
         {
           "role": "Hosting & Deployment",
