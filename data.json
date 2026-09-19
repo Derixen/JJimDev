@@ -18,32 +18,32 @@
       "title": "My Career Journey",
       "description": [
         {
-          "role": "2008 – 2010: L1 Support & Shared Desk | Getronics",
-          "desc": "Began in L1 support at Getronics, rapidly advancing to a multi-account Shared Desk servicing major enterprise clients including a Fortune 100 industrial tech conglomerate, and a tier-1 global bank amongs others. Applied bilingual fluency (Native German, Fluent English) and intuitive root-cause analysis to resolve complex technical issues."
-        },
-        {
-          "role": "2010 – 2012: L2 Lead & Technical Escalation | HP",
-          "desc": "Elevated to L2 Technical Lead at HP, steering support operations for Monier and Panasonic. Specialized in deciphering systemic infrastructure issues from minimal diagnostics and mentoring cross-functional team members."
-        },
-        {
-          "role": "2012 – 2015: L3 Infrastructure, SCCM & GPO | HPE (SKF)",
-          "desc": "Transitioned to L3 infrastructure support at HPE dedicated to SKF. Managed SCCM architecture, Group Policies, and enterprise scripts. Optimized logon/startup scripts using VBScript and Batch to significantly reduce boot times and implemented standardized endpoint logging. Modernized GPO architecture using Loopback Processing (LSAD) and GPO Preferences, establishing dedicated test OU structures to ensure targeted policy enforcement."
-        },
-        {
-          "role": "2015 – 2018: Systems Tooling & Technical Enablement | DXC (SKF)",
-          "desc": "Engineered custom object-oriented VB.NET GUI tools at DXC Technology to automate remote Active Directory management and bulk-endpoint remediation for SKF, drastically cutting resolution times. Served as a Technical Trainer, developing curriculum to upskill teams in Advanced PowerShell automation, VBScripting, T-SQL Reporting, and GPO optimization."
-        },
-        {
-          "role": "2018 – 2020: Technical Lead & Global Automation | Evosoft (Siemens)",
-          "desc": "Appointed Technical Lead at Evosoft within the Siemens domain. Modernized software packaging by introducing the PowerShell App Deployment Toolkit (PSADT) to standardize deployment workflows. Engineered a dynamic AD-group-driven automation framework to trigger targeted logon/startup scripts globally, integrating automated completion-time logging to drive domain-wide performance optimization."
+          "role": "2022 – Present: Enterprise Web Applications & C#.NET Engineering | CGF",
+          "desc": "Lead developer at CGF managing an in-house ASP.NET MVC deployment platform for a major European automotive manufacturer. Engineered direct API/SDK integrations with Matrix42 Enterprise Manager and SCCM inside Visual Studio Enterprise, enabling real-time application deployment tasks that trigger immediate endpoint agent installations—bypassing traditional SCCM/Intune polling delays while managing full-stack C# backend logic, database operations, and frontend UI."
         },
         {
           "role": "2020 – 2022: OSD, VDI & Infrastructure | DXC",
           "desc": "Owned OS Deployment (OSD) and Windows In-Place Upgrade pipelines at DXC supporting a major European automotive manufacturer. Engineered custom WinPE HTA tools for pre-PXE customization and architected Zero-Touch Installations (ZTI). Handled physical datacenter rack installations while managing VMware Horizon VDI infrastructure—authoring optimized master images and maintaining storage redundancy across virtualized environments."
         },
         {
-          "role": "2022 – Present: Enterprise Web Applications & C#.NET Engineering | CGF",
-          "desc": "Lead developer at CGF managing an in-house ASP.NET MVC deployment platform for a major European automotive manufacturer. Engineered direct API/SDK integrations with Matrix42 Enterprise Manager and SCCM inside Visual Studio Enterprise, enabling real-time application deployment tasks that trigger immediate endpoint agent installations—bypassing traditional SCCM/Intune polling delays while managing full-stack C# backend logic, database operations, and frontend UI."
+          "role": "2018 – 2020: Technical Lead & Global Automation | Evosoft (Siemens)",
+          "desc": "Appointed Technical Lead at Evosoft within the Siemens domain. Modernized software packaging by introducing the PowerShell App Deployment Toolkit (PSADT) to standardize deployment workflows. Engineered a dynamic AD-group-driven automation framework to trigger targeted logon/startup scripts globally, integrating automated completion-time logging to drive domain-wide performance optimization."
+        },
+        {
+          "role": "2015 – 2018: Systems Tooling & Technical Enablement | DXC (SKF)",
+          "desc": "Engineered custom object-oriented VB.NET GUI tools at DXC Technology to automate remote Active Directory management and bulk-endpoint remediation for SKF, drastically cutting resolution times. Served as a Technical Trainer, developing curriculum to upskill teams in Advanced PowerShell automation, VBScripting, T-SQL Reporting, and GPO optimization."
+        },
+        {
+          "role": "2012 – 2015: L3 Infrastructure, SCCM & GPO | HPE (SKF)",
+          "desc": "Transitioned to L3 infrastructure support at HPE dedicated to SKF. Managed SCCM architecture, Group Policies, and enterprise scripts. Optimized logon/startup scripts using VBScript and Batch to significantly reduce boot times and implemented standardized endpoint logging. Modernized GPO architecture using Loopback Processing (LSAD) and GPO Preferences, establishing dedicated test OU structures to ensure targeted policy enforcement."
+        },
+        {
+          "role": "2010 – 2012: L2 Lead & Technical Escalation | HP",
+          "desc": "Elevated to L2 Technical Lead at HP, steering support operations for Monier and Panasonic. Specialized in deciphering systemic infrastructure issues from minimal diagnostics and mentoring cross-functional team members."
+        },
+        {
+          "role": "2008 – 2010: L1 Support & Shared Desk | Getronics",
+          "desc": "Began in L1 support at Getronics, rapidly advancing to a multi-account Shared Desk servicing major enterprise clients including a Fortune 100 industrial tech conglomerate, and a tier-1 global bank among others. Applied bilingual fluency (Native German, Fluent English) and intuitive root-cause analysis to resolve complex technical issues."
         }
       ]
     },
@@ -130,11 +130,11 @@
       "title": "Professional Training & Coursework",
       "description": [
         {
-          "role": "<div class='flex items-center gap-2'><span class='px-2 py-0.5 text-[10px] font-bold tracking-wider text-sky-800 bg-sky-100 rounded border border-sky-300 uppercase'>UDemy</span> <span>2018: The Complete ASP.NET MVC 5 Course (Mosh Hamedani)</span></div>",
+          "role": "<div class='flex items-center gap-2'><span class='inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-semibold text-slate-800 bg-white/80 rounded-md border border-slate-300 shadow-sm'><img src='images/udemy.png' alt='Microsoft' class='w-18 h-8 object-contain' /></span> <span class='font-semibold text-slate-800'>2018: The Complete ASP.NET MVC 5 Course (Mosh Hamedani)</span></div>",
           "desc": "Mastered full-stack web development using ASP.NET MVC 5, focusing on C# backend architecture, RESTful APIs, Entity Framework ORM, SQL database integration, and responsive frontend design."
         },
         {
-          "role": "<div class='flex items-center gap-2'><span class='px-2 py-0.5 text-[10px] font-bold tracking-wider text-sky-800 bg-sky-100 rounded border border-sky-300 uppercase'>UDemy</span> <span>2025: The Complete JavaScript Course: From Zero to Expert! (Jonas Schmedtmann)</span></div>",
+          "role": "<div class='flex items-center gap-2'><span class='inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-semibold text-slate-800 bg-white/80 rounded-md border border-slate-300 shadow-sm'><img src='images/udemy.png' alt='Microsoft' class='w-18 h-8 object-contain' /></span> <span class='font-semibold text-slate-800'>2025: The Complete JavaScript Course: From Zero to Expert! (Jonas Schmedtmann)</span></div>",
           "desc": "Deepening core JavaScript mastery covering modern ES6+ features, asynchronous programming (Promises, Async/Await), OOP principles, DOM manipulation, and modern web application architecture."
         }
       ]
@@ -147,19 +147,19 @@
       "title": "Licenses & Certifications",
       "description": [
         {
-          "role": "<div class='flex items-center gap-2'><span class='px-2 py-0.5 text-[10px] font-bold tracking-wider text-sky-800 bg-sky-100 rounded border border-sky-300 uppercase'>Microsoft</span> <span>2018 — System Center Configuration Manager: Current Branch</span></div>",
+          "role": "<div class='flex items-center gap-2'><span class='inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-semibold text-slate-800 bg-white/80 rounded-md border border-slate-300 shadow-sm'><img src='images/microsoft.png' alt='Microsoft' class='w-18 h-8 object-contain' /></span> <span class='font-semibold text-slate-800'>2018 — System Center Configuration Manager: Current Branch</span></div>",
           "desc": "Evosoft (Siemens) — Advanced enterprise training on modern SCCM/MECM Current Branch architecture, CMG deployment, and endpoint management."
         },
         {
-          "role": "<div class='flex items-center gap-2'><span class='px-2 py-0.5 text-[10px] font-bold tracking-wider text-slate-700 bg-slate-200 rounded border border-slate-300 uppercase'>Symantec / HPE</span> <span>2015 — Client Management Suite 7.5: Administration</span></div>",
+          "role": "<div class='flex items-center gap-2'><span class='inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-semibold text-slate-800 bg-white/80 rounded-md border border-slate-300 shadow-sm'><img src='images/symantec.png' alt='Microsoft' class='w-18 h-8 object-contain' /></span> <span class='font-semibold text-slate-800'>2015 — Client Management Suite 7.5: Administration</span></div>",
           "desc": "Acquired comprehensive administration expertise in Altiris Client Management Suite 7.5, specializing in endpoint management and software delivery pipelines."
         },
         {
-          "role": "<div class='flex items-center gap-2'><span class='px-2 py-0.5 text-[10px] font-bold tracking-wider text-sky-800 bg-sky-100 rounded border border-sky-300 uppercase'>Microsoft</span> <span>2013 — System Center 2012 Configuration Manager</span></div>",
+          "role": "<div class='flex items-center gap-2'><span class='inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-semibold text-slate-800 bg-white/80 rounded-md border border-slate-300 shadow-sm'><img src='images/microsoft.png' alt='Microsoft' class='w-18 h-8 object-contain' /></span> <span class='font-semibold text-slate-800'>2013 — System Center 2012 Configuration Manager</span></div>",
           "desc": "Training360 — Formal enterprise training covering SCCM 2012 site deployment, software packaging, and centralized patch management."
         },
         {
-          "role": "<div class='flex items-center gap-2'><span class='px-2 py-0.5 text-[10px] font-bold tracking-wider text-sky-800 bg-sky-100 rounded border border-sky-300 uppercase'>Microsoft</span> <span>2009 — Desktop Support Technician (MCDST)</span></div>",
+          "role": "<div class='flex items-center gap-2'><span class='inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-semibold text-slate-800 bg-white/80 rounded-md border border-slate-300 shadow-sm'><img src='images/microsoft.png' alt='Microsoft' class='w-18 h-8 object-contain' /></span> <span class='font-semibold text-slate-800'>2009 — Desktop Support Technician (MCDST)</span></div>",
           "desc": "ControllTraining Kft. — Demonstrated core competency in troubleshooting Windows desktop environments, client OS, and remote support."
         }
       ]
