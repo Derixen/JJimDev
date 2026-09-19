@@ -3,38 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JJim.dev | Full-Stack Developer</title>
-
+    <title>Jim.dev | Site Layout</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body
-    class="jimbg min-h-screen flex items-center justify-center font-sans antialiased"
+    class="jimbg min-h-screen flex items-start justify-center pt-8 font-sans antialiased"
   >
     <div
-      class="max-w-md mx-4 p-8 bg-slate-800 rounded-2xl shadow-2xl border border-slate-800/50 text-center backdrop-blur-sm"
+      class="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-5xl mx-auto w-full px-4 mt-8"
     >
-      <!-- Avatar Icon -->
+      <!-- Row 1: Separate Grid Container for Title (Name) -->
       <div
-        class="w-16 h-16 border-2 highlight-avatar rounded-full flex items-center justify-center text-3xl font-extrabold mx-auto mb-4 text-slate-400"
+        class="md:col-span-4 jimboxbg p-5 rounded-xl border border-sky-300/60 shadow-lg shadow-sky-500/5 text-center"
       >
-        <span class="text-slate-200">J</span>
+        <div id="site-heading" class="jim-title-text"></div>
       </div>
 
-      <!-- Main Heading (Bright White for High Contrast) -->
-      <h1 id="main-heading" class="text-3xl jim-title-text mb-2">
-        Welcome to
-        <span class="text-slate-400 font-extrabold">Jim's </span>
-        Profile
-      </h1>
+      <!-- Row 2: Separate Grid Container for Subtitle -->
+      <div
+        class="md:col-span-4 jimboxbg p-4 rounded-xl border border-slate-200 text-center"
+      >
+        <div id="site-description" class="jim-subtitle-text"></div>
+      </div>
 
-      <!-- Sub-Heading (Readable Slate Tone) -->
-      <p
-        id="sub-heading"
-        class="jim-subtitle-text text-sm mb-6 text-slate-400"
-      ></p>
+      <!-- Row 3 - Left: Navigation Sidebar -->
+      <div
+        class="md:col-span-1 jimboxbg p-6 rounded-xl border border-slate-200"
+      >
+        <div id="button-container" class="flex flex-col gap-4 w-full"></div>
+      </div>
 
-      <!-- Button Container -->
-      <div id="button-container" class="flex flex-col gap-4 w-full"></div>
+      <!-- Row 3 - Right: Main Content Display Area -->
+      <div
+        class="md:col-span-3 jimboxbg p-6 rounded-xl border border-slate-200 text-slate-200"
+      >
+        <div id="main-content-display">
+          <h3
+            id="site-subtitle"
+            class="text-xl font-bold mb-2 text-white border-b border-slate-700 pb-2"
+          ></h3>
+
+          <div
+            id="site-subdescription"
+            class="text-slate-600 mt-2 leading-relaxed"
+          ></div>
+        </div>
+      </div>
     </div>
 
     <script src="app.js"></script>

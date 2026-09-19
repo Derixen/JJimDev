@@ -1,7 +1,7 @@
 /**
  * Dynamic UI Renderer (Tailwind v4 Setup)
  * Fetches profile data and links from a local JSON file and dynamically
- * generates components based on the current HTML file context.
+ * generates components for index.html.
  */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -14,17 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return response.json();
     })
     .then((data) => {
-      // 2. Identify routing environment context
-      const currentPage = window.location.pathname.includes("site.html")
-        ? "site"
-        : "index";
-
-      // 3. Inject Page Metadata
-      const general = document.getElementById("general");
-      if (general && window.location.pathname.includes("general")) {
-        // Safe check fixed
-      }
-
+      // 2. Inject Page Metadata
       const subHeading = document.getElementById("sub-heading");
       if (subHeading && data.mainsubheading) {
         subHeading.textContent = data.mainsubheading;
@@ -40,12 +30,12 @@ document.addEventListener("DOMContentLoaded", () => {
         siteDescription.textContent = data.sitedescription;
       }
 
-      // 4. Clear and secure the primary layout injection target
+      // 3. Clear and secure the primary layout injection target
       const buttonContainer = document.getElementById("button-container");
       if (!buttonContainer) return;
       buttonContainer.innerHTML = "";
 
-      // Clean helper function: Handles strings, images, links, and array-based bullet lists cleanly
+      // Clean helper function: Handles strings, images, links, and array-based bullet lists
       const renderContentToDisplay = (
         titleText,
         descriptionData,
@@ -110,9 +100,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       };
 
-      // 5. Build components dynamically from dataset array
+      // 4. Build components dynamically from dataset array
       data.buttons.forEach((btn) => {
-        if (btn.page !== currentPage) return;
+        // Skip buttons that were specifically meant for navigation between index -> site
+        if (btn.url === "site.html" || btn.text.toLowerCase() === "enter")
+          return;
 
         const btnWrapper = document.createElement("div");
         btnWrapper.className = "relative w-full text-center";
@@ -131,12 +123,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
           // DIRECT BUTTON CONTENT CLICK HANDLER
           anchor.addEventListener("click", (e) => {
-            // If it's navigating to a real HTML page (e.g., site.html), let it navigate
             if (btn.url && btn.url !== "#" && !btn.url.startsWith("#")) {
               return;
             }
 
-            // Otherwise, update the static display elements with clean data
             if (btn.title || btn.description) {
               e.preventDefault();
               renderContentToDisplay(btn.title, btn.description, btn.image);
@@ -146,7 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         btnWrapper.appendChild(anchor);
 
-        // 6. Generate dropdown content components if definitions exist
+        // 5. Generate dropdown content components if definitions exist
         if (hasDropdown) {
           const dropdownMenu = document.createElement("div");
           dropdownMenu.className =
@@ -184,18 +174,16 @@ document.addEventListener("DOMContentLoaded", () => {
         buttonContainer.appendChild(btnWrapper);
       });
 
-      // 7. AUTO-LOAD DEFAULT CONTENT ON SITE.HTML
-      if (currentPage === "site") {
-        const defaultButton = data.buttons.find(
-          (btn) => btn.page === "site" && (btn.title || btn.description),
+      // 6. AUTO-LOAD DEFAULT CONTENT ON INDEX.HTML
+      const defaultButton = data.buttons.find(
+        (btn) => btn.title || btn.description,
+      );
+      if (defaultButton) {
+        renderContentToDisplay(
+          defaultButton.title,
+          defaultButton.description,
+          defaultButton.image,
         );
-        if (defaultButton) {
-          renderContentToDisplay(
-            defaultButton.title,
-            defaultButton.description,
-            defaultButton.image,
-          );
-        }
       }
     })
     .catch((error) => {
