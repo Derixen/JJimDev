@@ -3,47 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JJim.dev | Site Layout</title>
+    <title>Jim.dev | Site Layout</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body
-    class="jimbg min-h-screen flex items-center justify-center font-sans antialiased"
+    class="jimbg min-h-screen flex items-start justify-center pt-8 font-sans antialiased"
   >
     <div
       class="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-5xl mx-auto w-full px-4 mt-8"
     >
+      <!-- Row 1: Separate Grid Container for Title (Name) -->
+      <div
+        class="md:col-span-4 jimboxbg p-5 rounded-xl border border-sky-300/60 shadow-lg shadow-sky-500/5 text-center"
+      >
+        <div id="site-heading" class="jim-title-text"></div>
+      </div>
+
+      <!-- Row 2: Separate Grid Container for Subtitle -->
       <div
         class="md:col-span-4 jimboxbg p-4 rounded-xl border border-slate-200 text-center"
       >
-        <div
-          id="site-heading"
-          class="jim-title-text tracking-wider text-slate-500"
-        ></div>
         <div id="site-description" class="jim-subtitle-text"></div>
       </div>
 
+      <!-- Row 3 - Left: Navigation Sidebar -->
       <div
         class="md:col-span-1 jimboxbg p-6 rounded-xl border border-slate-200"
       >
         <div id="button-container" class="flex flex-col gap-4 w-full"></div>
       </div>
 
+      <!-- Row 3 - Right: Main Content Display Area -->
       <div
-  class="md:col-span-3 jimboxbg p-6 rounded-xl border border-slate-200 text-slate-200"
->
-  <div id="main-content-display">
-    <h3
-      id="site-subtitle"
-      class="text-xl font-bold mb-2 text-white border-b border-slate-700 pb-2"
-    ></h3>
+        class="md:col-span-3 jimboxbg p-6 rounded-xl border border-slate-200 text-slate-200"
+      >
+        <div id="main-content-display">
+          <h3
+            id="site-subtitle"
+            class="text-xl font-bold mb-2 text-white border-b border-slate-700 pb-2"
+          ></h3>
 
-    <!-- Changed <p> to <div> and removed 'whitespace-pre-line' -->
-    <div
-      id="site-subdescription"
-      class="text-slate-600 mt-2 leading-relaxed"
-    ></div>
-  </div>
-</div>
+          <div
+            id="site-subdescription"
+            class="text-slate-600 mt-2 leading-relaxed"
+          ></div>
+        </div>
+      </div>
+    </div>
 
     <script src="app.js"></script>
   </body>

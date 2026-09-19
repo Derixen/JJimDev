@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
             menuLink.href = "#";
             menuLink.innerText = item.text;
             menuLink.className =
-              "block w-full rounded-lg px-3 py-2 text-sm font-semibold text-slate-200 hover:bg-sky-500 hover:text-white transition-all duration-150 text-center cursor-pointer";
+              "block w-full rounded-lg px-3 py-2 text-sm font-semibold text-slate-200 hover:bg-slate-600 hover:text-slate-300 transition-all duration-150 text-center cursor-pointer";
 
             menuLink.addEventListener("click", (e) => {
               e.preventDefault();

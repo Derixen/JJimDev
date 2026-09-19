@@ -25,7 +25,9 @@ p {
   @apply text-xl font-extrabold tracking-tight text-slate-500;
 }
 .jim-title-text {
-  @apply text-3xl font-extrabold tracking-wider text-slate-500;
+  @apply text-3xl md:text-4xl font-extrabold tracking-wide 
+         bg-gradient-to-r from-slate-800 via-sky-800 to-slate-800 
+         bg-clip-text text-transparent drop-shadow-sm;
 }
 .jim-subtitle-text {
   @apply text-lg tracking-tight text-slate-900;
@@ -87,8 +89,8 @@ p {
 .btn-jim-slate {
   @apply bg-slate-300/80 text-slate-800 border border-slate-400/50 
          shadow-md shadow-slate-500/10 
-         hover:bg-sky-500 hover:text-white hover:border-sky-400 
-         hover:shadow-lg hover:shadow-sky-500/25 hover:-translate-y-0.5;
+         hover:bg-sky-500 hover:text-white hover:bg-slate-400/80 
+         hover:shadow-lg hover:shadow-slate-500/25 hover:-translate-y-0.5;
 }
 
 .btn-jim-sky {

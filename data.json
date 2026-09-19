@@ -18,32 +18,36 @@
       "title": "My Career Journey",
       "description": [
         {
-          "role": "2022 – Present: Technical Architect | CGF CounselGroupFrankfurt AG",
+          "role": "<div class='flex items-center gap-2'><span class='inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-semibold text-slate-800 bg-white/80 rounded-md border border-slate-300 shadow-sm'><img src='images/cgf.png' alt='CGF' class='w-18 h-8 object-contain' /></span> <span class='font-semibold text-slate-800'>2022 – Present: Technical Architect | CGF CounselGroupFrankfurt AG</span></div>",
           "desc": "Serving as Technical Architect managing an in-house ASP.NET MVC deployment platform for a major European automotive manufacturer. Engineered direct API/SDK integrations with Matrix42 Enterprise Manager and SCCM inside Visual Studio Enterprise, enabling real-time application deployment tasks that trigger immediate endpoint agent installations—bypassing traditional SCCM/Intune polling delays while managing full-stack C# backend logic, database operations, and frontend UI."
         },
         {
-          "role": "2020 – 2022: SCCM Infrastructure Engineer L3 | SwiconGroup",
-          "desc": "Served as L3 Infrastructure Engineer and Technical Lead across enterprise accounts. Owned OS Deployment (OSD) and Windows In-Place Upgrade pipelines, engineering custom WinPE HTA tools for pre-PXE customization and architecting Zero-Touch Installations (ZTI). Handled physical datacenter rack installations while managing VMware Horizon VDI infrastructure—authoring optimized master images and maintaining storage redundancy across virtualized environments."
+          "role": "<div class='flex items-center gap-2'><span class='inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-semibold text-slate-800 bg-white/80 rounded-md border border-slate-300 shadow-sm'><img src='images/SwiconGroup.png' alt='SwiconGroup' class='w-16 h-9 object-contain' /></span> <span class='font-semibold text-slate-800'>2020 – 2022: SCCM Infrastructure Engineer L3 | SwiconGroup</span></div>",
+          "desc": "Served as Technical Lead across enterprise accounts managing 100,000+ endpoints. Oversaw SCCM packaging, WinPE/HTA pre-PXE customization, Zero-Touch OS Deployments (ZTI), and Matrix42 Enterprise Server Manager optimization. Engineered full-stack internal platform tools using C#, ASP.NET MVC, Entity Framework, and PowerShell WPF GUIs, backed by optimized T-SQL database queries. Led agile workflows in Jira/Git, authored architecture in Confluence, and mentored cross-disciplinary teams in OOP, SQL, and automation scripting."
         },
         {
-          "role": "2017 – 2020: System Administrator (SCCM) | evosoft (Siemens)",
-          "desc": "Managed, optimized, and modernized SCCM/MECM infrastructure within the Siemens domain. Modernized software packaging by introducing the PowerShell App Deployment Toolkit (PSADT) to standardize deployment workflows. Engineered a dynamic AD-group-driven automation framework to trigger targeted logon/startup scripts globally, integrating automated completion-time logging to drive domain-wide performance optimization."
+          "role": "<div class='flex items-center gap-2'><span class='inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-semibold text-slate-800 bg-white/80 rounded-md border border-slate-300 shadow-sm'><img src='images/evosoft.png' alt='evosoft' class='w-16 h-9 object-contain' /></span> <span class='font-semibold text-slate-800'>2017 – 2020: System Administrator (SCCM) | evosoft (Siemens)</span></div>",
+          "desc": "Managed and optimized an entire SCCM 2012 R2 environment—including boundaries, site maintenance, CAS/Primary/Secondary server monitoring, distribution point management, and client health checks. Built LTI/ZTI Task Sequences, complex Windows 10 upgrade packages, USMT solutions, and compliance baselines. Executed Windows 10 Servicing and Office 365 client management via ADRs, while administering multi-domain Group Policies, isolated WSUS servers, and VMware/vSphere environments. Modernized software packaging with PSADT, built custom C#.NET WPF tools in TFS/GitHub, authored SQL/T-SQL/WQL reports in SSRS, and conducted team trainings in OOP, SQL, scripting, and GPO troubleshooting."
         },
         {
-          "role": "2017: Software Distribution Engineer L2 | DXC Technology",
-          "desc": "Engineered custom object-oriented VB.NET GUI tools to automate remote Active Directory management and bulk-endpoint remediation for enterprise clients like SKF, drastically cutting resolution times. Served as a Technical Trainer, developing curriculum to upskill support teams in Advanced PowerShell automation, VBScripting, T-SQL Reporting, and GPO optimization."
+          "role": "<div class='flex items-center gap-2'><span class='inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-semibold text-slate-800 bg-white/80 rounded-md border border-slate-300 shadow-sm'><img src='images/DXC.png' alt='DXC' class='w-16 h-9 object-contain' /></span> <span class='font-semibold text-slate-800'>2017: Software Distribution Engineer L2 | DXC Technology</span></div>",
+          "desc": "Served as Technical Lead supporting software distribution infrastructure, OS image deployment, and patch management across SMS 2003, SCCM 2007/2012/2012 R2, and Altiris 7.5/7.6/8.1 environments[cite: 9]. Created captured images using Altiris Image Deployment (Symantec Ghost), optimized Group Policies and logon/startup scripts (reducing GPO count and tuning WMI queries), and configured OU structures for deployment strategies[cite: 9]. Engineered object-oriented .NET GUI applications and framework automation tools for internal and customer use[cite: 9]. Developed complex SQL queries in SSMS for ad-hoc MS Excel reporting, led technical consultations with clients, and conducted trainings in OOP programming, SQL, scripting, Windows troubleshooting, and GPO administration[cite: 9]."
         },
         {
-          "role": "2012 – 2017: ITO Service Delivery Consultant II | Hewlett Packard Enterprise (HPE)",
-          "desc": "Acted as Technical Lead for Software Distribution dedicated to enterprise accounts. Managed SCCM architecture, Group Policies, and enterprise scripts. Optimized logon/startup scripts using VBScript and Batch to significantly reduce boot times and implemented standardized endpoint logging. Modernized GPO architecture using Loopback Processing (LSAD) and GPO Preferences, establishing dedicated test OU structures to ensure targeted policy enforcement."
+          "role": "<div class='flex items-center gap-2'><span class='inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-semibold text-slate-800 bg-white/80 rounded-md border border-slate-300 shadow-sm'><img src='images/HPE.png' alt='HPE' class='w-16 h-9 object-contain' /></span> <span class='font-semibold text-slate-800'>2012 – 2017: ITO Service Delivery Consultant II | Hewlett Packard Enterprise (HPE)</span></div>",
+          "desc": "Served as Technical Lead for Software Distribution managing multi-customer infrastructure, OS image deployment, and troubleshooting across SMS 2003, SCCM 2007/2012/2012 R2, and Altiris 7.5/7.6/8.1 environments[cite: 11]. Engineered custom capture images via Altiris Image Deployment (Symantec Ghost), directed WSUS/SCCM patch management, and optimized GPO architecture by establishing targeted OU structures, reducing GPO count, and tuning WMI queries[cite: 11]. Modernized logon/startup scripts using VBScript and Batch to cut boot times and standardize endpoint logging[cite: 11]. Developed .NET GUI applications for customer frameworks, authored complex SQL Server queries for ad-hoc MS Excel reporting, and delivered team trainings in OOP programming, SQL, scripting, and GPO optimization[cite: 11]."
         },
         {
-          "role": "2010 – 2012: Senior Level 2 Service Desk Agent | HP",
+          "role": "<div class='flex items-center gap-2'><span class='inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-semibold text-slate-800 bg-white/80 rounded-md border border-slate-300 shadow-sm'><img src='images/HP.png' alt='HP' class='w-16 h-9 object-contain' /></span> <span class='font-semibold text-slate-800'>2010 – 2012: Senior Level 2 Service Desk Agent | HP</span></div>",
           "desc": "Elevated to Senior L2 Technical Lead at HP, steering support operations for Monier and Panasonic. Specialized in deciphering systemic infrastructure issues from minimal diagnostics, handling complex escalations, and mentoring cross-functional team members."
         },
         {
-          "role": "2008 – 2010: Service Desk Analyst & Shared Desk | Getronics / IT Services Hungary",
-          "desc": "Began in L1 support, rapidly advancing to a multi-account Shared Desk servicing major enterprise clients including Sybase, Innospec, Nalco, and Honeywell. Applied multilingual fluency (German, English, Dutch) and intuitive root-cause analysis to resolve complex technical issues across global environments."
+          "role": "<div class='flex items-center gap-2'><span class='inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-semibold text-slate-800 bg-white/80 rounded-md border border-slate-300 shadow-sm'><img src='images/Getronics.png' alt='Getronics' class='w-16 h-9 object-contain' /></span> <span class='font-semibold text-slate-800'>2008 – 2010: Service Desk Analyst | Getronics</span></div>",
+          "desc": "Delivered multilingual L1/L2 technical support in German, English, and Dutch across major global client accounts, including Sybase, Innospec, Nalco, and Honeywell. Supported internal service desk operations and colleagues, managing ticket resolution and technical troubleshooting across enterprise environments."
+        },
+        {
+          "role": "<div class='flex items-center gap-2'><span class='inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-semibold text-slate-800 bg-white/80 rounded-md border border-slate-300 shadow-sm'><img src='images/ITSH.png' alt='ITSH' class='w-16 h-9 object-contain' /></span> <span class='font-semibold text-slate-800'>2008: Service Desk Agent | IT Services Hungary Kft.</span></div>",
+          "desc": "Provided dedicated German-language Service Desk support for T-Systems Germany, handling user support, incident logging, and initial technical triage."
         }
       ]
     },
@@ -165,7 +169,7 @@
       ]
     },
     {
-      "text": "About",
+      "text": "About This Site",
       "url": "#About",
       "styleClass": "btn-jim btn-jim-slate",
       "page": "site",
