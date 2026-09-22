@@ -1,7 +1,12 @@
 @import "tailwindcss";
 @source "../index.html";
 
-/* --- 1. Global Element Overrides --- */
+/* --- 1. Global Reset & Body Styling --- */
+body {
+  @apply bg-[#f5f6fa] min-h-screen flex items-start justify-center pt-8 font-sans antialiased;
+}
+
+/* --- 2. Typography Overrides --- */
 h1 {
   @apply text-3xl font-extrabold tracking-tight text-slate-600;
 }
@@ -14,43 +19,54 @@ h3 {
 p {
   @apply text-sm md:text-base font-normal leading-relaxed antialiased text-slate-500;
 }
-/* --- 2. Custom Utility Classes --- */
-.highlight-text-h1 {
-  @apply text-3xl font-extrabold tracking-wider text-slate-100;
-}
-.highlight-text-h2 {
-  @apply text-2xl font-extrabold tracking-tight text-slate-400;
-}
-.highlight-text-h3 {
-  @apply text-xl font-extrabold tracking-tight text-slate-500;
-}
-.jim-title-text {
-  @apply text-3xl md:text-4xl font-extrabold tracking-wide 
-         bg-gradient-to-r from-slate-800 via-sky-800 to-slate-800 
-         bg-clip-text text-transparent drop-shadow-sm;
-}
-.jim-subtitle-text {
-  @apply text-lg tracking-tight text-slate-900;
-}
 
-.jimbg {
-  background-color: #f5f6fa; /* Smooth Slate-300 base */
-}
-.jimboxbg {
+/* --- 3. Custom Card Components --- */
+.card-container {
   @apply bg-white/90 backdrop-blur-md rounded-2xl border border-slate-200/90 shadow-sm transition-all duration-200;
 }
-.jim-text-title {
-  @apply text-xl font-extrabold tracking-tight text-slate-600;
-}
-.jim-text {
-  /* Inherit standard paragraph flow mechanics */
-  @apply text-sm md:text-base font-normal leading-relaxed antialiased;
 
-  /* Set your unique, custom text color (e.g., a nice bright sky or slate tint) */
-  color: var(--color-slate-500); /* Or use an explicit hex like #cbd5e1 */
+.header-card {
+  @apply card-container p-6 text-center flex flex-col items-center justify-center gap-1;
 }
-/* --- 3. Custom Button Components --- */
-/* Base vertical button styling */
+
+.sub-header-card {
+  @apply card-container p-4 text-center;
+}
+
+.sidebar-card {
+  @apply card-container p-6;
+}
+
+.content-card {
+  @apply card-container p-6 text-slate-200;
+}
+
+/* --- 4. Content Elements --- */
+.site-title {
+  @apply text-4xl font-extrabold text-[#0B192C] tracking-tight;
+}
+
+.site-subheading {
+  @apply text-base md:text-lg font-bold text-[#0066B2] tracking-wide mt-0.5;
+}
+
+.site-desc {
+  @apply text-base md:text-lg tracking-wide text-slate-700 mt-0.5;
+}
+
+.content-title {
+  @apply text-xl font-bold text-white border-b border-slate-700 pb-2 mb-2;
+}
+
+.content-body {
+  @apply text-slate-600 mt-2 leading-relaxed;
+}
+
+.sidebar-menu {
+  @apply flex flex-col gap-4 w-full;
+}
+
+/* --- 5. Button Components --- */
 .btn-jim {
   @apply w-full py-2.5 px-4 rounded-xl text-sm font-semibold 
          flex items-center justify-start gap-2.5 
@@ -58,21 +74,41 @@ p {
          focus:outline-none active:scale-[0.98];
 }
 
-/* Inactive button state: sleek transparent/subtle style */
 .btn-jim-slate {
   @apply text-slate-700 bg-transparent 
          hover:bg-[#e8f2fc] hover:text-[#0066b2] 
          border border-transparent hover:border-[#b3d7f5];
 }
 
-/* Active button state: soft blue pill style like your screenshot */
 .btn-jim-active {
   @apply bg-[#ebf5ff] text-[#0066b2] border border-[#b3d7f5] shadow-xs;
 }
 
-/* Active/Selected Button Accent */
 .btn-jim-sky {
   @apply bg-sky-600 text-white border border-sky-500 
          shadow-md shadow-sky-500/25 
          hover:bg-sky-500 hover:-translate-y-0.5;
+}
+
+/* --- Quote Box Components --- */
+.quote-card {
+  @apply p-5 text-center flex items-center justify-center 
+         rounded-2xl border border-slate-200/90 shadow-sm 
+         border-l-4 border-l-sky-500 bg-white/90 backdrop-blur-md;
+}
+
+.quote-text {
+  @apply text-base md:text-lg font-medium italic text-slate-700 
+         tracking-wide max-w-3xl leading-relaxed;
+}
+
+/* Optional pseudo-element quotes for automatic quotation marks */
+.quote-text::before {
+  content: "“";
+  @apply text-sky-500 font-serif font-bold text-xl mr-1;
+}
+
+.quote-text::after {
+  content: "”";
+  @apply text-sky-500 font-serif font-bold text-xl ml-1;
 }

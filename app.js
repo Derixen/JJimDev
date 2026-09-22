@@ -82,17 +82,28 @@ document.addEventListener("DOMContentLoaded", () => {
         );
       };
 
-      // Clean helper function: Handles strings, images, links, career cards, certifications, and bullet lists
+      // Updated signature accepting iconSvg as a 4th parameter
       const renderContentToDisplay = (
         titleText,
         descriptionData,
         imagePath = null,
+        iconSvg = null,
       ) => {
         const subtitle = document.getElementById("site-subtitle");
         const subdescription = document.getElementById("site-subdescription");
 
         if (subtitle && titleText) {
-          subtitle.textContent = titleText;
+          // Safe icon check: use passed iconSvg or fallback to default profile SVG
+          const iconMarkup = iconSvg
+            ? `<span class="text-sky-600 shrink-0 flex items-center">${iconSvg}</span>`
+            : `<svg class="w-6 h-6 text-sky-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>`;
+
+          subtitle.innerHTML = `
+      <div class="flex items-center gap-2.5 text-slate-900 font-extrabold text-2xl tracking-tight">
+        ${iconMarkup}
+        <span>${titleText}</span>
+      </div>
+    `;
         }
 
         if (subdescription) {
@@ -289,7 +300,12 @@ document.addEventListener("DOMContentLoaded", () => {
             if (btn.title || btn.description) {
               e.preventDefault();
               setActiveButton(anchor);
-              renderContentToDisplay(btn.title, btn.description, btn.image);
+              renderContentToDisplay(
+                btn.title,
+                btn.description,
+                btn.image,
+                btn.icon,
+              );
             }
           });
         }
@@ -313,7 +329,12 @@ document.addEventListener("DOMContentLoaded", () => {
               e.preventDefault();
               e.stopPropagation();
               setActiveButton(anchor);
-              renderContentToDisplay(item.title, item.description, item.image);
+              renderContentToDisplay(
+                item.title,
+                item.description,
+                item.image,
+                btn.icon,
+              );
             });
             dropdownMenu.appendChild(menuLink);
           });
@@ -349,6 +370,7 @@ document.addEventListener("DOMContentLoaded", () => {
           defaultButton.title,
           defaultButton.description,
           defaultButton.image,
+          defaultButton.icon,
         );
       }
     })
