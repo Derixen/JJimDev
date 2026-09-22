@@ -47,7 +47,7 @@
           "role": "Technical Architect",
           "statusBadge": "Active Role",
           "company": "CGF CounselGroupFrankfurt AG",
-          "imageUrl": "images/CGF.png",
+          "imageUrl": "images/cgf.png",
           "logoText": "CGF",
           "date": "2022 – Present",
           "desc": "Serving as Technical Architect managing an in-house <strong>ASP.NET MVC deployment platform</strong> for a major European automotive manufacturer. Engineered direct API/SDK integrations with <strong>Matrix42 Enterprise Manager</strong> and <strong>SCCM</strong> inside Visual Studio Enterprise, enabling real-time application deployment tasks that trigger immediate endpoint agent installations—bypassing traditional SCCM/Intune polling delays while managing full-stack C# backend logic, database operations, and frontend UI.",
@@ -256,11 +256,17 @@
       "title": "Professional Training & Coursework",
       "description": [
         {
-          "role": "<div class='flex items-center gap-2'><span class='inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-semibold text-slate-800 bg-white/80 rounded-md border border-slate-300 shadow-sm'><img src='images/udemy.png' alt='Microsoft' class='w-18 h-8 object-contain' /></span> <span class='font-semibold text-slate-800'>2018: The Complete ASP.NET MVC 5 Course (Mosh Hamedani)</span></div>",
+          "title": "The Complete ASP.NET MVC 5 Course (Mosh Hamedani)",
+          "vendor": "Udemy",
+          "year": "2018",
+          "logo": "images/udemy.png",
           "desc": "Mastered full-stack web development using ASP.NET MVC 5, focusing on C# backend architecture, RESTful APIs, Entity Framework ORM, SQL database integration, and responsive frontend design."
         },
         {
-          "role": "<div class='flex items-center gap-2'><span class='inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-semibold text-slate-800 bg-white/80 rounded-md border border-slate-300 shadow-sm'><img src='images/udemy.png' alt='Microsoft' class='w-18 h-8 object-contain' /></span> <span class='font-semibold text-slate-800'>2025: The Complete JavaScript Course: From Zero to Expert! (Jonas Schmedtmann)</span></div>",
+          "title": "The Complete JavaScript Course: From Zero to Expert! (Jonas Schmedtmann)",
+          "vendor": "Udemy",
+          "year": "2025",
+          "logo": "images/udemy.png",
           "desc": "Deepening core JavaScript mastery covering modern ES6+ features, asynchronous programming (Promises, Async/Await), OOP principles, DOM manipulation, and modern web application architecture."
         }
       ]
@@ -274,19 +280,31 @@
       "title": "Licenses & Certifications",
       "description": [
         {
-          "role": "<div class='flex items-center gap-2'><span class='inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-semibold text-slate-800 bg-white/80 rounded-md border border-slate-300 shadow-sm'><img src='images/microsoft.png' alt='Microsoft' class='w-18 h-8 object-contain' /></span> <span class='font-semibold text-slate-800'>2018 — System Center Configuration Manager: Current Branch</span></div>",
+          "title": "System Center Configuration Manager: Current Branch",
+          "vendor": "Evosoft (Siemens)",
+          "year": "2018",
+          "logo": "images/microsoft.png",
           "desc": "Evosoft (Siemens) — Advanced enterprise training on modern SCCM/MECM Current Branch architecture, CMG deployment, and endpoint management."
         },
         {
-          "role": "<div class='flex items-center gap-2'><span class='inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-semibold text-slate-800 bg-white/80 rounded-md border border-slate-300 shadow-sm'><img src='images/symantec.png' alt='Microsoft' class='w-18 h-8 object-contain' /></span> <span class='font-semibold text-slate-800'>2015 — Client Management Suite 7.5: Administration</span></div>",
+          "title": "Client Management Suite 7.5: Administration",
+          "vendor": "Symantec",
+          "year": "2015",
+          "logo": "images/symantec.png",
           "desc": "Acquired comprehensive administration expertise in Altiris Client Management Suite 7.5, specializing in endpoint management and software delivery pipelines."
         },
         {
-          "role": "<div class='flex items-center gap-2'><span class='inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-semibold text-slate-800 bg-white/80 rounded-md border border-slate-300 shadow-sm'><img src='images/microsoft.png' alt='Microsoft' class='w-18 h-8 object-contain' /></span> <span class='font-semibold text-slate-800'>2013 — System Center 2012 Configuration Manager</span></div>",
+          "title": "System Center 2012 Configuration Manager",
+          "vendor": "Training360",
+          "year": "2013",
+          "logo": "images/microsoft.png",
           "desc": "Training360 — Formal enterprise training covering SCCM 2012 site deployment, software packaging, and centralized patch management."
         },
         {
-          "role": "<div class='flex items-center gap-2'><span class='inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-semibold text-slate-800 bg-white/80 rounded-md border border-slate-300 shadow-sm'><img src='images/microsoft.png' alt='Microsoft' class='w-18 h-8 object-contain' /></span> <span class='font-semibold text-slate-800'>2009 — Desktop Support Technician (MCDST)</span></div>",
+          "title": "Desktop Support Technician (MCDST)",
+          "vendor": "ControllTraining Kft.",
+          "year": "2009",
+          "logo": "images/microsoft.png",
           "desc": "ControllTraining Kft. — Demonstrated core competency in troubleshooting Windows desktop environments, client OS, and remote support."
         }
       ]

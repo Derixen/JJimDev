@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
         );
       };
 
-      // Clean helper function: Handles strings, images, links, and array-based bullet lists
+      // Clean helper function: Handles strings, images, links, career cards, certifications, and bullet lists
       const renderContentToDisplay = (
         titleText,
         descriptionData,
@@ -113,65 +113,116 @@ document.addEventListener("DOMContentLoaded", () => {
             const cardsHtml = descriptionData
               .map((item) => {
                 if (typeof item === "object") {
-                  // Render Tech Stack Badges
-                  const tags = item.techStack
-                    ? item.techStack
-                        .map(
-                          (tech) =>
-                            `<span class="px-2.5 py-1 text-xs font-mono font-medium rounded-md bg-sky-50/80 text-sky-700 border border-sky-200/80 shadow-2xs">${tech}</span>`,
-                        )
-                        .join("")
-                    : "";
+                  // --- TYPE 1: Certifications & Trainings (Cleaned Title/Vendor Structure) ---
+                  if (item.title && (item.vendor || item.year || item.logo)) {
+                    const logoMarkup = item.logo
+                      ? `<div class="w-12 h-10 rounded-xl bg-white border border-slate-200 p-1 flex items-center justify-center shrink-0 shadow-2xs">
+                           <img src="${item.logo}" alt="${item.vendor || "Vendor"}" class="w-full h-full object-contain" />
+                         </div>`
+                      : "";
 
-                  // Dynamic Image or Text Logo Fallback
-                  const logoContainer = item.imageUrl
-                    ? `<div class="w-14 h-12 rounded-xl bg-white border border-slate-200 p-1.5 flex items-center justify-center shrink-0 shadow-2xs">
-                       <img src="${item.imageUrl}" alt="${item.company}" class="w-full h-full object-contain" />
-                     </div>`
-                    : `<div class="w-14 h-12 rounded-xl bg-sky-50 border border-sky-200 flex items-center justify-center font-bold text-sky-700 text-sm shrink-0">
-                       ${item.logoText || "IT"}
-                     </div>`;
+                    const yearBadge = item.year
+                      ? `<div class="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-sky-50 border border-sky-200/80 text-xs font-mono font-medium text-sky-700 shrink-0">
+                           <svg class="w-3.5 h-3.5 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                           </svg>
+                           <span>${item.year}</span>
+                         </div>`
+                      : "";
 
-                  return `
-              <div class="bg-white/90 backdrop-blur-md border border-slate-200/90 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-200 text-left mb-5">
-                
-                <!-- Header Row -->
-                <div class="flex items-start justify-between gap-4 mb-3">
-                  <div class="flex items-center gap-3.5">
-                    ${logoContainer}
-                    <div>
-                      <div class="flex items-center gap-2 flex-wrap">
-                        <h3 class="text-xl font-bold text-slate-900 tracking-tight">${item.role}</h3>
+                    return `
+                    <div class="bg-white/90 backdrop-blur-md border border-slate-200/90 rounded-2xl p-5 shadow-sm hover:shadow-md transition-all duration-200 text-left mb-4">
+                      <div class="flex items-start justify-between gap-4">
+                        <div class="flex items-center gap-3.5">
+                          ${logoMarkup}
+                          <div>
+                            <h3 class="text-base font-bold text-slate-900 tracking-tight leading-snug">${item.title}</h3>
+                            ${
+                              item.vendor
+                                ? `<p class="text-xs font-semibold text-slate-400 mt-0.5">${item.vendor}</p>`
+                                : ""
+                            }
+                          </div>
+                        </div>
+                        ${yearBadge}
+                      </div>
+                      ${
+                        item.desc
+                          ? `<p class="text-slate-600 text-sm leading-relaxed mt-3 pt-3 border-t border-slate-100">${formatTextWithLinks(item.desc)}</p>`
+                          : ""
+                      }
+                    </div>`;
+                  }
+
+                  // --- TYPE 2: Career Experience Cards ---
+                  if (item.role) {
+                    const tags = item.techStack
+                      ? item.techStack
+                          .map(
+                            (tech) =>
+                              `<span class="px-2.5 py-1 text-xs font-mono font-medium rounded-md bg-sky-50/80 text-sky-700 border border-sky-200/80 shadow-2xs">${tech}</span>`,
+                          )
+                          .join("")
+                      : "";
+
+                    const logoContainer = item.imageUrl
+                      ? `<div class="w-14 h-12 rounded-xl bg-white border border-slate-200 p-1.5 flex items-center justify-center shrink-0 shadow-2xs">
+                         <img src="${item.imageUrl}" alt="${item.company}" class="w-full h-full object-contain" />
+                       </div>`
+                      : `<div class="w-14 h-12 rounded-xl bg-sky-50 border border-sky-200 flex items-center justify-center font-bold text-sky-700 text-sm shrink-0">
+                         ${item.logoText || "IT"}
+                       </div>`;
+
+                    return `
+                    <div class="bg-white/90 backdrop-blur-md border border-slate-200/90 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-200 text-left mb-5">
+                      
+                      <!-- Header Row -->
+                      <div class="flex items-start justify-between gap-4 mb-3">
+                        <div class="flex items-center gap-3.5">
+                          ${logoContainer}
+                          <div>
+                            <div class="flex items-center gap-2 flex-wrap">
+                              <h3 class="text-xl font-bold text-slate-900 tracking-tight">${item.role}</h3>
+                              ${
+                                item.statusBadge
+                                  ? `<span class="px-2.5 py-0.5 text-xs font-mono font-medium rounded-full bg-sky-50 text-sky-600 border border-sky-200/80">${item.statusBadge}</span>`
+                                  : ""
+                              }
+                            </div>
+                            ${
+                              item.company
+                                ? `<p class="text-sm font-medium text-slate-500 mt-0.5">${item.company}</p>`
+                                : ""
+                            }
+                          </div>
+                        </div>
+
                         ${
-                          item.statusBadge
-                            ? `<span class="px-2.5 py-0.5 text-xs font-mono font-medium rounded-full bg-sky-50 text-sky-600 border border-sky-200/80">${item.statusBadge}</span>`
+                          item.date
+                            ? `<div class="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-slate-50 border border-slate-200/80 text-xs font-mono text-slate-600 shrink-0">
+                                 <svg class="w-3.5 h-3.5 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                 </svg>
+                                 <span>${item.date}</span>
+                               </div>`
                             : ""
                         }
                       </div>
-                      <p class="text-sm font-medium text-slate-500 mt-0.5">${item.company}</p>
-                    </div>
-                  </div>
 
-                  <!-- Date Tag -->
-                  <div class="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-slate-50 border border-slate-200/80 text-xs font-mono text-slate-600 shrink-0">
-                    <svg class="w-3.5 h-3.5 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                    </svg>
-                    <span>${item.date}</span>
-                  </div>
-                </div>
+                      <!-- Description Body -->
+                      <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        ${formatTextWithLinks(item.desc)}
+                      </p>
 
-                <!-- Description Body -->
-                <p class="text-slate-600 text-sm leading-relaxed mb-4">
-                  ${formatTextWithLinks(item.desc)}
-                </p>
+                      <!-- Tech Stack Pills -->
+                      ${
+                        tags
+                          ? `<div class="flex flex-wrap gap-2 pt-1">${tags}</div>`
+                          : ""
+                      }
 
-                <!-- Tech Stack Pills -->
-                <div class="flex flex-wrap gap-2 pt-1">
-                  ${tags}
-                </div>
-
-              </div>`;
+                    </div>`;
+                  }
                 }
                 return `<div class="mb-3 text-left text-slate-700">${formatTextWithLinks(item)}</div>`;
               })
