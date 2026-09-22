@@ -12,28 +12,38 @@
     <div
       class="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-5xl mx-auto w-full px-4 mt-8"
     >
-      <!-- Row 1: Separate Grid Container for Title (Name) -->
+      <!-- Row 1: Title Container (Name) -->
       <div
-        class="md:col-span-4 jimboxbg p-5 rounded-xl border border-sky-300/60 shadow-lg shadow-sky-500/5 text-center"
+        class="md:col-span-4 jimboxbg p-6 rounded-2xl text-center flex flex-col items-center justify-center gap-1"
       >
-        <div id="site-heading" class="jim-title-text"></div>
+        <h1
+          id="site-heading"
+          class="text-3xl md:text-4xl font-extrabold text-[#0B192C] tracking-tight"
+        ></h1>
+        <p
+          id="main-subheading"
+          class="text-base md:text-lg font-semibold text-[#0066B2] tracking-wide mt-0.5"
+        ></p>
       </div>
 
-      <!-- Row 2: Separate Grid Container for Subtitle -->
+      <!-- Row 2: Subtitle Container -->
       <div
         class="md:col-span-4 jimboxbg p-4 rounded-xl border border-slate-200 text-center"
       >
         <div id="site-description" class="jim-subtitle-text"></div>
       </div>
 
-      <!-- Row 3 - Left: Navigation Sidebar -->
+      <!-- Row 3: Independent Stats Grid Row -->
+      <div id="stats-grid-container" class="md:col-span-4"></div>
+
+      <!-- Row 4 - Left: Navigation Sidebar -->
       <div
         class="md:col-span-1 jimboxbg p-6 rounded-xl border border-slate-200"
       >
         <div id="button-container" class="flex flex-col gap-4 w-full"></div>
       </div>
 
-      <!-- Row 3 - Right: Main Content Display Area -->
+      <!-- Row 4 - Right: Main Content Display Area -->
       <div
         class="md:col-span-3 jimboxbg p-6 rounded-xl border border-slate-200 text-slate-200"
       >

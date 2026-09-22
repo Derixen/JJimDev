@@ -32,30 +32,12 @@ p {
 .jim-subtitle-text {
   @apply text-lg tracking-tight text-slate-900;
 }
+
 .jimbg {
-  min-height: 100vh;
-  /* Distinct Sky Blue to Slate Gradient */
-  background: linear-gradient(
-    135deg,
-    #dffaf7 0%,
-    #f8f8fc 50%,
-    #dffaf7 100%
-  ) !important;
-  color: #0f172a;
+  background-color: #f5f6fa; /* Smooth Slate-300 base */
 }
 .jimboxbg {
-  background: linear-gradient(
-    135deg,
-    #dfeffa 29%,
-    #f1f5f9 30%,
-    #dfeffa 30%,
-    #dfeffa 69%,
-    #f1f5f9 70%,
-    #dfeffa 70%,
-    #f1f5f9 80%,
-    #dfeffa 80%
-  ) !important;
-  @apply bg-slate-200/80 rounded-xl border border-slate-300 shadow-xl shadow-slate-300/30;
+  @apply bg-white/90 backdrop-blur-md rounded-2xl border border-slate-200/90 shadow-sm transition-all duration-200;
 }
 .jim-text-title {
   @apply text-xl font-extrabold tracking-tight text-slate-600;
@@ -68,31 +50,29 @@ p {
   color: var(--color-slate-500); /* Or use an explicit hex like #cbd5e1 */
 }
 /* --- 3. Custom Button Components --- */
+/* Base vertical button styling */
 .btn-jim {
-  /* Layout & Alignment */
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-
-  /* Spacing & Typography */
-  @apply py-3 px-6 text-sm font-semibold;
-
-  /* Aesthetics & Smooth Transitions */
-  @apply rounded-xl transition-all duration-200 ease-out;
-
-  /* Accessibility & Tactile Micro-Interactions */
-  @apply cursor-pointer select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 active:scale-[0.98];
+  @apply w-full py-2.5 px-4 rounded-xl text-sm font-semibold 
+         flex items-center justify-start gap-2.5 
+         transition-all duration-200 cursor-pointer 
+         focus:outline-none active:scale-[0.98];
 }
 
-/* Color & Hover State */
+/* Inactive button state: sleek transparent/subtle style */
 .btn-jim-slate {
-  @apply bg-slate-300/80 text-slate-800 border border-slate-400/50 
-         shadow-md shadow-slate-500/10 
-         hover:bg-sky-500 hover:text-white hover:bg-slate-400/80 
-         hover:shadow-lg hover:shadow-slate-500/25 hover:-translate-y-0.5;
+  @apply text-slate-700 bg-transparent 
+         hover:bg-[#e8f2fc] hover:text-[#0066b2] 
+         border border-transparent hover:border-[#b3d7f5];
 }
 
+/* Active button state: soft blue pill style like your screenshot */
+.btn-jim-active {
+  @apply bg-[#ebf5ff] text-[#0066b2] border border-[#b3d7f5] shadow-xs;
+}
+
+/* Active/Selected Button Accent */
 .btn-jim-sky {
-  @apply bg-sky-400 hover:bg-sky-400 shadow-sky-500/20;
+  @apply bg-sky-600 text-white border border-sky-500 
+         shadow-md shadow-sky-500/25 
+         hover:bg-sky-500 hover:-translate-y-0.5;
 }
