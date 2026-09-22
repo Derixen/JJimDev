@@ -228,6 +228,13 @@
           "title": "Active Directory Security Group Updater",
           "image": "images/adsgu-tool.png",
           "description": "Bulk administration utility built to perform safe, high-speed Active Directory security group membership updates. Enables administrators to add or remove multiple target user/computer objects across multiple groups simultaneously in a single execution pass.\n\nIncludes a dedicated real-time Error Handling & Reporting Grid that tracks individual operation statuses (e.g., User Added, User Not Found, Already a Member). Provides immediate visual confirmation and instant audit feedback for ticket documentation.\n\nDocumentation: https://peskyjim.blogspot.com/p/ad-security-group-updater.html"
+        },
+        {
+          "id": "client-support-tool",
+          "text": "Client Support Tool",
+          "title": "Enterprise Client Support Utility",
+          "image": "images/ClientSupportTool.png",
+          "description": "<p class='text-slate-600 text-sm leading-relaxed mb-3'>A feature-rich PowerShell WPF GUI engineered to streamline single-endpoint administration, remote diagnostics, and automated infrastructure repairs.</p><ul class='list-disc list-inside text-sm text-slate-600 space-y-1'><li><strong>Automated Diagnostics:</strong> Real-time status checks for WMI, C$ share access, DNS conflicts, and disk space.</li><li><strong>1-Click Remediation:</strong> Built-in repair actions for WMI repository, SCCM Client agent, and Windows Update Agent.</li><li><strong>Remote Administration:</strong> Direct shortcuts for CMD, elevated System sessions, and interactive PSSessions.</li><li><strong>Live Telemetry:</strong> Synchronous execution log console alongside structured status tables.</li></ul>"
         }
       ]
     },
