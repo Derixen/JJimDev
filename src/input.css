@@ -3,7 +3,8 @@
 
 /* --- 1. Global Reset & Body Styling --- */
 body {
-  @apply bg-[#f5f6fa] min-h-screen flex items-start justify-center pt-8 font-sans antialiased;
+  background-color: #f5f6fa;
+  @apply min-h-screen flex items-start justify-center pt-8 font-sans antialiased;
 }
 
 /* --- 2. Typography Overrides --- */
@@ -26,19 +27,19 @@ p {
 }
 
 .header-card {
-  @apply card-container p-6 text-center flex flex-col items-center justify-center gap-1;
+  @apply bg-white/90 backdrop-blur-md rounded-2xl border border-slate-200/90 p-6 shadow-2xs text-left flex flex-col justify-center gap-1 pl-6;
 }
 
 .sub-header-card {
-  @apply card-container p-4 text-center;
+  @apply bg-white/90 backdrop-blur-md rounded-2xl border border-slate-200/90 shadow-sm transition-all duration-200 p-4 text-center;
 }
 
 .sidebar-card {
-  @apply card-container p-6;
+  @apply bg-white/90 backdrop-blur-md rounded-2xl border border-slate-200/90 shadow-sm transition-all duration-200 p-6;
 }
 
 .content-card {
-  @apply card-container p-6 text-slate-200;
+  @apply bg-white/90 backdrop-blur-md rounded-2xl border border-slate-200/90 shadow-sm transition-all duration-200 p-6 text-slate-200;
 }
 
 /* --- 4. Content Elements --- */
@@ -47,7 +48,7 @@ p {
 }
 
 .site-subheading {
-  @apply text-base md:text-lg font-bold text-[#0066B2] tracking-wide mt-0.5;
+  @apply text-base text-[#0B192C] tracking-wide mt-0.5;
 }
 
 .site-desc {
@@ -102,7 +103,6 @@ p {
          tracking-wide max-w-3xl leading-relaxed;
 }
 
-/* Optional pseudo-element quotes for automatic quotation marks */
 .quote-text::before {
   content: "“";
   @apply text-sky-500 font-serif font-bold text-xl mr-1;
