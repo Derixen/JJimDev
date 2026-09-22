@@ -11,9 +11,32 @@
       class="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-5xl mx-auto w-full px-4 mt-8"
     >
       <!-- Row 1: Title Container -->
-      <div class="md:col-span-4 header-card px-4">
-        <h1 id="site-heading" class="site-title"></h1>
-        <p id="main-subheading" class="site-subheading"></p>
+      <div
+        class="md:col-span-4 header-card px-6 py-5 flex items-center justify-between gap-4"
+      >
+        <!-- Title & Subtitle Text (Left Aligned) -->
+        <div class="flex flex-col justify-center text-left">
+          <h1 id="site-heading" class="site-title">Janos Robert Friedrich</h1>
+          <p id="main-subheading" class="site-subheading">
+            Enterprise Systems Architect & Infrastructure Engineer
+          </p>
+        </div>
+
+        <!-- Profile Image (Right Aligned) -->
+        <div
+          class="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-slate-900 border-2 border-sky-500/30 shadow-md flex items-center justify-center shrink-0 overflow-hidden group"
+        >
+          <img
+            src="images/profile.png"
+            alt="Janos Robert Friedrich"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            onerror="
+              this.onerror = null;
+              this.parentElement.innerHTML =
+                '<span class=\'text-2xl font-black text-sky-400\'>JF</span>';
+            "
+          />
+        </div>
       </div>
 
       <!-- Row 2: Description Box -->

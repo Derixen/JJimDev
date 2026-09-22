@@ -27,7 +27,7 @@ p {
 }
 
 .header-card {
-  @apply bg-white/90 backdrop-blur-md rounded-2xl border border-slate-200/90 p-6 shadow-2xs text-left flex flex-col justify-center gap-1 pl-6;
+  @apply bg-white/90 backdrop-blur-md rounded-2xl border border-slate-200/90 p-6 shadow-2xs w-full flex items-center justify-between gap-4;
 }
 
 .sub-header-card {
