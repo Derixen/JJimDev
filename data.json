@@ -183,24 +183,7 @@
           "text": "Logon Script",
           "title": "StartUp / LogonScript Handler Framework",
           "image": "images/logonscript.png",
-          "description": [
-            {
-              "role": "Modular Master Controller",
-              "desc": "Engineered a centralized VBScript master controller that automatically orchestrates and executes child scripts (VBScript and Batch) placed within designated target directories."
-            },
-            {
-              "role": "Active Directory Group Targeting",
-              "desc": "Implemented dynamic membership checking that cross-references the client computer's AD groups against script filenames (omitting extension) to conditionally run targeted scripts only for authorized endpoints."
-            },
-            {
-              "role": "Standardized Logging Template",
-              "desc": "Enforced a uniform script template across all modules, automatically writing local client log files to streamline troubleshooting during execution failures."
-            },
-            {
-              "role": "Performance Monitoring & Optimization",
-              "desc": "Integrated a centralized execution log that calculates individual script runtimes and outputs total elapsed time per session to benchmark and optimize overall user logon duration."
-            }
-          ]
+          "description": "<h3>Active Directory Group Targeting</h3>Implemented dynamic membership checking that cross-references the client computer's AD groups against script filenames (omitting extension) to conditionally run targeted scripts only for authorized endpoints<br><br><h3>Standardized Logging Template</h3>Enforced a uniform script template across all modules, automatically writing local client log files to streamline troubleshooting during execution failures.<br><br><h3>Performance Monitoring & Optimization</h3>Integrated a centralized execution log that calculates individual script runtimes and outputs total elapsed time per session to benchmark and optimize overall user logon duration."
         },
         {
           "id": "sccm-matrix42-framework-tester",

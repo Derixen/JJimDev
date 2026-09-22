@@ -44,5 +44,29 @@
     </div>
 
     <script src="app.js"></script>
+
+    <!-- Image Lightbox Modal -->
+    <div
+      id="image-modal"
+      class="fixed inset-0 z-50 hidden bg-slate-900/80 backdrop-blur-sm flex items-center justify-center p-4 cursor-pointer"
+      onclick="closeModal()"
+    >
+      <div
+        class="relative max-w-5xl max-h-[90vh] flex items-center justify-center"
+      >
+        <img
+          id="modal-img"
+          src=""
+          alt="Enlarged View"
+          class="max-w-full max-h-[85vh] rounded-xl shadow-2xl object-contain border border-slate-700"
+        />
+        <button
+          onclick="closeModal()"
+          class="absolute -top-10 right-0 text-white hover:text-sky-400 font-bold text-sm bg-slate-800/80 px-3 py-1 rounded-lg border border-slate-700"
+        >
+          Close ✕
+        </button>
+      </div>
+    </div>
   </body>
 </html>

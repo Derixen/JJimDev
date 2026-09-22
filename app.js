@@ -4,6 +4,31 @@
  * generates components for index.html.
  */
 
+// --- LIGHTBOX MODAL CONTROLLER (STEP 3) ---
+function openModal(imageSrc) {
+  const modal = document.getElementById("image-modal");
+  const modalImg = document.getElementById("modal-img");
+
+  if (modal && modalImg) {
+    modalImg.src = imageSrc;
+    modal.classList.remove("hidden");
+    document.body.style.overflow = "hidden"; // Prevent background scrolling
+  }
+}
+
+function closeModal() {
+  const modal = document.getElementById("image-modal");
+  if (modal) {
+    modal.classList.add("hidden");
+    document.body.style.overflow = ""; // Restore background scrolling
+  }
+}
+
+// Close modal when pressing ESC key
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeModal();
+});
+
 document.addEventListener("DOMContentLoaded", () => {
   // 1. Fetch data collection from JSON configuration file
   fetch("data.json")
@@ -109,13 +134,17 @@ document.addEventListener("DOMContentLoaded", () => {
         if (subdescription) {
           subdescription.innerHTML = ""; // Clear current display container
 
-          // A. Render Image if present
+          // A. Render Image if present (STEP 2: ENLARGABLE ON CLICK)
           if (imagePath) {
             const imgElement = document.createElement("img");
             imgElement.src = imagePath;
             imgElement.alt = titleText || "Tool Screenshot";
             imgElement.className =
-              "w-full max-h-72 object-contain rounded-xl border border-slate-200 shadow-sm mb-4 mt-2 bg-white p-2";
+              "w-full max-h-96 object-contain rounded-xl border border-slate-200 shadow-sm mb-4 mt-2 bg-white p-2 cursor-zoom-in hover:opacity-95 transition-all duration-200";
+
+            // Attach lightbox trigger on click
+            imgElement.addEventListener("click", () => openModal(imagePath));
+
             subdescription.appendChild(imgElement);
           }
 
