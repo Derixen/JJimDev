@@ -300,28 +300,7 @@
       "styleClass": "btn-jim btn-jim-slate",
       "title": "About This Site",
       "image": "images/about.jif",
-      "description": [
-        {
-          "role": "Architecture & Data Flow",
-          "desc": "Built with a lightweight, data-driven architecture that completely separates layout from content. All site metadata, navigation buttons, and tool project entries are stored externally in a structured data.json file."
-        },
-        {
-          "role": "Frontend & Styling",
-          "desc": "Engineered using HTML5 and Tailwind CSS v4 for a responsive, dark-mode dashboard. Utilizes utility-first CSS components to maintain consistent typography, button states, and hover effects across desktop and mobile devices."
-        },
-        {
-          "role": "Dynamic Rendering",
-          "desc": "Powered by a custom vanilla JavaScript engine (app.js) that fetches data.json asynchronously on page load to dynamically render interface elements, populate project details, and build interactive dropdown context menus."
-        },
-        {
-          "role": "AI Assistance & Development",
-          "desc": "Designed and refactored with the help of AI assistance (Gemini) to accelerate code iteration, optimize Tailwind CSS utility layouts, refine dynamic JSON parsing, and polish responsive UI styling."
-        },
-        {
-          "role": "Hosting & Deployment",
-          "desc": "Zero-framework overhead delivering instant page loads. Version-controlled on GitHub and deployed via GitHub Pages with custom domain integration (jjim.dev)."
-        }
-      ]
+      "description": "<h3 class='text-lg font-bold text-slate-900 border-b border-slate-200 pb-1 mb-2'>Architecture & Data Flow</h3><p class='text-slate-600 text-sm leading-relaxed mb-5'>Built with a lightweight, data-driven architecture that completely separates layout from content. All site metadata, navigation buttons, and tool project entries are stored externally in a structured <b><code>data.json</code></b> file.</p><h3 class='text-lg font-bold text-slate-900 border-b border-slate-200 pb-1 mb-2'>Frontend & Styling</h3><p class='text-slate-600 text-sm leading-relaxed mb-5'>Engineered using <b>HTML5</b> and <b>Tailwind CSS v4</b> for a responsive layout. Utilizes utility-first CSS components to maintain consistent typography, button states, and hover effects across desktop and mobile devices.</p><h3 class='text-lg font-bold text-slate-900 border-b border-slate-200 pb-1 mb-2'>Dynamic Rendering</h3><p class='text-slate-600 text-sm leading-relaxed mb-5'>Powered by a custom vanilla <b>JavaScript</b> engine (<code>app.js</code>) that fetches <code>data.json</code> asynchronously on page load to dynamically render interface elements, populate project details, and build interactive dropdown context menus.</p><h3 class='text-lg font-bold text-slate-900 border-b border-slate-200 pb-1 mb-2'>AI Assistance & Development</h3><p class='text-slate-600 text-sm leading-relaxed mb-5'>Designed and refactored with the help of <b>AI assistance (Gemini)</b> to accelerate code iteration, optimize Tailwind CSS utility layouts, refine dynamic JSON parsing, and polish responsive UI styling.</p><h3 class='text-lg font-bold text-slate-900 border-b border-slate-200 pb-1 mb-2'>Hosting & Deployment</h3><p class='text-slate-600 text-sm leading-relaxed'>Zero-framework overhead delivering instant page loads. Version-controlled on <b>GitHub</b> and deployed via <b>GitHub Pages</b> with custom domain integration (<code>jjim.dev</code>).</p>"
     }
   ]
 }
