@@ -329,12 +329,6 @@
   .h-12 {
     height: calc(var(--spacing) * 12);
   }
-  .h-16 {
-    height: calc(var(--spacing) * 16);
-  }
-  .h-18 {
-    height: calc(var(--spacing) * 18);
-  }
   .h-24 {
     height: calc(var(--spacing) * 24);
   }
@@ -374,14 +368,11 @@
   .w-14 {
     width: calc(var(--spacing) * 14);
   }
-  .w-16 {
-    width: calc(var(--spacing) * 16);
-  }
-  .w-18 {
-    width: calc(var(--spacing) * 18);
-  }
   .w-24 {
     width: calc(var(--spacing) * 24);
+  }
+  .w-fit {
+    width: fit-content;
   }
   .w-full {
     width: 100%;
@@ -504,6 +495,14 @@
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
   }
+  .border-b-8 {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 8px;
+  }
+  .border-double {
+    --tw-border-style: double;
+    border-style: double;
+  }
   .border-sky-100 {
     border-color: var(--color-sky-100);
   }
@@ -539,6 +538,9 @@
     @supports (color: color-mix(in lab, red, red)) {
       border-color: color-mix(in oklab, var(--color-sky-500) 30%, transparent);
     }
+  }
+  .border-sky-600 {
+    border-color: var(--color-sky-600);
   }
   .border-slate-100 {
     border-color: var(--color-slate-100);
@@ -668,6 +670,9 @@
   }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
+  }
+  .py-3 {
+    padding-block: calc(var(--spacing) * 3);
   }
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
@@ -983,19 +988,9 @@
       grid-column: span 4 / span 4;
     }
   }
-  .md\:h-20 {
-    @media (width >= 48rem) {
-      height: calc(var(--spacing) * 20);
-    }
-  }
   .md\:h-28 {
     @media (width >= 48rem) {
       height: calc(var(--spacing) * 28);
-    }
-  }
-  .md\:w-20 {
-    @media (width >= 48rem) {
-      width: calc(var(--spacing) * 20);
     }
   }
   .md\:w-28 {
@@ -1209,7 +1204,7 @@ p {
   line-height: var(--tw-leading, var(--text-base--line-height));
   --tw-tracking: var(--tracking-wide);
   letter-spacing: var(--tracking-wide);
-  color: #0B192C;
+  color: var(--color-slate-600);
 }
 .site-desc {
   margin-top: calc(var(--spacing) * 0.5);

@@ -48,7 +48,7 @@ p {
 }
 
 .site-subheading {
-  @apply text-base text-[#0B192C] tracking-wide mt-0.5;
+  @apply text-base text-slate-600 tracking-wide mt-0.5;
 }
 
 .site-desc {
