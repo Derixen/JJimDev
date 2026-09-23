@@ -23,7 +23,9 @@ p {
 
 /* --- 3. Custom Card Components --- */
 .card-container {
-  @apply bg-white/90 backdrop-blur-md rounded-2xl border border-slate-200/90 shadow-sm transition-all duration-200;
+  @apply bg-white/90 backdrop-blur-md rounded-2xl border border-slate-200/90 p-4
+         transition-all duration-200 cursor-pointer
+         hover:bg-[#ebf5ff] hover:border-[#b3d7f5] hover:-translate-y-0.5 hover:shadow-xs;
 }
 
 .header-card {

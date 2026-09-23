@@ -59,11 +59,11 @@ document.addEventListener("DOMContentLoaded", () => {
       if (siteDescription && data.sitedescription) {
         siteDescription.textContent = data.sitedescription;
       }
-
       // Inject Stats Grid under Subtitle
       const statsGridContainer = document.getElementById(
         "stats-grid-container",
       );
+
       if (
         statsGridContainer &&
         data.statsGrid &&
@@ -72,25 +72,24 @@ document.addEventListener("DOMContentLoaded", () => {
         const gridHtml = data.statsGrid
           .map(
             (stat) => `
-      <div class="bg-white/90 backdrop-blur-md border border-slate-200/90 rounded-2xl p-4 shadow-2xs hover:shadow-sm transition-all duration-200 flex flex-col justify-between">
-        <div class="flex items-center justify-between gap-2 mb-2">
-          <span class="text-[11px] font-mono font-bold tracking-wider text-slate-400 uppercase">${stat.category}</span>
-          <div class="p-1 rounded-lg bg-sky-50 border border-sky-100/80 shrink-0">
-            ${stat.icon || ""}
-          </div>
-        </div>
-        <div>
-          <div class="text-lg font-extrabold text-slate-900 tracking-tight leading-snug">${stat.value}</div>
-          <div class="text-xs font-medium text-slate-500 mt-0.5">${stat.label}</div>
+    <div class="bg-white/90 backdrop-blur-md border border-slate-200/90 rounded-2xl p-4 shadow-2xs transition-all duration-200 cursor-pointer hover:bg-[#ebf5ff] hover:border-[#b3d7f5] hover:-translate-y-0.5 hover:shadow-md flex flex-col justify-between">
+      <div class="flex items-center justify-between gap-2 mb-2">
+        <span class="text-[11px] font-mono font-bold tracking-wider text-slate-400 uppercase">${stat.category}</span>
+        <div class="p-1.5 rounded-lg bg-sky-50 border border-sky-100/80 shrink-0">
+          ${stat.icon || ""}
         </div>
       </div>
-    `,
+      <div>
+        <div class="text-lg font-extrabold text-slate-900 tracking-tight leading-snug">${stat.value}</div>
+        <div class="text-xs font-medium text-slate-500 mt-0.5">${stat.label}</div>
+      </div>
+    </div>
+  `,
           )
           .join("");
 
         statsGridContainer.innerHTML = `<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">${gridHtml}</div>`;
       }
-
       // 3. Clear and secure the primary layout injection target
       const buttonContainer = document.getElementById("button-container");
       if (!buttonContainer) return;
