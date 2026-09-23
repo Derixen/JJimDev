@@ -244,21 +244,76 @@
       "url": "#Trainings",
       "styleClass": "btn-jim btn-jim-slate",
       "page": "site",
-      "title": "Professional Training & Coursework",
-      "description": [
+      "dropdownItems": [
         {
-          "title": "The Complete ASP.NET MVC 5 Course (Mosh Hamedani)",
-          "vendor": "Udemy",
-          "year": "2018",
-          "logo": "images/udemy.png",
-          "desc": "Mastered full-stack web development using ASP.NET MVC 5, focusing on C# backend architecture, RESTful APIs, Entity Framework ORM, SQL database integration, and responsive frontend design."
+          "id": "trainings-delivered",
+          "text": "Delivered Trainings",
+          "title": "Courses & Workshops Delivered as Instructor",
+          "description": [
+            {
+              "title": "PowerShell Automation: Beginner to Advanced",
+              "vendor": "General",
+              "year": "2017 – present",
+              "logo": "images/instructor.png",
+              "desc": "Designed curriculum and delivered hands-on technical training to upskill enterprise support teams in Advanced PowerShell automation, pipeline processing, custom GUI creation, and bulk-endpoint remediation."
+            },
+            {
+              "title": "T-SQL Querying & Reporting Fundamentals",
+              "vendor": "General",
+              "year": "2015 – present",
+              "logo": "images/instructor.png",
+              "desc": "Authored and conducted training modules covering T-SQL syntax, database querying, data aggregation, JOIN operations, and building custom reports for endpoint management."
+            },
+            {
+              "title": "Group Policy & Scripting Optimization",
+              "vendor": "General",
+              "year": "2014 – present",
+              "logo": "images/instructor.png",
+              "desc": "Led technical workshops focused on Group Policy optimization, Loopback Processing, and modernizing legacy VBScript/Batch logon and startup scripts into standardized enterprise workflows."
+            }
+          ]
         },
         {
-          "title": "The Complete JavaScript Course: From Zero to Expert! (Jonas Schmedtmann)",
-          "vendor": "Udemy",
-          "year": "2025",
-          "logo": "images/udemy.png",
-          "desc": "Deepening core JavaScript mastery covering modern ES6+ features, asynchronous programming (Promises, Async/Await), OOP principles, DOM manipulation, and modern web application architecture."
+          "id": "trainings-completed",
+          "text": "Completed Trainings",
+          "title": "Professional Development & Coursework Completed",
+          "description": [
+            {
+              "title": "The Complete JavaScript Course: From Zero to Expert! (Jonas Schmedtmann)",
+              "vendor": "Udemy",
+              "year": "2025",
+              "logo": "images/udemy.png",
+              "desc": "Deepening core JavaScript mastery covering modern ES6+ features, asynchronous programming (Promises, Async/Await), OOP principles, DOM manipulation, and modern web application architecture."
+            },
+            {
+              "title": "The Complete ASP.NET MVC 5 Course (Mosh Hamedani)",
+              "vendor": "Udemy",
+              "year": "2018",
+              "logo": "images/udemy.png",
+              "desc": "Mastered full-stack web development using ASP.NET MVC 5, focusing on C# backend architecture, RESTful APIs, Entity Framework ORM, SQL database integration, and responsive frontend design."
+            },
+            {
+              "title": "PowerShell 7 & Advanced Automation Series",
+              "vendor": "JackedProgrammer",
+              "year": "2024",
+              "logo": "images/jacked.png",
+              "desc": "Hands-on training covering PowerShell 7 fundamentals, GUI creation, REST API integration, Active Directory management, custom module development, and PowerShell Universal application building."
+            },
+            {
+              "title": "SQL Server Queries (WiseOwl Tutorials)",
+              "vendor": "WiseOwl Training",
+              "year": "2014",
+              "logo": "images/wiseowl.png",
+              "desc": "Comprehensive training on T-SQL query design covering fundamental SELECT queries, filtering with WHERE, sorting, aggregations with GROUP BY and HAVING, multi-table JOINs, subqueries, and correlated subqueries."
+            },
+            {
+              "title": "VBScript User's Guide & Scripting Fundamentals",
+              "vendor": "VbsEdit",
+              "year": "2012",
+              "logo": "images/vbsedit.png",
+              "desc": "Foundational training in VBScript core syntax, object manipulation (WScript, COM/WMI classes), Regular Expressions, HTML Applications (HTA), and script debugging for Windows administration."
+            }
+          ]
         }
       ]
     },
