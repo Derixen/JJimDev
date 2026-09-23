@@ -191,6 +191,13 @@
           "title": "SCCM & Matrix42 Infrastructure Health Tester",
           "image": "images/framework-tester-flow.png",
           "description": "An automated PowerShell diagnostic tool scheduled for daily morning execution to evaluate core endpoint infrastructure health. It performs automated WMI connectivity verification between managed servers and the SCCM environment, while simultaneously scanning Matrix42 Enterprise Manager event logs for operational errors. Upon detecting system anomalies, the framework automatically triggers alerts to the central enterprise monitoring platform and initiates automated IT Service Management ticket creation for immediate engineering remediation."
+        },
+        {
+          "id": "SQLReportEmailer",
+          "text": "SQL Emailer",
+          "title": "Automated SQL Query & HTML Email Dispatcher",
+          "image": "images/sqlmailer.png",
+          "description": "<h3>Automated SQL Data Extraction</h3>Executes targeted T-SQL queries against enterprise SQL databases utilizing secure authentication parameters to extract real-time system metrics and report data.<br><br><h3>Dynamic HTML Template Engine</h3>Parses and populates an external HTML body template with dynamically extracted dataset values, generating responsive, rich-text email layouts automatically.<br><br><h3>Outlook COM Integration</h3>Interfaces directly with the local Outlook COM object client (`Outlook.Application`) to compose and dispatch formatted automated alerts and reports through authorized user sessions."
         }
       ]
     },
