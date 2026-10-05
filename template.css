@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Marcellus&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap");
+
+/* --- Global Base Styles --- */
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: #f7f6f2;
+  color: #1c1917; /* stone-900 */
+  padding-bottom: 7rem;
+}
+
+/* Custom Serif Font for Headings */
+.font-serif-custom {
+  font-family: "Marcellus", serif;
+}
+
+/* --- Reusable Component Styles --- */
+
+/* Header Avatar */
+.header-avatar {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  overflow: hidden;
+  border: 1px solid #d6d3d1; /* stone-300 */
+}
+
+/* Card Overlays & Badges */
+.badge-glass {
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  font-size: 10px;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Soft Container Cards */
+.card-soft {
+  background-color: rgba(231, 229, 228, 0.5); /* stone-200/50 */
+  border: 1px solid rgba(214, 211, 209, 0.4); /* stone-300/40 */
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(245, 245, 244, 0.9); /* stone-100/90 */
+  backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(214, 211, 209, 0.6);
+  padding: 0.625rem 1.5rem;
+  z-index: 50;
+}
