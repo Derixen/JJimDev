@@ -24,31 +24,71 @@
 
     <!-- Dynamic Renderer Script -->
     <script>
-      // Audio Toggle Functionality
-      function toggleAudio() {
-        const audio = document.getElementById("bg-audio");
+      // Update Button UI based on audio state
+      function updateAudioUI(isPlaying) {
         const btnText = document.getElementById("audio-btn-text");
         const btnIcon = document.getElementById("audio-btn-icon");
 
+        if (btnText && btnIcon) {
+          if (isPlaying) {
+            btnText.textContent = "Leállítás";
+            btnIcon.textContent = "⏸";
+          } else {
+            btnText.textContent = "Meghallgatom";
+            btnIcon.textContent = "🔊";
+          }
+        }
+      }
+
+      // Toggle Audio Function
+      function toggleAudio() {
+        const audio = document.getElementById("bg-audio");
         if (!audio) return;
 
         if (audio.paused) {
           audio
             .play()
-            .then(() => {
-              if (btnText) btnText.textContent = "Leállítás";
-              if (btnIcon) btnIcon.textContent = "⏸";
-            })
-            .catch((err) => {
-              console.error(
-                "Audio playback failed or was blocked by browser:",
-                err,
-              );
-            });
+            .then(() => updateAudioUI(true))
+            .catch((err) => console.error(err));
         } else {
           audio.pause();
-          if (btnText) btnText.textContent = "Meghallgatom";
-          if (btnIcon) btnIcon.textContent = "🔊";
+          updateAudioUI(false);
+        }
+      }
+
+      // Automatic Playback Handler
+      function initAutoplay() {
+        const audio = document.getElementById("bg-audio");
+        if (!audio) return;
+
+        // Try playing automatically immediately
+        const playPromise = audio.play();
+
+        if (playPromise !== undefined) {
+          playPromise
+            .then(() => {
+              updateAudioUI(true);
+            })
+            .catch(() => {
+              // If blocked by browser autoplay policy, start on first user interaction
+              const handleFirstInteraction = () => {
+                audio.play().then(() => {
+                  updateAudioUI(true);
+                  document.removeEventListener("click", handleFirstInteraction);
+                  document.removeEventListener(
+                    "touchstart",
+                    handleFirstInteraction,
+                  );
+                });
+              };
+
+              document.addEventListener("click", handleFirstInteraction, {
+                once: true,
+              });
+              document.addEventListener("touchstart", handleFirstInteraction, {
+                once: true,
+              });
+            });
         }
       }
 
@@ -105,7 +145,7 @@
             </div>
           </section>
 
-          <!-- Audio Bar (With Onclick Trigger) -->
+          <!-- Audio Bar -->
           <section class="bg-stone-200/60 border border-stone-300/50 rounded-2xl p-3.5 flex items-center justify-between">
             <div class="flex items-center gap-3">
               <div class="w-10 h-10 rounded-xl bg-emerald-900 text-emerald-100 flex items-center justify-center shrink-0">
@@ -117,7 +157,6 @@
               </div>
             </div>
             
-            <!-- Interactive Audio Button -->
             <button onclick="toggleAudio()" class="px-3.5 py-1.5 bg-stone-300/70 hover:bg-stone-300 text-stone-800 text-xs font-medium rounded-full transition-colors flex items-center gap-1.5 shrink-0 cursor-pointer active:scale-95">
               <span id="audio-btn-icon">🔊</span>
               <span id="audio-btn-text">${data.audio.buttonText}</span>
@@ -136,7 +175,6 @@
               </button>
             </div>
 
-            <!-- Feature Items List -->
             <div class="space-y-3">
               ${data.featuresSection.items
                 .map(
@@ -187,7 +225,6 @@
               <span class="text-xs text-stone-500 font-medium">${data.healersSection.subtitle}</span>
             </div>
 
-            <!-- Healers Cards -->
             <div class="space-y-3">
               ${data.healersSection.healers
                 .map(
@@ -235,6 +272,9 @@
           </nav>
         `;
           document.body.insertAdjacentHTML("beforeend", navHtml);
+
+          // Trigger autoplay logic once DOM is rendered
+          initAutoplay();
         } catch (error) {
           console.error("Error loading template.json:", error);
         }
