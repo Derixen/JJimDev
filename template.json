@@ -1,0 +1,78 @@
+{
+  "header": {
+    "title": "Hā Lomi",
+    "subtitle": "TRADÍCIONÁLIS HAWAII GYÓGYÍTÁS"
+  },
+  "hero": {
+    "tagline": "SZAKRÁLIS TERÜNK ÉS ŐSI BÖLCSESSÉGÜNK",
+    "title": "A hawaii megújulás élő szentélye",
+    "description": "Évszázados őshonos testgyógyászati bölcsesség ápolása. Oahu szigetén található nyitott kerti pavilonjainkban a plumeria illata, csendes patakok és az időtlen gyógyító érintés találkozik.",
+    "image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=1200&auto=format&fit=crop",
+    "overlayTag": "WAIKÍKÍ ELDUGOTT TERMÉSZETI KERTJE",
+    "overlayTitle": "Mālama Kerti Pavilonok",
+    "badge": "Szentély Kert"
+  },
+  "audio": {
+    "title": "Hangtáj: Plumeria szellő",
+    "subtitle": "Patakmorajlás és hawaii madárdal",
+    "buttonText": "Meghallgatom"
+  },
+  "featuresSection": {
+    "category": "GYÓGYÍTÓ ELEMEINK",
+    "title": "Szentély Életterek",
+    "items": [
+      {
+        "title": "Nyitott Kerti Hale",
+        "description": "Trópusi növényekkel, bambuszfalakkal és természetes madárcsicsergéssel körülvett privát terek.",
+        "image": "https://images.unsplash.com/photo-1596178065887-1198b6148b2b?q=80&w=200&auto=format&fit=crop",
+        "tags": ["Természetes szellőzés", "Teljes intimitás"]
+      },
+      {
+        "title": "Kézműves Botanikai Patika",
+        "description": "Frissen infuzált szigeti olajok kukui, makadámia és illatos pikake virág kivonattal.",
+        "image": "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?q=80&w=200&auto=format&fit=crop",
+        "tags": ["Hidegen sajtolt olajok", "Vadon gyűjtött"]
+      },
+      {
+        "title": "A Pono Filozófiája",
+        "description": "A test, lélek és természeti világ közötti tökéletes belső harmónia helyreállítása tudatos lélegzet és ima által.",
+        "icon": "∞",
+        "tags": ["Lōkahi Összhang"]
+      }
+    ]
+  },
+  "healersSection": {
+    "category": "ÉLŐ CSALÁDI VONAL",
+    "title": "Mester Gyógyítók",
+    "subtitle": "2 Kupuna vezető",
+    "healers": [
+      {
+        "name": "Kahu Meleana Santos",
+        "role": "Hagyományos Áramlás és Hā Igazítás",
+        "experience": "16+ év vonalbeli gyakorlat",
+        "rating": "5.0",
+        "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop",
+        "bio": "Több mint 16 éve gyakorolja a tradicionális, folyamatosan áramló simításokat és energetikai összehangolást, továbbörökítve maui nagymamája együttérző érintését."
+      }
+    ]
+  },
+  "navigation": [
+    {
+      "label": "Ajánlatok",
+      "icon": "<svg class='w-5 h-5' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z'/></svg>"
+    },
+    {
+      "label": "Rituálék",
+      "icon": "<svg class='w-5 h-5' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4'/></svg>"
+    },
+    {
+      "label": "Foglalás",
+      "icon": "<svg class='w-5 h-5' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z'/></svg>"
+    },
+    {
+      "label": "Szentély",
+      "icon": "<svg class='w-5 h-5' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6'/></svg>",
+      "active": true
+    }
+  ]
+}

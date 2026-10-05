@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hā Lomi - Template</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Marcellus&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap");
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        background-color: #f7f6f2;
+      }
+      .font-serif-custom {
+        font-family: "Marcellus", serif;
+      }
+    </style>
+  </head>
+  <body class="text-slate-800 pb-28">
+    <div id="app" class="max-w-2xl mx-auto px-4 pt-6 space-y-6">
+      <!-- Content injected dynamically via JavaScript -->
+    </div>
+
+    <!-- Dynamic Renderer Script -->
+    <script>
+      async function renderTemplate() {
+        try {
+          const response = await fetch("template.json");
+          const data = await response.json();
+          const app = document.getElementById("app");
+
+          app.innerHTML = `
+          <!-- Header Bar -->
+          <header class="flex items-center justify-between py-2">
+            <div class="flex items-center gap-2">
+              <div class="w-8 h-8 rounded-full bg-stone-800 text-stone-100 flex items-center justify-center font-bold text-xs">
+                ✦
+              </div>
+              <div>
+                <h1 class="font-serif-custom text-lg font-bold text-stone-900 leading-none">${data.header.title}</h1>
+                <p class="text-[9px] font-semibold tracking-wider text-stone-500 uppercase mt-0.5">${data.header.subtitle}</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <button class="p-2 text-stone-600 hover:text-stone-900">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 01-6 0v-1m6 0H9"/></svg>
+              </button>
+              <div class="w-8 h-8 rounded-full overflow-hidden border border-stone-300">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=100&auto=format&fit=crop" class="w-full h-full object-cover" alt="User Avatar" />
+              </div>
+            </div>
+          </header>
+
+          <!-- Hero Section -->
+          <section class="space-y-3">
+            <div>
+              <p class="text-[10px] font-bold tracking-widest text-stone-500 uppercase">${data.hero.tagline}</p>
+              <h2 class="font-serif-custom text-2xl font-normal text-stone-900 mt-1">${data.hero.title}</h2>
+              <p class="text-xs text-stone-600 leading-relaxed mt-2">${data.hero.description}</p>
+            </div>
+
+            <!-- Banner Image Card -->
+            <div class="relative rounded-2xl overflow-hidden shadow-sm h-64 bg-stone-200">
+              <img src="${data.hero.image}" class="w-full h-full object-cover" alt="${data.hero.overlayTitle}" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex flex-col justify-between p-4">
+                <div class="self-end">
+                  <span class="bg-black/40 backdrop-blur-md text-white text-[10px] px-3 py-1 rounded-full border border-white/20">
+                    🌿 ${data.hero.badge}
+                  </span>
+                </div>
+                <div class="text-white">
+                  <p class="text-[9px] font-semibold tracking-wider uppercase opacity-80">${data.hero.overlayTag}</p>
+                  <h3 class="font-serif-custom text-xl font-medium mt-0.5">${data.hero.overlayTitle}</h3>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Audio Bar -->
+          <section class="bg-stone-200/60 border border-stone-300/50 rounded-2xl p-3.5 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-emerald-900 text-emerald-100 flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/></svg>
+              </div>
+              <div>
+                <h4 class="text-xs font-bold text-stone-900">${data.audio.title}</h4>
+                <p class="text-[11px] text-stone-500 mt-0.5">${data.audio.subtitle}</p>
+              </div>
+            </div>
+            <button class="px-3.5 py-1.5 bg-stone-300/70 hover:bg-stone-300 text-stone-800 text-xs font-medium rounded-full transition-colors flex items-center gap-1.5 shrink-0">
+              <span>🔊</span> ${data.audio.buttonText}
+            </button>
+          </section>
+
+          <!-- Features Section -->
+          <section class="space-y-3">
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="text-[10px] font-bold tracking-widest text-stone-500 uppercase">${data.featuresSection.category}</p>
+                <h3 class="font-serif-custom text-xl font-normal text-stone-900">${data.featuresSection.title}</h3>
+              </div>
+              <button class="p-1.5 rounded-full bg-stone-200/60 text-stone-600">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg>
+              </button>
+            </div>
+
+            <!-- Feature Items List -->
+            <div class="space-y-3">
+              ${data.featuresSection.items
+                .map(
+                  (item) => `
+                <div class="bg-stone-200/50 border border-stone-300/40 rounded-2xl p-4 flex gap-4 items-start">
+                  ${
+                    item.image
+                      ? `
+                    <div class="w-12 h-12 rounded-xl overflow-hidden shrink-0 bg-stone-300">
+                      <img src="${item.image}" class="w-full h-full object-cover" alt="${item.title}" />
+                    </div>
+                  `
+                      : `
+                    <div class="w-12 h-12 rounded-xl bg-stone-300/70 flex items-center justify-center text-xl text-stone-700 font-serif-custom shrink-0">
+                      ${item.icon || "✦"}
+                    </div>
+                  `
+                  }
+                  <div class="space-y-1.5 flex-1">
+                    <h4 class="text-sm font-bold text-stone-900">${item.title}</h4>
+                    <p class="text-xs text-stone-600 leading-relaxed">${item.description}</p>
+                    <div class="flex flex-wrap gap-1.5 pt-1">
+                      ${item.tags
+                        .map(
+                          (tag) => `
+                        <span class="px-2.5 py-0.5 bg-stone-300/60 text-stone-700 text-[10px] font-medium rounded-md">
+                          ${tag}
+                        </span>
+                      `,
+                        )
+                        .join("")}
+                    </div>
+                  </div>
+                </div>
+              `,
+                )
+                .join("")}
+            </div>
+          </section>
+
+          <!-- Master Healers Section -->
+          <section class="space-y-3">
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="text-[10px] font-bold tracking-widest text-stone-500 uppercase">${data.healersSection.category}</p>
+                <h3 class="font-serif-custom text-xl font-normal text-stone-900">${data.healersSection.title}</h3>
+              </div>
+              <span class="text-xs text-stone-500 font-medium">${data.healersSection.subtitle}</span>
+            </div>
+
+            <!-- Healers Cards -->
+            <div class="space-y-3">
+              ${data.healersSection.healers
+                .map(
+                  (healer) => `
+                <div class="bg-stone-200/50 border border-stone-300/40 rounded-2xl p-4 space-y-3">
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                      <img src="${healer.avatar}" class="w-10 h-10 rounded-full object-cover border border-stone-300" alt="${healer.name}" />
+                      <div>
+                        <h4 class="text-sm font-bold text-stone-900">${healer.name}</h4>
+                        <p class="text-[11px] text-stone-500">${healer.role}</p>
+                        <p class="text-[10px] font-medium text-stone-400 mt-0.5">${healer.experience}</p>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-1 bg-stone-300/50 px-2 py-0.5 rounded-full text-xs text-stone-700 font-bold">
+                      <span class="text-amber-600 text-[10px]">★</span> ${healer.rating}
+                    </div>
+                  </div>
+                  <p class="text-xs text-stone-600 leading-relaxed border-t border-stone-300/40 pt-3">
+                    ${healer.bio}
+                  </p>
+                </div>
+              `,
+                )
+                .join("")}
+            </div>
+          </section>
+        `;
+
+          // Render Bottom Navigation
+          const navHtml = `
+          <nav class="fixed bottom-0 left-0 right-0 bg-stone-100/90 backdrop-blur-md border-t border-stone-300/60 py-2.5 px-6">
+            <div class="max-w-md mx-auto flex items-center justify-between">
+              ${data.navigation
+                .map(
+                  (nav) => `
+                <button class="flex flex-col items-center gap-1 ${nav.active ? "text-stone-900 font-bold" : "text-stone-400 hover:text-stone-600"}">
+                  ${nav.icon}
+                  <span class="text-[10px]">${nav.label}</span>
+                </button>
+              `,
+                )
+                .join("")}
+            </div>
+          </nav>
+        `;
+          document.body.insertAdjacentHTML("beforeend", navHtml);
+        } catch (error) {
+          console.error("Error loading template.json:", error);
+        }
+      }
+
+      renderTemplate();
+    </script>
+  </body>
+</html>
