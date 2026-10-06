@@ -12,275 +12,259 @@
     <link rel="stylesheet" href="template.css" />
   </head>
   <body class="text-stone-800 pb-28">
-    <div id="app" class="max-w-2xl mx-auto px-4 pt-6 space-y-6">
-      <!-- Content injected dynamically via JavaScript -->
+    <div class="max-w-2xl mx-auto px-4 pt-6 space-y-6">
+      <!-- Header Bar -->
+      <header class="flex items-center justify-between py-2">
+        <div class="flex items-center gap-2">
+          <div
+            class="w-8 h-8 rounded-full bg-stone-800 text-stone-100 flex items-center justify-center font-bold text-xs"
+          >
+            ✦
+          </div>
+          <div>
+            <h1
+              id="header-title"
+              class="font-serif-custom text-lg font-bold text-stone-900 leading-none"
+            ></h1>
+            <p
+              id="header-subtitle"
+              class="text-[9px] font-semibold tracking-wider text-stone-500 uppercase mt-0.5"
+            ></p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <button class="p-2 text-stone-600 hover:text-stone-900">
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 01-6 0v-1m6 0H9"
+              />
+            </svg>
+          </button>
+          <div class="header-avatar">
+            <img
+              src="Template/profile.png"
+              class="w-full h-full object-cover"
+              alt="User Avatar"
+            />
+          </div>
+        </div>
+      </header>
+
+      <!-- Hero Section -->
+      <section class="space-y-3">
+        <div>
+          <p
+            id="hero-tagline"
+            class="text-[10px] font-bold tracking-widest text-stone-500 uppercase"
+          ></p>
+          <h2
+            id="hero-title"
+            class="font-serif-custom text-2xl font-normal text-stone-900 mt-1"
+          ></h2>
+          <p
+            id="hero-desc"
+            class="text-xs text-stone-600 leading-relaxed mt-2"
+          ></p>
+        </div>
+
+        <!-- Banner Image Card -->
+        <div
+          class="relative rounded-2xl overflow-hidden shadow-sm h-64 bg-stone-200"
+        >
+          <img id="hero-img" class="w-full h-full object-cover" alt="" />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex flex-col justify-between p-4"
+          >
+            <div class="self-end">
+              <span id="hero-badge" class="badge-glass"></span>
+            </div>
+            <div class="text-white">
+              <p
+                id="hero-overlay-tag"
+                class="text-[9px] font-semibold tracking-wider uppercase opacity-80"
+              ></p>
+              <h3
+                id="hero-overlay-title"
+                class="font-serif-custom text-xl font-medium mt-0.5"
+              ></h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Audio Bar -->
+      <section
+        class="bg-stone-200/60 border border-stone-300/50 rounded-2xl p-3.5 flex items-center justify-between"
+      >
+        <div class="flex items-center gap-3">
+          <div
+            class="w-10 h-10 rounded-xl bg-emerald-900 text-emerald-100 flex items-center justify-center shrink-0"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"
+              />
+            </svg>
+          </div>
+          <div>
+            <h4 id="audio-title" class="text-xs font-bold text-stone-900"></h4>
+            <p
+              id="audio-subtitle"
+              class="text-[11px] text-stone-500 mt-0.5"
+            ></p>
+          </div>
+        </div>
+
+        <button
+          id="audio-btn"
+          class="px-3.5 py-1.5 bg-stone-300/70 hover:bg-stone-300 text-stone-800 text-xs font-medium rounded-full transition-colors flex items-center gap-1.5 shrink-0 cursor-pointer active:scale-95"
+        >
+          <span id="audio-btn-icon">🔊</span>
+          <span id="audio-btn-text"></span>
+        </button>
+      </section>
+
+      <!-- Features Section -->
+      <section class="space-y-3">
+        <div class="flex items-center justify-between">
+          <div>
+            <p
+              id="features-category"
+              class="text-[10px] font-bold tracking-widest text-stone-500 uppercase"
+            ></p>
+            <h3
+              id="features-title"
+              class="font-serif-custom text-xl font-normal text-stone-900"
+            ></h3>
+          </div>
+          <button class="p-1.5 rounded-full bg-stone-200/60 text-stone-600">
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Dinamikus funkció-kártyák konténere -->
+        <div id="features-container" class="space-y-3"></div>
+      </section>
+
+      <!-- Master Healers Section -->
+      <section class="space-y-3">
+        <div class="flex items-center justify-between">
+          <div>
+            <p
+              id="healers-category"
+              class="text-[10px] font-bold tracking-widest text-stone-500 uppercase"
+            ></p>
+            <h3
+              id="healers-title"
+              class="font-serif-custom text-xl font-normal text-stone-900"
+            ></h3>
+          </div>
+          <span
+            id="healers-subtitle"
+            class="text-xs text-stone-500 font-medium"
+          ></span>
+        </div>
+
+        <!-- Dinamikus gyógyító-kártyák konténere -->
+        <div id="healers-container" class="space-y-3"></div>
+      </section>
     </div>
 
-    <!-- Background Audio File -->
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+      <div
+        id="nav-container"
+        class="max-w-md mx-auto flex items-center justify-between"
+      ></div>
+    </nav>
+
+    <!-- HTML Sabil sablon a dinamikus elemek másolásához (Template Elements) -->
+    <template id="feature-card-template">
+      <div class="card-soft flex gap-4 items-start">
+        <div
+          class="feature-img-box w-12 h-12 rounded-xl overflow-hidden shrink-0 bg-stone-300 hidden"
+        >
+          <img class="feature-img w-full h-full object-cover" src="" alt="" />
+        </div>
+        <div
+          class="feature-icon-box w-12 h-12 rounded-xl bg-stone-300/70 flex items-center justify-center text-xl text-stone-700 font-serif-custom shrink-0 hidden"
+        >
+          <span class="feature-icon"></span>
+        </div>
+        <div class="space-y-1.5 flex-1">
+          <h4 class="feature-item-title text-sm font-bold text-stone-900"></h4>
+          <p
+            class="feature-item-desc text-xs text-stone-600 leading-relaxed"
+          ></p>
+          <div class="feature-tags flex flex-wrap gap-1.5 pt-1"></div>
+        </div>
+      </div>
+    </template>
+
+    <template id="healer-card-template">
+      <div class="card-soft space-y-3">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <img
+              class="healer-avatar w-10 h-10 rounded-full object-cover border border-stone-300"
+              src=""
+              alt=""
+            />
+            <div>
+              <h4 class="healer-name text-sm font-bold text-stone-900"></h4>
+              <p class="healer-role text-[11px] text-stone-500"></p>
+              <p
+                class="healer-exp text-[10px] font-medium text-stone-400 mt-0.5"
+              ></p>
+            </div>
+          </div>
+          <div
+            class="flex items-center gap-1 bg-stone-300/50 px-2 py-0.5 rounded-full text-xs text-stone-700 font-bold"
+          >
+            <span class="text-amber-600 text-[10px]">★</span>
+            <span class="healer-rating"></span>
+          </div>
+        </div>
+        <p
+          class="healer-bio text-xs text-stone-600 leading-relaxed border-t border-stone-300/40 pt-3"
+        ></p>
+      </div>
+    </template>
+
+    <!-- Background Audio Element -->
     <audio id="bg-audio" loop preload="auto">
       <source src="audio/sample.mp3" type="audio/mpeg" />
-      Your browser does not support the audio element.
     </audio>
 
-    <!-- Dynamic Renderer Script -->
-    <script>
-      // Update Button UI based on audio state
-      function updateAudioUI(isPlaying) {
-        const btnText = document.getElementById("audio-btn-text");
-        const btnIcon = document.getElementById("audio-btn-icon");
-
-        if (btnText && btnIcon) {
-          if (isPlaying) {
-            btnText.textContent = "Leállítás";
-            btnIcon.textContent = "⏸";
-          } else {
-            btnText.textContent = "Meghallgatom";
-            btnIcon.textContent = "🔊";
-          }
-        }
-      }
-
-      // Toggle Audio Function
-      function toggleAudio() {
-        const audio = document.getElementById("bg-audio");
-        if (!audio) return;
-
-        if (audio.paused) {
-          audio
-            .play()
-            .then(() => updateAudioUI(true))
-            .catch((err) => console.error(err));
-        } else {
-          audio.pause();
-          updateAudioUI(false);
-        }
-      }
-
-      // Automatic Playback Handler
-      function initAutoplay() {
-        const audio = document.getElementById("bg-audio");
-        if (!audio) return;
-
-        // Try playing automatically immediately
-        const playPromise = audio.play();
-
-        if (playPromise !== undefined) {
-          playPromise
-            .then(() => {
-              updateAudioUI(true);
-            })
-            .catch(() => {
-              // If blocked by browser autoplay policy, start on first user interaction
-              const handleFirstInteraction = () => {
-                audio.play().then(() => {
-                  updateAudioUI(true);
-                  document.removeEventListener("click", handleFirstInteraction);
-                  document.removeEventListener(
-                    "touchstart",
-                    handleFirstInteraction,
-                  );
-                });
-              };
-
-              document.addEventListener("click", handleFirstInteraction, {
-                once: true,
-              });
-              document.addEventListener("touchstart", handleFirstInteraction, {
-                once: true,
-              });
-            });
-        }
-      }
-
-      async function renderTemplate() {
-        try {
-          const response = await fetch("template.json");
-          const data = await response.json();
-          const app = document.getElementById("app");
-
-          app.innerHTML = `
-          <!-- Header Bar -->
-          <header class="flex items-center justify-between py-2">
-            <div class="flex items-center gap-2">
-              <div class="w-8 h-8 rounded-full bg-stone-800 text-stone-100 flex items-center justify-center font-bold text-xs">
-                ✦
-              </div>
-              <div>
-                <h1 class="font-serif-custom text-lg font-bold text-stone-900 leading-none">${data.header.title}</h1>
-                <p class="text-[9px] font-semibold tracking-wider text-stone-500 uppercase mt-0.5">${data.header.subtitle}</p>
-              </div>
-            </div>
-            <div class="flex items-center gap-3">
-              <button class="p-2 text-stone-600 hover:text-stone-900">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 01-6 0v-1m6 0H9"/></svg>
-              </button>
-              <div class="header-avatar">
-                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=100&auto=format&fit=crop" class="w-full h-full object-cover" alt="User Avatar" />
-              </div>
-            </div>
-          </header>
-
-          <!-- Hero Section -->
-          <section class="space-y-3">
-            <div>
-              <p class="text-[10px] font-bold tracking-widest text-stone-500 uppercase">${data.hero.tagline}</p>
-              <h2 class="font-serif-custom text-2xl font-normal text-stone-900 mt-1">${data.hero.title}</h2>
-              <p class="text-xs text-stone-600 leading-relaxed mt-2">${data.hero.description}</p>
-            </div>
-
-            <!-- Banner Image Card -->
-            <div class="relative rounded-2xl overflow-hidden shadow-sm h-64 bg-stone-200">
-              <img src="${data.hero.image}" class="w-full h-full object-cover" alt="${data.hero.overlayTitle}" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex flex-col justify-between p-4">
-                <div class="self-end">
-                  <span class="badge-glass">
-                    🌿 ${data.hero.badge}
-                  </span>
-                </div>
-                <div class="text-white">
-                  <p class="text-[9px] font-semibold tracking-wider uppercase opacity-80">${data.hero.overlayTag}</p>
-                  <h3 class="font-serif-custom text-xl font-medium mt-0.5">${data.hero.overlayTitle}</h3>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <!-- Audio Bar -->
-          <section class="bg-stone-200/60 border border-stone-300/50 rounded-2xl p-3.5 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-xl bg-emerald-900 text-emerald-100 flex items-center justify-center shrink-0">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/></svg>
-              </div>
-              <div>
-                <h4 class="text-xs font-bold text-stone-900">${data.audio.title}</h4>
-                <p class="text-[11px] text-stone-500 mt-0.5">${data.audio.subtitle}</p>
-              </div>
-            </div>
-            
-            <button onclick="toggleAudio()" class="px-3.5 py-1.5 bg-stone-300/70 hover:bg-stone-300 text-stone-800 text-xs font-medium rounded-full transition-colors flex items-center gap-1.5 shrink-0 cursor-pointer active:scale-95">
-              <span id="audio-btn-icon">🔊</span>
-              <span id="audio-btn-text">${data.audio.buttonText}</span>
-            </button>
-          </section>
-
-          <!-- Features Section -->
-          <section class="space-y-3">
-            <div class="flex items-center justify-between">
-              <div>
-                <p class="text-[10px] font-bold tracking-widest text-stone-500 uppercase">${data.featuresSection.category}</p>
-                <h3 class="font-serif-custom text-xl font-normal text-stone-900">${data.featuresSection.title}</h3>
-              </div>
-              <button class="p-1.5 rounded-full bg-stone-200/60 text-stone-600">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg>
-              </button>
-            </div>
-
-            <div class="space-y-3">
-              ${data.featuresSection.items
-                .map(
-                  (item) => `
-                <div class="card-soft flex gap-4 items-start">
-                  ${
-                    item.image
-                      ? `
-                    <div class="w-12 h-12 rounded-xl overflow-hidden shrink-0 bg-stone-300">
-                      <img src="${item.image}" class="w-full h-full object-cover" alt="${item.title}" />
-                    </div>
-                  `
-                      : `
-                    <div class="w-12 h-12 rounded-xl bg-stone-300/70 flex items-center justify-center text-xl text-stone-700 font-serif-custom shrink-0">
-                      ${item.icon || "✦"}
-                    </div>
-                  `
-                  }
-                  <div class="space-y-1.5 flex-1">
-                    <h4 class="text-sm font-bold text-stone-900">${item.title}</h4>
-                    <p class="text-xs text-stone-600 leading-relaxed">${item.description}</p>
-                    <div class="flex flex-wrap gap-1.5 pt-1">
-                      ${item.tags
-                        .map(
-                          (tag) => `
-                        <span class="px-2.5 py-0.5 bg-stone-300/60 text-stone-700 text-[10px] font-medium rounded-md">
-                          ${tag}
-                        </span>
-                      `,
-                        )
-                        .join("")}
-                    </div>
-                  </div>
-                </div>
-              `,
-                )
-                .join("")}
-            </div>
-          </section>
-
-          <!-- Master Healers Section -->
-          <section class="space-y-3">
-            <div class="flex items-center justify-between">
-              <div>
-                <p class="text-[10px] font-bold tracking-widest text-stone-500 uppercase">${data.healersSection.category}</p>
-                <h3 class="font-serif-custom text-xl font-normal text-stone-900">${data.healersSection.title}</h3>
-              </div>
-              <span class="text-xs text-stone-500 font-medium">${data.healersSection.subtitle}</span>
-            </div>
-
-            <div class="space-y-3">
-              ${data.healersSection.healers
-                .map(
-                  (healer) => `
-                <div class="card-soft space-y-3">
-                  <div class="flex items-center justify-between">
-                    <div class="flex items-center gap-3">
-                      <img src="${healer.avatar}" class="w-10 h-10 rounded-full object-cover border border-stone-300" alt="${healer.name}" />
-                      <div>
-                        <h4 class="text-sm font-bold text-stone-900">${healer.name}</h4>
-                        <p class="text-[11px] text-stone-500">${healer.role}</p>
-                        <p class="text-[10px] font-medium text-stone-400 mt-0.5">${healer.experience}</p>
-                      </div>
-                    </div>
-                    <div class="flex items-center gap-1 bg-stone-300/50 px-2 py-0.5 rounded-full text-xs text-stone-700 font-bold">
-                      <span class="text-amber-600 text-[10px]">★</span> ${healer.rating}
-                    </div>
-                  </div>
-                  <p class="text-xs text-stone-600 leading-relaxed border-t border-stone-300/40 pt-3">
-                    ${healer.bio}
-                  </p>
-                </div>
-              `,
-                )
-                .join("")}
-            </div>
-          </section>
-        `;
-
-          // Render Bottom Navigation
-          const navHtml = `
-          <nav class="bottom-nav">
-            <div class="max-w-md mx-auto flex items-center justify-between">
-              ${data.navigation
-                .map(
-                  (nav) => `
-                <button class="flex flex-col items-center gap-1 ${nav.active ? "text-stone-900 font-bold" : "text-stone-400 hover:text-stone-600"}">
-                  ${nav.icon}
-                  <span class="text-[10px]">${nav.label}</span>
-                </button>
-              `,
-                )
-                .join("")}
-            </div>
-          </nav>
-        `;
-          document.body.insertAdjacentHTML("beforeend", navHtml);
-
-          // Trigger autoplay logic once DOM is rendered
-          initAutoplay();
-        } catch (error) {
-          console.error("Error loading template.json:", error);
-        }
-      }
-
-      renderTemplate();
-    </script>
+    <!-- External JavaScript File -->
+    <script src="template.js"></script>
   </body>
 </html>
