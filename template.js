@@ -157,7 +157,27 @@ function populateHealers(healersSection) {
   });
 }
 
-// Alsó Navigáció feltöltése
+// Modal nyitása/zárása
+function setupBookingModal() {
+  const modal = document.getElementById("booking-modal");
+  const closeBtn = document.getElementById("close-booking-modal");
+
+  if (!modal) return;
+
+  // Zárás gombra kattintva
+  closeBtn?.addEventListener("click", () => {
+    modal.classList.add("hidden");
+  });
+
+  // Kívülre kattintva is bezáródik
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.add("hidden");
+    }
+  });
+}
+
+// Navigáció feltöltése és gomb eseménykezelők
 function populateNavigation(navigationItems) {
   const container = document.getElementById("nav-container");
   if (!container || !navigationItems) return;
@@ -168,15 +188,27 @@ function populateNavigation(navigationItems) {
     const btn = document.createElement("button");
     btn.className = `flex flex-col items-center gap-1 ${nav.active ? "text-stone-900 font-bold" : "text-stone-400 hover:text-stone-600"}`;
 
-    btn.innerHTML = nav.icon; // SVG felvétele
+    btn.innerHTML = nav.icon;
 
     const span = document.createElement("span");
     span.className = "text-[10px]";
     span.textContent = nav.label;
 
     btn.appendChild(span);
+
+    // Ha a "Foglalás" gombra kattintanak, nyissa meg a Modalt
+    if (nav.label === "Foglalás") {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        const modal = document.getElementById("booking-modal");
+        if (modal) modal.classList.remove("hidden");
+      });
+    }
+
     container.appendChild(btn);
   });
+
+  setupBookingModal();
 }
 
 // Fő adatbetöltő függvény
