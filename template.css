@@ -99,3 +99,60 @@ body {
   width: 18px; /* Az aktív pötty megnyúlik pill alakúra */
   background-color: #ffffff;
 }
+
+* --- Sziromhullás Effektek --- */
+
+/* A szirmok konténere (rögzítve a teljes képernyőn, átkattintható) */
+#petal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Fontos: nem akadályozza a kattintásokat a gombokon */
+  overflow: hidden;
+  z-index: 40;
+}
+
+/* Egyedi szirom stílusa */
+.petal {
+  position: absolute;
+  top: -10%;
+  user-select: none;
+  pointer-events: none;
+  animation-name: fall, sway;
+  animation-timing-function: linear, ease-in-out;
+  animation-iteration-count: infinite, infinite;
+  animation-direction: normal, alternate;
+}
+
+/* 1. Animáció: Hullás fentről lefelé */
+@keyframes fall {
+  0% {
+    top: -10%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    top: 105%;
+    opacity: 0;
+  }
+}
+
+/* 2. Animáció: Lágy ide-oda lebegés és forgás */
+@keyframes sway {
+  0% {
+    transform: translateX(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateX(50px) rotate(180deg);
+  }
+  100% {
+    transform: translateX(-50px) rotate(360deg);
+  }
+}

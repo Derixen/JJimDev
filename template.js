@@ -128,6 +128,39 @@ function populateFeatures(featuresSection) {
   });
 }
 
+// Virágszirom hullás effekt
+function initPetalEffect() {
+  const container = document.getElementById("petal-container");
+  if (!container) return;
+
+  // Szirmok típusa (használhatunk lágy virág emoijkat vagy egyedi képeket)
+  const petals = ["🌸", "🌺", "🍃", "🌸"];
+  const totalPetals = 12; // Szirmok száma (a szép, nem tolakodó hatáshoz)
+
+  for (let i = 0; i < totalPetals; i++) {
+    const petal = document.createElement("div");
+    petal.className = "petal";
+
+    // Véletlenszerű virág kiválasztása
+    petal.textContent = petals[Math.floor(Math.random() * petals.length)];
+
+    // Véletlenszerű méret, pozíció és sebesség
+    const size = Math.random() * 12 + 12; // 12px - 24px közötti méret
+    const leftPos = Math.random() * 100; // 0% - 100% szélesség
+    const fallDuration = Math.random() * 8 + 7; // 7s - 15s hullási idő
+    const swayDuration = Math.random() * 4 + 3; // 3s - 7s lebegési idő
+    const delay = Math.random() * 10; // Késleltetés, hogy ne egyszerre induljanak
+
+    // Stílusok alkalmazása
+    petal.style.fontSize = `${size}px`;
+    petal.style.left = `${leftPos}%`;
+    petal.style.animationDuration = `${fallDuration}s, ${swayDuration}s`;
+    petal.style.animationDelay = `${delay}s, ${delay}s`;
+
+    container.appendChild(petal);
+  }
+}
+
 // Gyógyító kártyák kirajzolása
 function populateHealers(healersSection) {
   setElementText("healers-category", healersSection?.category);
@@ -226,6 +259,8 @@ async function loadTemplateData() {
   } catch (error) {
     console.error("Hiba a template.json betöltése közben:", error);
   }
+  // Effekt indítása
+  initPetalEffect();
 }
 
 // Indítás az oldal betöltődésekor
