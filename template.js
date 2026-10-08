@@ -198,3 +198,119 @@ async function loadTemplateData() {
 
 // Indítás az oldal betöltődésekor
 document.addEventListener("DOMContentLoaded", loadTemplateData);
+
+// Képgyűjtemény konfigurációja (background01.jpg - background07.jpg)
+const heroImages = [
+  "Template/background01.jif",
+  "Template/background02.jif",
+  "Template/background03.jif",
+  "Template/background04.jif",
+  "Template/background05.jif",
+  "Template/background06.jif",
+  "Template/background07.jif",
+];
+
+let currentImageIndex = 0;
+let carouselTimer = null;
+
+// Diavetítés inicializálása és pöttyök generálása
+function initHeroCarousel() {
+  const container = document.getElementById("hero-carousel-container");
+  const dotsContainer = document.getElementById("hero-dots-container");
+
+  if (!container || !dotsContainer) return;
+
+  container.innerHTML = "";
+  dotsContainer.innerHTML = "";
+
+  // Képek és Pöttyök beszúrása
+  heroImages.forEach((imgSrc, index) => {
+    // 1. Kép elem
+    const img = document.createElement("img");
+    img.src = imgSrc;
+    img.alt = `Background ${index + 1}`;
+    img.className = `carousel-img ${index === 0 ? "active" : ""}`;
+    container.appendChild(img);
+
+    // 2. Pötty elem (. . . . . . .)
+    const dot = document.createElement("button");
+    dot.className = `carousel-dot ${index === 0 ? "active" : ""}`;
+    dot.setAttribute("aria-label", `Ugrás a(z) ${index + 1}. képre`);
+
+    // Kattintásra képléptetés
+    dot.addEventListener("click", () => {
+      goToImage(index);
+      resetCarouselTimer();
+    });
+
+    dotsContainer.appendChild(dot);
+  });
+
+  // Automatikus indítás 4 másodperces váltással
+  startCarouselTimer();
+}
+
+// Léptetés konkrét képre
+function goToImage(index) {
+  const images = document.querySelectorAll(".carousel-img");
+  const dots = document.querySelectorAll(".carousel-dot");
+
+  if (images.length === 0 || dots.length === 0) return;
+
+  // Előző aktív elemek levétele
+  images[currentImageIndex]?.classList.remove("active");
+  dots[currentImageIndex]?.classList.remove("active");
+
+  // Új index beállítása
+  currentImageIndex = index;
+
+  // Új elemek aktiválása
+  images[currentImageIndex]?.classList.add("active");
+  dots[currentImageIndex]?.classList.add("active");
+}
+
+// Következő képre léptetés
+function nextImage() {
+  const nextIdx = (currentImageIndex + 1) % heroImages.length;
+  goToImage(nextIdx);
+}
+
+// Időzítő kezelése
+function startCarouselTimer() {
+  carouselTimer = setInterval(nextImage, 4000); // 4 másodpercenként vált
+}
+
+function resetCarouselTimer() {
+  clearInterval(carouselTimer);
+  startCarouselTimer();
+}
+
+// Elem tartalmának biztonságos beállítása
+function setElementText(id, text) {
+  const el = document.getElementById(id);
+  if (el && text) el.textContent = text;
+}
+
+// Hero és Fejléc adatok feltöltése DOM elemekbe
+function populateHeaderAndHero(data) {
+  setElementText("header-title", data.header?.title);
+  setElementText("header-subtitle", data.header?.subtitle);
+
+  setElementText("hero-tagline", data.hero?.tagline);
+  setElementText("hero-title", data.hero?.title);
+  setElementText("hero-desc", data.hero?.description);
+  setElementText("hero-badge", "🌿 " + data.hero?.badge);
+  setElementText("hero-overlay-tag", data.hero?.overlayTag);
+  setElementText("hero-overlay-title", data.hero?.overlayTitle);
+
+  setElementText("audio-title", data.audio?.title);
+  setElementText("audio-subtitle", data.audio?.subtitle);
+  setElementText("audio-btn-text", data.audio?.buttonText);
+
+  // Audio Gomb Eseménykezelő
+  const audioBtn = document.getElementById("audio-btn");
+  if (audioBtn) audioBtn.addEventListener("click", toggleAudio);
+
+  // Diavetítés indítása
+  initHeroCarousel();
+}
