@@ -101,7 +101,7 @@ const heroImages = [
   "Template/background04.jif",
   "Template/background05.jif",
   "Template/background06.jif",
-  "Template/background07.jpg",
+  "Template/background07.jif",
 ];
 
 let currentImageIndex = 0;
