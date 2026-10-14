@@ -3,8 +3,8 @@
 /* --- Global Base Styles --- */
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
-  background-color: #f7f6f2;
-  color: #1c1917; /* stone-900 */
+  background-color: #f2f2ed; /* brand-bg */
+  color: #464b71; /* brand-dark */
   padding-bottom: 7rem;
 }
 
@@ -20,7 +20,7 @@ body {
   width: 2rem;
   height: 2rem;
   border-radius: 9999px;
-  border: 1px solid #d6d3d1; /* stone-300 */
+  border: 1px solid #7cd5c7; /* brand-mint */
   position: relative;
   z-index: 10;
 }
@@ -34,25 +34,25 @@ body {
 }
 
 .header-avatar:hover img {
-  transform: scale(2.2); /* 2.2-szeresére nagyítja a képet */
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.25); /* Lágy árnyék a kiemeléshez */
+  transform: scale(2.2);
+  box-shadow: 0 10px 25px -5px rgba(70, 75, 113, 0.3);
 }
 
 /* Card Overlays & Badges */
 .badge-glass {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(70, 75, 113, 0.45);
   backdrop-filter: blur(8px);
   color: #ffffff;
   font-size: 10px;
   padding: 0.25rem 0.75rem;
   border-radius: 9999px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 /* Soft Container Cards */
 .card-soft {
-  background-color: rgba(231, 229, 228, 0.5); /* stone-200/50 */
-  border: 1px solid rgba(214, 211, 209, 0.4); /* stone-300/40 */
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(124, 213, 199, 0.4); /* brand-mint/40 */
   border-radius: 1rem;
   padding: 1rem;
 }
@@ -63,12 +63,13 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(245, 245, 244, 0.9); /* stone-100/90 */
+  background-color: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(12px);
-  border-top: 1px solid rgba(214, 211, 209, 0.6);
+  border-top: 1px solid rgba(124, 213, 199, 0.3);
   padding: 0.625rem 1.5rem;
   z-index: 50;
 }
+
 /* Carousel Image Fade Animation */
 .carousel-img {
   position: absolute;
@@ -90,26 +91,26 @@ body {
   width: 6px;
   height: 6px;
   border-radius: 9999px;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.5);
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
 .carousel-dot.active {
-  width: 18px; /* Az aktív pötty megnyúlik pill alakúra */
-  background-color: #ffffff;
+  width: 18px;
+  background-color: #7cd5c7; /* brand-mint */
 }
 
-* --- Sziromhullás Effektek --- */
+/* --- Sziromhullás Effektek --- */
 
-/* A szirmok konténere (rögzítve a teljes képernyőn, átkattintható) */
+/* A szirmok konténere */
 #petal-container {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none; /* Fontos: nem akadályozza a kattintásokat a gombokon */
+  pointer-events: none;
   overflow: hidden;
   z-index: 40;
 }

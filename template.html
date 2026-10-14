@@ -5,23 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hā Lomi - Template</title>
 
-    <!-- Tailwind CSS CDN -->
+    <!-- Tailwind CSS CDN with Custom Color Palette -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                dark: "#464B71",
+                ocean: "#118AB2",
+                mint: "#7CD5C7",
+                bg: "#F2F2ED",
+              },
+            },
+          },
+        },
+      };
+    </script>
 
     <!-- Custom Template Stylesheet -->
     <link rel="stylesheet" href="template.css" />
   </head>
-  <body class="text-stone-800 pb-28">
+  <body class="bg-brand-bg text-brand-dark pb-28">
     <!-- Szirmok Konténere -->
     <div id="petal-container"></div>
+
     <div class="max-w-2xl mx-auto px-4 pt-6 space-y-6">
       <!-- Header Bar -->
       <header class="flex items-center justify-between py-2">
         <div class="flex items-center gap-2">
           <div
-            class="w-8 h-8 rounded-full overflow-hidden shrink-0 flex items-center justify-center"
+            class="w-8 h-8 rounded-full overflow-hidden shrink-0 flex items-center justify-center border border-brand-mint/50"
           >
             <img
+              id="header-logo"
               src="Template/icon.png"
               alt="Logo"
               class="w-full h-full object-cover"
@@ -30,11 +48,11 @@
           <div>
             <h1
               id="header-title"
-              class="font-serif-custom text-lg font-bold text-stone-900 leading-none"
+              class="font-serif-custom text-lg font-bold text-brand-dark leading-none"
             ></h1>
             <p
               id="header-subtitle"
-              class="text-[9px] font-semibold tracking-wider text-stone-500 uppercase mt-0.5"
+              class="text-[9px] font-semibold tracking-wider text-brand-ocean uppercase mt-0.5"
             ></p>
           </div>
         </div>
@@ -51,24 +69,29 @@
 
       <!-- Hero Section -->
       <section class="space-y-3">
-        <div>
+        <div class="space-y-1.5">
+          <!-- Tagline / Kategória -->
           <p
             id="hero-tagline"
-            class="text-[10px] font-bold tracking-widest text-stone-500 uppercase"
+            class="text-[10px] font-bold tracking-widest text-brand-ocean uppercase"
           ></p>
+
+          <!-- Főcím -->
           <h2
             id="hero-title"
-            class="font-serif-custom text-2xl font-normal text-stone-900 mt-1"
+            class="text-xl font-serif-custom font-normal text-brand-dark"
           ></h2>
-          <p
+
+          <!-- Leírás -->
+          <div
             id="hero-desc"
-            class="text-xs text-stone-600 leading-relaxed mt-2"
-          ></p>
+            class="text-xs text-brand-dark/80 leading-relaxed"
+          ></div>
         </div>
 
         <!-- Banner Image Card -->
         <div
-          class="relative rounded-2xl overflow-hidden shadow-sm h-64 bg-stone-200 group"
+          class="relative rounded-2xl overflow-hidden shadow-sm h-64 bg-brand-mint/20 group"
         >
           <!-- Képek konténere (Crossfade effekt) -->
           <div
@@ -80,7 +103,7 @@
 
           <!-- Sötétítő Gradiens & Szövegek Overlay -->
           <div
-            class="relative z-10 inset-0 h-full bg-gradient-to-t from-black/70 via-black/20 to-transparent flex flex-col justify-between p-4 pointer-events-none"
+            class="relative z-10 inset-0 h-full bg-gradient-to-t from-brand-dark/80 via-brand-dark/30 to-transparent flex flex-col justify-between p-4 pointer-events-none"
           >
             <div class="self-end pointer-events-auto">
               <span id="hero-badge" class="badge-glass"></span>
@@ -112,11 +135,11 @@
 
       <!-- Audio Bar -->
       <section
-        class="bg-stone-200/60 border border-stone-300/50 rounded-2xl p-3.5 flex items-center justify-between"
+        class="bg-brand-mint/30 border border-brand-mint/50 rounded-2xl p-3.5 flex items-center justify-between"
       >
         <div class="flex items-center gap-3">
           <div
-            class="w-10 h-10 rounded-xl bg-emerald-900 text-emerald-100 flex items-center justify-center shrink-0"
+            class="w-10 h-10 rounded-xl bg-brand-ocean text-white flex items-center justify-center shrink-0 shadow-sm"
           >
             <svg
               class="w-5 h-5"
@@ -133,17 +156,17 @@
             </svg>
           </div>
           <div>
-            <h4 id="audio-title" class="text-xs font-bold text-stone-900"></h4>
+            <h4 id="audio-title" class="text-xs font-bold text-brand-dark"></h4>
             <p
               id="audio-subtitle"
-              class="text-[11px] text-stone-500 mt-0.5"
+              class="text-[11px] text-brand-dark/70 mt-0.5"
             ></p>
           </div>
         </div>
 
         <button
           id="audio-btn"
-          class="px-3.5 py-1.5 bg-stone-300/70 hover:bg-stone-300 text-stone-800 text-xs font-medium rounded-full transition-colors flex items-center gap-1.5 shrink-0 cursor-pointer active:scale-95"
+          class="px-3.5 py-1.5 bg-brand-ocean text-white text-xs font-medium rounded-full transition-all hover:bg-brand-ocean/90 shrink-0 cursor-pointer active:scale-95 shadow-sm"
         >
           <span id="audio-btn-icon">🔊</span>
           <span id="audio-btn-text"></span>
@@ -156,14 +179,14 @@
           <div>
             <p
               id="features-category"
-              class="text-[10px] font-bold tracking-widest text-stone-500 uppercase"
+              class="text-[10px] font-bold tracking-widest text-brand-ocean uppercase"
             ></p>
             <h3
               id="features-title"
-              class="font-serif-custom text-xl font-normal text-stone-900"
+              class="font-serif-custom text-xl font-normal text-brand-dark"
             ></h3>
           </div>
-          <button class="p-1.5 rounded-full bg-stone-200/60 text-stone-600">
+          <button class="p-1.5 rounded-full bg-brand-mint/40 text-brand-dark">
             <svg
               class="w-4 h-4"
               fill="none"
@@ -190,16 +213,16 @@
           <div>
             <p
               id="healers-category"
-              class="text-[10px] font-bold tracking-widest text-stone-500 uppercase"
+              class="text-[10px] font-bold tracking-widest text-brand-ocean uppercase"
             ></p>
             <h3
               id="healers-title"
-              class="font-serif-custom text-xl font-normal text-stone-900"
+              class="font-serif-custom text-xl font-normal text-brand-dark"
             ></h3>
           </div>
           <span
             id="healers-subtitle"
-            class="text-xs text-stone-500 font-medium"
+            class="text-xs text-brand-dark/60 font-medium"
           ></span>
         </div>
 
@@ -209,30 +232,34 @@
     </div>
 
     <!-- Bottom Navigation -->
-    <nav class="bottom-nav">
+    <nav
+      class="bottom-nav bg-white/80 backdrop-blur-md border-t border-brand-mint/30 fixed bottom-0 left-0 right-0 py-3 z-30"
+    >
       <div
         id="nav-container"
-        class="max-w-md mx-auto flex items-center justify-between"
+        class="max-w-md mx-auto flex items-center justify-between px-6"
       ></div>
     </nav>
 
-    <!-- HTML Sabil sablon a dinamikus elemek másolásához (Template Elements) -->
+    <!-- HTML Templates -->
     <template id="feature-card-template">
-      <div class="card-soft flex gap-4 items-start">
+      <div
+        class="card-soft bg-white/70 border border-brand-mint/40 rounded-2xl p-4 flex gap-4 items-start shadow-sm"
+      >
         <div
-          class="feature-img-box w-12 h-12 rounded-xl overflow-hidden shrink-0 bg-stone-300 hidden"
+          class="feature-img-box w-12 h-12 rounded-xl overflow-hidden shrink-0 bg-brand-mint/30 hidden"
         >
           <img class="feature-img w-full h-full object-cover" src="" alt="" />
         </div>
         <div
-          class="feature-icon-box w-12 h-12 rounded-xl bg-stone-300/70 flex items-center justify-center text-xl text-stone-700 font-serif-custom shrink-0 hidden"
+          class="feature-icon-box w-12 h-12 rounded-xl bg-brand-mint/30 text-brand-ocean flex items-center justify-center text-xl font-serif-custom shrink-0 hidden"
         >
           <span class="feature-icon"></span>
         </div>
         <div class="space-y-1.5 flex-1">
-          <h4 class="feature-item-title text-sm font-bold text-stone-900"></h4>
+          <h4 class="feature-item-title text-sm font-bold text-brand-dark"></h4>
           <p
-            class="feature-item-desc text-xs text-stone-600 leading-relaxed"
+            class="feature-item-desc text-xs text-brand-dark/70 leading-relaxed"
           ></p>
           <div class="feature-tags flex flex-wrap gap-1.5 pt-1"></div>
         </div>
@@ -240,31 +267,33 @@
     </template>
 
     <template id="healer-card-template">
-      <div class="card-soft space-y-3">
+      <div
+        class="card-soft bg-white/70 border border-brand-mint/40 rounded-2xl p-4 space-y-3 shadow-sm"
+      >
         <div class="flex items-center justify-between">
           <div class="flex items-center gap-3">
             <img
-              class="healer-avatar w-10 h-10 rounded-full object-cover border border-stone-300"
+              class="healer-avatar w-10 h-10 rounded-full object-cover border border-brand-mint"
               src=""
               alt=""
             />
             <div>
-              <h4 class="healer-name text-sm font-bold text-stone-900"></h4>
-              <p class="healer-role text-[11px] text-stone-500"></p>
+              <h4 class="healer-name text-sm font-bold text-brand-dark"></h4>
+              <p class="healer-role text-[11px] text-brand-ocean"></p>
               <p
-                class="healer-exp text-[10px] font-medium text-stone-400 mt-0.5"
+                class="healer-exp text-[10px] font-medium text-brand-dark/50 mt-0.5"
               ></p>
             </div>
           </div>
           <div
-            class="flex items-center gap-1 bg-stone-300/50 px-2 py-0.5 rounded-full text-xs text-stone-700 font-bold"
+            class="flex items-center gap-1 bg-brand-mint/30 px-2 py-0.5 rounded-full text-xs text-brand-dark font-bold"
           >
-            <span class="text-amber-600 text-[10px]">★</span>
+            <span class="text-amber-500 text-[10px]">★</span>
             <span class="healer-rating"></span>
           </div>
         </div>
         <p
-          class="healer-bio text-xs text-stone-600 leading-relaxed border-t border-stone-300/40 pt-3"
+          class="healer-bio text-xs text-brand-dark/80 leading-relaxed border-t border-brand-mint/30 pt-3"
         ></p>
       </div>
     </template>
@@ -276,55 +305,56 @@
 
     <!-- External JavaScript File -->
     <script src="template.js"></script>
-  </body>
-  <!-- Foglalási Modal (Felugró ablak) -->
-  <div
-    id="booking-modal"
-    class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/60 backdrop-blur-sm hidden"
-  >
-    <div
-      class="relative w-full max-w-2xl bg-stone-100 rounded-2xl shadow-2xl overflow-hidden border border-stone-300 flex flex-col max-h-[90vh]"
-    >
-      <!-- Modal Fejléc -->
-      <div
-        class="flex items-center justify-between p-4 border-b border-stone-200 bg-stone-200/60 shrink-0"
-      >
-        <h3 class="font-serif-custom text-lg font-bold text-stone-900">
-          Időpontfoglalás
-        </h3>
-        <button
-          id="close-booking-modal"
-          class="p-1 rounded-full text-stone-500 hover:text-stone-800 hover:bg-stone-300/50 transition-colors cursor-pointer"
-        >
-          <svg
-            class="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
-        </button>
-      </div>
 
-      <!-- Modal Tartalom (Görgethető konténer elegendő magassággal) -->
-      <div class="p-1 sm:p-3 overflow-y-auto flex-1 w-full bg-white">
-        <iframe
-          id="calendar-iframe"
-          src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ03tEvc4aFZW6jclDS-zrvXM58GMeeZ0dMxE2WTitIK0wBNNpU5ERtWFVdcM46O_N_udMDzt_jE?gv=true"
-          style="border: 0"
-          width="100%"
-          class="w-full min-h-[680px] h-full rounded-lg"
-          frameborder="0"
-          scrolling="yes"
+    <!-- Foglalási Modal (Felugró ablak) -->
+    <div
+      id="booking-modal"
+      class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-brand-dark/60 backdrop-blur-sm hidden"
+    >
+      <div
+        class="relative w-full max-w-2xl bg-brand-bg rounded-2xl shadow-2xl overflow-hidden border border-brand-mint flex flex-col max-h-[90vh]"
+      >
+        <!-- Modal Fejléc -->
+        <div
+          class="flex items-center justify-between p-4 border-b border-brand-mint/40 bg-brand-mint/20 shrink-0"
         >
-        </iframe>
+          <h3 class="font-serif-custom text-lg font-bold text-brand-dark">
+            Időpontfoglalás
+          </h3>
+          <button
+            id="close-booking-modal"
+            class="p-1 rounded-full text-brand-dark/60 hover:text-brand-dark hover:bg-brand-mint/30 transition-colors cursor-pointer"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Modal Tartalom -->
+        <div class="p-1 sm:p-3 overflow-y-auto flex-1 w-full bg-white">
+          <iframe
+            id="calendar-iframe"
+            src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2RP9w17xsmeHLf_YLRSNOK4rYd1clJ4Na8CVe_v89MoEpKAK7TjAhauL8oU4iAiBpuE2AMoDvI?gv=true"
+            style="border: 0"
+            width="100%"
+            class="w-full min-h-[680px] h-full rounded-lg"
+            frameborder="0"
+            scrolling="yes"
+          >
+          </iframe>
+        </div>
       </div>
     </div>
-  </div>
+  </body>
 </html>
