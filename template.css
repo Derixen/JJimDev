@@ -51,8 +51,8 @@ body {
 
 /* Soft Container Cards */
 .card-soft {
-  background-color: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(124, 213, 199, 0.4); /* brand-mint/40 */
+  background-color: #f4eae0; /* <-- ITT módosítsd a kártya háttérszínét */
+  border: 1px solid #e4d3c1; /* <-- ITT módosítsd a kártya keretszínét */
   border-radius: 1rem;
   padding: 1rem;
 }
