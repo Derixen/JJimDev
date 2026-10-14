@@ -5,29 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hā Lomi - Template</title>
 
-    <!-- Tailwind CSS CDN with Custom Color Palette -->
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              brand: {
-                dark: "#464B71",
-                ocean: "#118AB2",
-                mint: "#7CD5C7",
-                bg: "#f0e2d0",
-              },
-            },
-          },
-        },
-      };
-    </script>
 
     <!-- Custom Template Stylesheet -->
     <link rel="stylesheet" href="template.css" />
   </head>
-  <body class="bg-brand-bg text-brand-dark pb-28">
+  <body class="pb-28">
     <!-- Szirmok Konténere -->
     <div id="petal-container"></div>
 
@@ -36,7 +20,7 @@
       <header class="flex items-center justify-between py-2">
         <div class="flex items-center gap-2">
           <div
-            class="w-8 h-8 rounded-full overflow-hidden shrink-0 flex items-center justify-center border border-brand-mint/50"
+            class="w-8 h-8 rounded-full overflow-hidden shrink-0 flex items-center justify-center border border-custom"
           >
             <img
               id="header-logo"
@@ -46,13 +30,11 @@
             />
           </div>
           <div>
-            <h1
-              id="header-title"
-              class="font-serif-custom text-lg font-bold text-brand-dark leading-none"
-            ></h1>
+            <h1 id="header-title" class="font-serif-custom leading-none"></h1>
             <p
               id="header-subtitle"
-              class="text-[9px] font-semibold tracking-wider text-brand-ocean uppercase mt-0.5"
+              class="text-[9px] font-semibold tracking-wider uppercase mt-0.5"
+              style="color: var(--color-text-accent)"
             ></p>
           </div>
         </div>
@@ -70,40 +52,26 @@
       <!-- Hero Section -->
       <section class="space-y-3">
         <div class="space-y-1.5">
-          <!-- Tagline / Kategória -->
           <p
             id="hero-tagline"
-            class="text-[10px] font-bold tracking-widest text-brand-ocean uppercase"
+            class="text-[10px] font-bold tracking-widest uppercase"
+            style="color: var(--color-text-accent)"
           ></p>
-
-          <!-- Főcím -->
-          <h2
-            id="hero-title"
-            class="text-xl font-serif-custom font-normal text-brand-dark"
-          ></h2>
-
-          <!-- Leírás -->
-          <div
-            id="hero-desc"
-            class="text-xs text-brand-dark/80 leading-relaxed"
-          ></div>
+          <h2 id="hero-title" class="font-serif-custom font-normal"></h2>
+          <div id="hero-desc" class="text-xs leading-relaxed opacity-90"></div>
         </div>
 
         <!-- Banner Image Card -->
         <div
-          class="relative rounded-2xl overflow-hidden shadow-sm h-64 bg-brand-mint/20 group"
+          class="relative rounded-2xl overflow-hidden shadow-sm h-64 group border-custom border"
         >
-          <!-- Képek konténere (Crossfade effekt) -->
           <div
             id="hero-carousel-container"
             class="absolute inset-0 w-full h-full"
-          >
-            <!-- A JS ide szúrja be a képeket dinamikusan -->
-          </div>
+          ></div>
 
-          <!-- Sötétítő Gradiens & Szövegek Overlay -->
           <div
-            class="relative z-10 inset-0 h-full bg-gradient-to-t from-brand-dark/80 via-brand-dark/30 to-transparent flex flex-col justify-between p-4 pointer-events-none"
+            class="relative z-10 inset-0 h-full bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-between p-4 pointer-events-none"
           >
             <div class="self-end pointer-events-auto">
               <span id="hero-badge" class="badge-glass"></span>
@@ -120,26 +88,20 @@
                   class="font-serif-custom text-xl font-medium mt-0.5"
                 ></h3>
               </div>
-
-              <!-- Pöttyök (Indicators: . . . . . . .) -->
               <div
                 id="hero-dots-container"
                 class="flex items-center gap-1.5 pt-1 pointer-events-auto"
-              >
-                <!-- A JS ide generálja a pöttyöket -->
-              </div>
+              ></div>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Audio Bar -->
-      <section
-        class="bg-brand-mint/30 border border-brand-mint/50 rounded-2xl p-3.5 flex items-center justify-between"
-      >
+      <section class="card-soft flex items-center justify-between">
         <div class="flex items-center gap-3">
           <div
-            class="w-10 h-10 rounded-xl bg-brand-ocean text-white flex items-center justify-center shrink-0 shadow-sm"
+            class="w-10 h-10 rounded-xl btn-primary flex items-center justify-center shrink-0 shadow-sm"
           >
             <svg
               class="w-5 h-5"
@@ -156,17 +118,15 @@
             </svg>
           </div>
           <div>
-            <h4 id="audio-title" class="text-xs font-bold text-brand-dark"></h4>
-            <p
-              id="audio-subtitle"
-              class="text-[11px] text-brand-dark/70 mt-0.5"
-            ></p>
+            <h4 id="audio-title" class="text-xs font-bold"></h4>
+            <p id="audio-subtitle" class="text-[11px] opacity-70 mt-0.5"></p>
           </div>
         </div>
 
+        <!-- Audio gomb a btn-primary osztállyal -->
         <button
           id="audio-btn"
-          class="px-3.5 py-1.5 bg-[#464B71] text-white text-xs font-medium rounded-full transition-all hover:bg-brand-ocean/90 shrink-0 cursor-pointer active:scale-95 shadow-sm"
+          class="px-3.5 py-1.5 btn-primary text-xs font-medium shrink-0 cursor-pointer active:scale-95 shadow-sm"
         >
           <span id="audio-btn-icon">🔊</span>
           <span id="audio-btn-text"></span>
@@ -177,33 +137,15 @@
       <section class="space-y-3">
         <div class="flex items-center justify-between">
           <div>
-            <p
+            <!--           <p
               id="features-category"
-              class="text-[10px] font-bold tracking-widest text-brand-ocean uppercase"
-            ></p>
-            <h3
-              id="features-title"
-              class="font-serif-custom text-xl font-normal text-brand-dark"
-            ></h3>
+              class="text-[10px] font-bold tracking-widest uppercase"
+              style="color: var(--color-text-accent)"
+            ></p> -->
+            <h3 id="features-title" class="font-serif-custom font-normal"></h3>
           </div>
-          <button class="p-1.5 rounded-full bg-brand-mint/40 text-brand-dark">
-            <svg
-              class="w-4 h-4"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-              />
-            </svg>
-          </button>
         </div>
 
-        <!-- Dinamikus funkció-kártyák konténere -->
         <div id="features-container" class="space-y-3"></div>
       </section>
 
@@ -211,30 +153,25 @@
       <section class="space-y-3">
         <div class="flex items-center justify-between">
           <div>
-            <p
+            <!--             <p
               id="healers-category"
-              class="text-[10px] font-bold tracking-widest text-brand-ocean uppercase"
-            ></p>
-            <h3
-              id="healers-title"
-              class="font-serif-custom text-xl font-normal text-brand-dark"
-            ></h3>
+              class="text-[10px] font-bold tracking-widest uppercase"
+              style="color: var(--color-text-accent)"
+            ></p> -->
+            <h3 id="healers-title" class="font-serif-custom font-normal"></h3>
           </div>
           <span
             id="healers-subtitle"
-            class="text-xs text-brand-dark/60 font-medium"
+            class="text-xs font-medium opacity-70"
           ></span>
         </div>
 
-        <!-- Dinamikus gyógyító-kártyák konténere -->
         <div id="healers-container" class="space-y-3"></div>
       </section>
     </div>
 
     <!-- Bottom Navigation -->
-    <nav
-      class="bottom-nav bg-white/80 backdrop-blur-md border-t border-brand-mint/30 fixed bottom-0 left-0 right-0 py-3 z-30"
-    >
+    <nav class="bottom-nav">
       <div
         id="nav-container"
         class="max-w-md mx-auto flex items-center justify-between px-6"
@@ -243,87 +180,81 @@
 
     <!-- HTML Templates -->
     <template id="feature-card-template">
-      <div
-        class="card-soft bg-white/70 border border-brand-mint/40 rounded-2xl p-4 flex gap-4 items-start shadow-sm"
-      >
+      <div class="card-soft flex gap-4 items-start shadow-sm">
         <div
-          class="feature-img-box w-12 h-12 rounded-xl overflow-hidden shrink-0 bg-brand-mint/30 hidden"
+          class="feature-img-box w-12 h-12 rounded-xl overflow-hidden shrink-0 hidden"
         >
           <img class="feature-img w-full h-full object-cover" src="" alt="" />
         </div>
         <div
-          class="feature-icon-box w-12 h-12 rounded-xl bg-brand-mint/30 text-brand-ocean flex items-center justify-center text-xl font-serif-custom shrink-0 hidden"
+          class="feature-icon-box w-12 h-12 rounded-xl btn-primary flex items-center justify-center text-xl font-serif-custom shrink-0 hidden"
         >
           <span class="feature-icon"></span>
         </div>
         <div class="space-y-1.5 flex-1">
-          <h4 class="feature-item-title text-sm font-bold text-brand-dark"></h4>
-          <p
-            class="feature-item-desc text-xs text-brand-dark/70 leading-relaxed"
-          ></p>
+          <h4 class="feature-item-title text-sm font-bold"></h4>
+          <p class="feature-item-desc text-xs opacity-80 leading-relaxed"></p>
           <div class="feature-tags flex flex-wrap gap-1.5 pt-1"></div>
         </div>
       </div>
     </template>
 
     <template id="healer-card-template">
-      <div
-        class="card-soft bg-white/70 border border-brand-mint/40 rounded-2xl p-4 space-y-3 shadow-sm"
-      >
+      <div class="card-soft space-y-3 shadow-sm">
         <div class="flex items-center justify-between">
           <div class="flex items-center gap-3">
             <img
-              class="healer-avatar w-10 h-10 rounded-full object-cover border border-brand-mint"
+              class="healer-avatar w-10 h-10 rounded-full object-cover border-custom border"
               src=""
               alt=""
             />
             <div>
-              <h4 class="healer-name text-sm font-bold text-brand-dark"></h4>
-              <p class="healer-role text-[11px] text-brand-ocean"></p>
+              <h4 class="healer-name text-sm font-bold"></h4>
               <p
-                class="healer-exp text-[10px] font-medium text-brand-dark/50 mt-0.5"
+                class="healer-role text-[11px] font-medium"
+                style="color: var(--color-text-accent)"
+              ></p>
+              <p
+                class="healer-exp text-[10px] font-medium opacity-60 mt-0.5"
               ></p>
             </div>
           </div>
           <div
-            class="flex items-center gap-1 bg-brand-mint/30 px-2 py-0.5 rounded-full text-xs text-brand-dark font-bold"
+            class="flex items-center gap-1 bg-black/5 px-2 py-0.5 rounded-full text-xs font-bold"
           >
             <span class="text-amber-500 text-[10px]">★</span>
             <span class="healer-rating"></span>
           </div>
         </div>
         <p
-          class="healer-bio text-xs text-brand-dark/80 leading-relaxed border-t border-brand-mint/30 pt-3"
+          class="healer-bio text-xs opacity-80 leading-relaxed border-t border-custom/30 pt-3"
         ></p>
       </div>
     </template>
 
-    <!-- Background Audio Element -->
+    <!-- Audio Element -->
     <audio id="bg-audio" loop preload="auto">
       <source src="audio/sample.mp3" type="audio/mpeg" />
     </audio>
 
-    <!-- External JavaScript File -->
     <script src="template.js"></script>
 
-    <!-- Foglalási Modal (Felugró ablak) -->
+    <!-- Foglalási Modal -->
     <div
       id="booking-modal"
-      class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-brand-dark/60 backdrop-blur-sm hidden"
+      class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/60 backdrop-blur-sm hidden"
     >
       <div
-        class="relative w-full max-w-2xl bg-brand-bg rounded-2xl shadow-2xl overflow-hidden border border-brand-mint flex flex-col max-h-[90vh]"
+        class="relative w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden border-custom border flex flex-col max-h-[90vh]"
+        style="background-color: var(--color-bg)"
       >
-        <!-- Modal Fejléc -->
         <div
-          class="flex items-center justify-between p-4 border-b border-brand-mint/40 bg-brand-mint/20 shrink-0"
+          class="flex items-center justify-between p-4 border-b border-custom/40 shrink-0"
         >
-          <h3 class="font-serif-custom text-lg font-bold text-brand-dark">
-            Időpontfoglalás
-          </h3>
+          <h3 class="font-serif-custom text-lg font-bold">Időpontfoglalás</h3>
           <button
             id="close-booking-modal"
-            class="p-1 rounded-full text-brand-dark/60 hover:text-brand-dark hover:bg-brand-mint/30 transition-colors cursor-pointer"
+            class="p-1 rounded-full opacity-70 hover:opacity-100 transition-opacity cursor-pointer"
           >
             <svg
               class="w-6 h-6"
@@ -340,8 +271,6 @@
             </svg>
           </button>
         </div>
-
-        <!-- Modal Tartalom -->
         <div class="p-1 sm:p-3 overflow-y-auto flex-1 w-full bg-white">
           <iframe
             id="calendar-iframe"
@@ -351,8 +280,7 @@
             class="w-full min-h-[680px] h-full rounded-lg"
             frameborder="0"
             scrolling="yes"
-          >
-          </iframe>
+          ></iframe>
         </div>
       </div>
     </div>
