@@ -31,12 +31,14 @@
       {
         "title": "Kézműves Botanikai Patika",
         "description": "Frissen infuzált szigeti olajok kukui, makadámia és illatos pikake virág kivonattal.",
+        "extendedDescription": "<strong>Extra részletek:</strong><br>• Privát zuhanyzó<br>• Hangszigetelt környezet<br><br><em>Nyitva: 08:00 - 20:00</em>",
         "image": "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?q=80&w=200&auto=format&fit=crop",
         "tags": ["Hidegen sajtolt olajok", "Vadon gyűjtött"]
       },
       {
         "title": "A Pono Filozófiája",
         "description": "A test, lélek és természeti világ közötti tökéletes belső harmónia helyreállítása tudatos lélegzet és ima által.",
+        "extendedDescription": "<strong>Extra részletek:</strong><br>• Privát zuhanyzó<br>• Hangszigetelt környezet<br><br><em>Nyitva: 08:00 - 20:00</em>",
         "icon": "∞",
         "tags": ["Lōkahi Összhang"]
       }
