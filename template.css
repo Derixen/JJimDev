@@ -67,6 +67,32 @@ body {
   box-shadow: 0 15px 30px -5px rgba(70, 75, 113, 0.18) !important;
 }
 
+/* Smooth Expand/Collapse Animation */
+.expandable-content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.4s ease-in-out,
+    opacity 0.3s ease-in-out,
+    padding 0.3s ease-in-out;
+}
+
+.expandable-content.expanded {
+  max-height: 500px; /* Bőséges hely a kinyílt szövegnek */
+  opacity: 1;
+}
+
+/* Nyíl forgatása animációval */
+.toggle-arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.toggle-arrow.rotated {
+  transform: rotate(180deg);
+}
+
 /* Gombok Stílusa (Audio gomb, Akció gombok) */
 .btn-primary {
   background-color: var(--color-button) !important;

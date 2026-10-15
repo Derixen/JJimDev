@@ -212,7 +212,7 @@ function populateHeaderAndHero(data) {
   initHeroCarousel();
 }
 
-// Funkció kártyák
+// Funkció kártyák kirajzolása és lenyíló animációja
 function populateFeatures(featuresSection) {
   setElementText("features-category", featuresSection?.category);
   setElementText("features-title", featuresSection?.title);
@@ -225,7 +225,9 @@ function populateFeatures(featuresSection) {
 
   featuresSection.items.forEach((item) => {
     const clone = template.content.cloneNode(true);
+    const cardElement = clone.querySelector(".card-soft");
 
+    // Kép vagy Ikon kezelése
     if (item.image) {
       const imgBox = clone.querySelector(".feature-img-box");
       const img = clone.querySelector(".feature-img");
@@ -239,14 +241,38 @@ function populateFeatures(featuresSection) {
       iconBox.classList.remove("hidden");
     }
 
+    // Cím és fő leírás (HTML formázás támogatásával)
     clone.querySelector(".feature-item-title").textContent = item.title;
-    clone.querySelector(".feature-item-desc").textContent = item.description;
+    const descEl = clone.querySelector(".feature-item-desc");
+    descEl.innerHTML = item.description || "";
 
+    // --- ITT VAN A 3. RÉSZ: Animált lenyitás kezelése ---
+    const extendedEl = clone.querySelector(".feature-item-extended");
+    const arrowEl = clone.querySelector(".feature-toggle-arrow");
+
+    if (item.extendedDescription && extendedEl) {
+      extendedEl.innerHTML = item.extendedDescription;
+      arrowEl?.classList.remove("hidden");
+
+      cardElement.addEventListener("click", () => {
+        const isExpanded = extendedEl.classList.contains("expanded");
+
+        if (isExpanded) {
+          extendedEl.classList.remove("expanded");
+          arrowEl?.classList.remove("rotated");
+        } else {
+          extendedEl.classList.add("expanded");
+          arrowEl?.classList.add("rotated");
+        }
+      });
+    }
+
+    // Címkék (Tags) feltöltése
     const tagsContainer = clone.querySelector(".feature-tags");
     item.tags?.forEach((tagText) => {
       const tagSpan = document.createElement("span");
       tagSpan.className =
-        "px-2.5 py-0.5 bg-stone-300/60 text-stone-700 text-[10px] font-medium rounded-md";
+        "px-2.5 py-0.5 bg-black/5 text-[10px] font-medium rounded-md";
       tagSpan.textContent = tagText;
       tagsContainer.appendChild(tagSpan);
     });

@@ -180,7 +180,9 @@
 
     <!-- Help Cards-->
     <template id="feature-card-template">
-      <div class="card-soft card-hover flex gap-4 items-start shadow-sm">
+      <div
+        class="card-soft card-hover flex gap-4 items-start shadow-sm transition-all duration-300 cursor-pointer"
+      >
         <div
           class="feature-img-box w-12 h-12 rounded-xl overflow-hidden shrink-0 hidden"
         >
@@ -192,8 +194,25 @@
           <span class="feature-icon"></span>
         </div>
         <div class="space-y-1.5 flex-1">
-          <h4 class="feature-item-title text-sm font-bold"></h4>
-          <p class="feature-item-desc text-xs opacity-80 leading-relaxed"></p>
+          <div class="flex items-center justify-between">
+            <h4 class="feature-item-title text-sm font-bold"></h4>
+            <!-- Smooth rotating arrow -->
+            <span
+              class="feature-toggle-arrow toggle-arrow text-[10px] opacity-60 hidden"
+              >▼</span
+            >
+          </div>
+
+          <!-- Main description -->
+          <div
+            class="feature-item-desc text-xs opacity-80 leading-relaxed"
+          ></div>
+
+          <!-- Animated Expandable Container -->
+          <div
+            class="feature-item-extended expandable-content text-xs opacity-90 leading-relaxed border-t border-dashed border-custom/40"
+          ></div>
+
           <div class="feature-tags flex flex-wrap gap-1.5 pt-1"></div>
         </div>
       </div>
