@@ -365,6 +365,31 @@ function populateNavigation(navigationItems) {
   setupBookingModal();
 }
 
+// Profile Bio Modal Setup
+function setupProfileModal() {
+  const avatar = document.querySelector(".header-avatar");
+  const modal = document.getElementById("profile-modal");
+  const closeBtn = document.getElementById("close-profile-modal");
+
+  if (!avatar || !modal) return;
+
+  // Open modal on avatar click
+  avatar.addEventListener("click", () => {
+    modal.classList.remove("hidden");
+  });
+
+  // Close modal on 'X' click
+  closeBtn?.addEventListener("click", () => {
+    modal.classList.add("hidden");
+  });
+
+  // Close modal when clicking on the backdrop
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.add("hidden");
+    }
+  });
+}
 // Fő indító függvény
 async function loadTemplateData() {
   try {
@@ -382,6 +407,7 @@ async function loadTemplateData() {
   }
 
   initPetalEffect();
+  setupProfileModal();
 }
 
 document.addEventListener("DOMContentLoaded", loadTemplateData);
