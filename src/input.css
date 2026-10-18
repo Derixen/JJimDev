@@ -183,3 +183,34 @@ p {
   pointer-events: auto;
   cursor: pointer;
 }
+
+/* ==========================================
+   Expandable Project Cards
+   ========================================== */
+
+/* Smooth interaction feedback */
+#site-subdescription article {
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+#site-subdescription article:hover {
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+}
+
+/* Prevent images from exceeding the card */
+#site-subdescription article img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Improve expanded content readability */
+#site-subdescription article li {
+  margin-bottom: 0.5rem;
+}
+
+/* Better spacing for paragraphs */
+#site-subdescription article p + p {
+  margin-top: 0.75rem;
+}

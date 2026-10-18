@@ -796,6 +796,159 @@ function setActiveButton(targetAnchor) {
 // 10. DYNAMIC SIDEBAR NAVIGATION
 // ==========================================
 
+function renderProjectOverview(items, sectionTitle, introText, iconSvg = null) {
+  renderContentToDisplay(sectionTitle, "", null, iconSvg);
+
+  const container = document.getElementById("site-subdescription");
+  if (!container) return;
+
+  const intro = document.createElement("p");
+  intro.className = "text-sm text-slate-600 leading-relaxed mb-5";
+  intro.textContent = introText;
+  container.appendChild(intro);
+
+  const projectList = document.createElement("div");
+  projectList.className = "flex flex-col gap-4";
+  container.appendChild(projectList);
+
+  let activeCard = null;
+
+  if (!Array.isArray(items)) return;
+
+  items.forEach((item, index) => {
+    const card = document.createElement("article");
+    card.className =
+      "bg-white/90 border border-slate-200 " +
+      "rounded-2xl shadow-sm overflow-hidden " +
+      "transition-all duration-200 hover:border-sky-200";
+
+    const header = document.createElement("button");
+    header.type = "button";
+    header.className =
+      "w-full flex items-center justify-between gap-4 " +
+      "p-5 text-left cursor-pointer hover:bg-sky-50/70 " +
+      "transition-colors focus:outline-none " +
+      "focus:ring-2 focus:ring-inset focus:ring-sky-500";
+
+    header.setAttribute("aria-expanded", "false");
+
+    const headerText = document.createElement("div");
+    headerText.className = "flex-1 min-w-0";
+
+    const title = document.createElement("h3");
+    title.className = "text-lg font-bold text-slate-800 leading-snug";
+    title.textContent = item.title || item.text || "Untitled Project";
+
+    const subtitle = document.createElement("p");
+    subtitle.className = "text-xs text-slate-500 mt-1";
+    subtitle.textContent = "Click to view project details";
+
+    headerText.appendChild(title);
+    headerText.appendChild(subtitle);
+
+    const arrow = document.createElement("span");
+    arrow.className = "text-sky-600 text-xl font-bold shrink-0";
+    arrow.textContent = "+";
+    arrow.setAttribute("aria-hidden", "true");
+
+    header.appendChild(headerText);
+    header.appendChild(arrow);
+
+    const details = document.createElement("div");
+    details.id = `project-details-${index}`;
+    details.className = "border-t border-slate-200 px-5 pb-6 pt-5";
+    details.style.display = "none";
+
+    header.setAttribute("aria-controls", details.id);
+
+    // Optional project screenshot
+    if (item.image) {
+      const imageWrapper = document.createElement("div");
+      imageWrapper.className =
+        "rounded-xl border border-slate-200 bg-white " +
+        "p-3 mb-5 text-center shadow-sm";
+
+      const image = document.createElement("img");
+      image.src = item.image;
+      image.alt = item.title || item.text || "Project screenshot";
+      image.loading = "lazy";
+      image.className =
+        "max-w-full max-h-96 mx-auto object-contain " +
+        "rounded-lg cursor-zoom-in hover:opacity-90";
+
+      image.addEventListener("click", () => {
+        openModal(item.image);
+      });
+
+      imageWrapper.appendChild(image);
+      details.appendChild(imageWrapper);
+    }
+
+    // Existing JSON description
+    const description = document.createElement("div");
+    description.className =
+      "text-sm text-slate-600 leading-relaxed break-words";
+
+    description.innerHTML = formatTextWithLinks(
+      item.description || item.desc || "",
+    );
+
+    details.appendChild(description);
+
+    // Optional external project link
+    if (item.url && /^https?:\/\//i.test(item.url)) {
+      const link = document.createElement("a");
+      link.href = item.url;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.className =
+        "inline-block mt-4 px-4 py-2 rounded-lg " +
+        "bg-sky-50 border border-sky-200 " +
+        "text-sky-700 text-sm font-semibold hover:bg-sky-100";
+      link.textContent = "View Project ↗";
+      details.appendChild(link);
+    }
+
+    function collapseCard() {
+      details.style.display = "none";
+      header.setAttribute("aria-expanded", "false");
+      arrow.textContent = "+";
+      subtitle.textContent = "Click to view project details";
+      card.classList.remove("border-sky-300");
+    }
+
+    function expandCard() {
+      details.style.display = "block";
+      header.setAttribute("aria-expanded", "true");
+      arrow.textContent = "−";
+      subtitle.textContent = "Click to collapse";
+      card.classList.add("border-sky-300");
+    }
+
+    header.addEventListener("click", () => {
+      const isExpanded = header.getAttribute("aria-expanded") === "true";
+
+      if (activeCard && activeCard !== card) {
+        activeCard.collapse();
+      }
+
+      if (isExpanded) {
+        collapseCard();
+        activeCard = null;
+      } else {
+        expandCard();
+        activeCard = card;
+      }
+    });
+
+    card.collapse = collapseCard;
+
+    card.appendChild(header);
+    card.appendChild(details);
+    projectList.appendChild(card);
+  });
+}
+
 function renderSidebarButtons(buttons) {
   const container = document.getElementById("button-container");
 
@@ -839,8 +992,14 @@ function renderSidebarButtons(buttons) {
       firstButton = anchor;
     }
 
+    const isTools = btn.text === "My Tools";
+    const isScripts = btn.text === "My Scripts";
+    const isProjectSection = isTools || isScripts;
+
     const hasDropdown =
-      Array.isArray(btn.dropdownItems) && btn.dropdownItems.length > 0;
+      !isProjectSection &&
+      Array.isArray(btn.dropdownItems) &&
+      btn.dropdownItems.length > 0;
 
     anchor.href = hasDropdown ? "#" : btn.url || "#";
 
@@ -921,6 +1080,29 @@ function renderSidebarButtons(buttons) {
     // ----------------------------------------
     else {
       anchor.addEventListener("click", (event) => {
+        if (isProjectSection) {
+          event.preventDefault();
+
+          setActiveButton(anchor);
+
+          const sectionTitle = isTools
+            ? "My Tools & Applications"
+            : "My Scripts & Automation";
+
+          const introText = isTools
+            ? "A collection of custom-developed tools and applications designed to simplify enterprise administration, diagnostics, and automation. Select a project to explore its functionality."
+            : "A collection of scripts and automation solutions developed through hands-on enterprise infrastructure engineering. Select a script to explore its purpose and implementation.";
+
+          renderProjectOverview(
+            btn.dropdownItems,
+            sectionTitle,
+            introText,
+            btn.icon,
+          );
+
+          return;
+        }
+
         if (btn.url && btn.url !== "#" && !btn.url.startsWith("#")) {
           return;
         }
