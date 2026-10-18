@@ -7,25 +7,81 @@
       "category": "Automation & Scripting",
       "value": "PowerShell & SQL",
       "label": "Advanced T-SQL, VBScript & Batch",
-      "icon": "<svg class='w-4 h-4 text-sky-600' fill='none' stroke='currentColor' stroke-width='2' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' d='M8 9l3 3-3 3m5 0h3M4 6h16a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2z'/></svg>"
+      "icon": "<svg class='w-4 h-4 text-sky-600' fill='none' stroke='currentColor' stroke-width='2' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' d='M8 9l3 3-3 3m5 0h3M4 6h16a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2z'/></svg>",
+      "sections": [
+        {
+          "title": "PowerShell Automation",
+          "content": "PowerShell scripting for enterprise administration, repeatable workflows, diagnostics, and endpoint remediation."
+        },
+        {
+          "title": "SQL & Reporting",
+          "content": "Advanced T-SQL queries, data extraction, and automated reporting."
+        },
+        {
+          "title": "Legacy & Integration Scripting",
+          "content": "VBScript and Batch automation for startup, logon, and infrastructure workflows."
+        }
+      ]
     },
     {
       "category": "Endpoint Management",
       "value": "SCCM & OSD",
       "label": "ZTI, In-Place Upgrades & GPO",
-      "icon": "<svg class='w-4 h-4 text-sky-600' fill='none' stroke='currentColor' stroke-width='2' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' d='M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10'/></svg>"
+      "icon": "<svg class='w-4 h-4 text-sky-600' fill='none' stroke='currentColor' stroke-width='2' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' d='M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10'/></svg>",
+      "sections": [
+        {
+          "title": "Configuration Management",
+          "content": "SCCM infrastructure management, client health, application packaging, and software distribution."
+        },
+        {
+          "title": "Operating System Deployment",
+          "content": "Zero-Touch Installation (ZTI), WinPE customization, and in-place Windows upgrades."
+        },
+        {
+          "title": "Enterprise Policy",
+          "content": "Group Policy design, optimization, and endpoint configuration."
+        }
+      ]
     },
     {
       "category": "Application Dev",
       "value": "C# & VB.NET",
       "label": "OOP Tooling & Internal Platforms",
-      "icon": "<svg class='w-4 h-4 text-sky-600' fill='none' stroke='currentColor' stroke-width='2' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' d='M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4'/></svg>"
+      "icon": "<svg class='w-4 h-4 text-sky-600' fill='none' stroke='currentColor' stroke-width='2' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' d='M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4'/></svg>",
+      "sections": [
+        {
+          "title": "C# & .NET",
+          "content": "Object-oriented C# and VB.NET tools for enterprise support and internal applications."
+        },
+        {
+          "title": "Web Applications",
+          "content": "ASP.NET MVC platforms, backend integrations, and database-driven user interfaces."
+        },
+        {
+          "title": "Desktop Utilities",
+          "content": "PowerShell WPF and .NET GUI utilities for administration and troubleshooting."
+        }
+      ]
     },
     {
       "category": "Scale & Experience",
       "value": "15+ Years",
       "label": "100,000+ Managed Endpoints",
-      "icon": "<svg class='w-4 h-4 text-sky-600' fill='none' stroke='currentColor' stroke-width='2' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' d='M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z'/></svg>"
+      "icon": "<svg class='w-4 h-4 text-sky-600' fill='none' stroke='currentColor' stroke-width='2' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' d='M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z'/></svg>",
+      "sections": [
+        {
+          "title": "Enterprise Experience",
+          "content": "15+ years across service desk, systems engineering, and technical architecture."
+        },
+        {
+          "title": "Endpoint Scale",
+          "content": "Experience supporting enterprise environments with 100,000+ managed endpoints."
+        },
+        {
+          "title": "Technical Leadership",
+          "content": "Technical lead responsibilities, mentoring, architecture, and cross-team collaboration."
+        }
+      ]
     }
   ],
   "buttons": [

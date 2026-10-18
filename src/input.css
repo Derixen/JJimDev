@@ -114,3 +114,72 @@ p {
   content: "”";
   @apply text-sky-500 font-serif font-bold text-xl ml-1;
 }
+
+/* Statistics Popup */
+#stat-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+}
+
+#stat-modal[aria-hidden="true"] {
+  display: none !important;
+}
+
+#stat-modal[aria-hidden="false"] {
+  display: flex !important;
+}
+
+#stat-modal-panel {
+  max-height: 90vh;
+  overflow: hidden;
+}
+
+#stat-modal-sections {
+  overflow-y: auto;
+  min-height: 0;
+}
+
+/* Ensure popup controls receive mouse clicks */
+#stat-modal {
+  pointer-events: auto;
+}
+
+#stat-modal-backdrop {
+  pointer-events: auto;
+}
+
+#stat-modal-panel {
+  pointer-events: auto;
+}
+
+#stat-modal-close,
+#stat-modal-footer-close {
+  position: relative;
+  z-index: 20;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+#stat-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: auto;
+}
+
+#stat-modal-panel {
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+#stat-modal-close,
+#stat-modal-footer-close {
+  position: relative;
+  z-index: 20;
+  pointer-events: auto;
+  cursor: pointer;
+}

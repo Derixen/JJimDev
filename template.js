@@ -390,6 +390,29 @@ function setupProfileModal() {
     }
   });
 }
+
+function populateProfile(profileSection) {
+  if (!profileSection) return;
+
+  const avatarEl = document.getElementById("profile-avatar");
+  const nameEl = document.getElementById("profile-name");
+  const roleEl = document.getElementById("profile-role");
+  const ageEl = document.getElementById("profile-age");
+  const aboutTitleEl = document.getElementById("profile-about-title");
+  const aboutQuoteEl = document.getElementById("profile-about-quote");
+
+  if (avatarEl) {
+    avatarEl.src = profileSection.avatar || "";
+    avatarEl.alt = profileSection.name || "";
+  }
+
+  setElementText("profile-name", profileSection.name);
+  setElementText("profile-role", profileSection.role);
+  setElementText("profile-age", profileSection.age);
+  setElementText("profile-about-title", profileSection.aboutTitle);
+  setElementText("profile-about-quote", `"${profileSection.aboutQuote}"`);
+}
+
 // Fő indító függvény
 async function loadTemplateData() {
   try {
@@ -400,6 +423,7 @@ async function loadTemplateData() {
     populateFeatures(data.featuresSection);
     populateHealers(data.healersSection);
     populateNavigation(data.navigation);
+    populateProfile(data.profileSection); // ← add this line
 
     initAutoplay();
   } catch (error) {

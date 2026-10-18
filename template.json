@@ -12,6 +12,14 @@
     "overlayTitle": "Málama Kerti Pavilonok",
     "badge": "Szentély Kert"
   },
+  "profileSection": {
+    "name": "Monostori Boglárka",
+    "role": "Lomi Lomi Masszőr",
+    "age": "18 éves",
+    "avatar": "Template/profile.png",
+    "aboutTitle": "Rólam:",
+    "aboutQuote": "Kicsit félénk vagyok, de nagyon jól tudok masszírozni. :)"
+  },
   "audio": {
     "title": "Hangtáj: Waves",
     "subtitle": "Mose · Iyakuh · Chantress Seba · Chiko-MandalAmor",
