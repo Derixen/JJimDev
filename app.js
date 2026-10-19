@@ -57,6 +57,10 @@ function createStatModal() {
 
   modal.style.setProperty("display", "none", "important");
 
+  // Smooth popup entrance and exit
+  modal.style.opacity = "0";
+  modal.style.transition = "opacity 300ms ease-in-out";
+
   modal.setAttribute("role", "dialog");
   modal.setAttribute("aria-modal", "true");
   modal.setAttribute("aria-labelledby", "stat-modal-title");
@@ -157,6 +161,14 @@ function createStatModal() {
 
   document.body.appendChild(modal);
 
+  const panel = modal.querySelector("#stat-modal-panel");
+
+  panel.style.opacity = "0";
+  panel.style.transform = "scale(0.95) translateY(12px)";
+  panel.style.transition =
+    "opacity 300ms ease-in-out, " +
+    "transform 300ms cubic-bezier(0.22, 1, 0.36, 1)";
+
   // Handle clicks at the document level during capture.
   // This also works if another element intercepts bubbling.
 
@@ -251,9 +263,29 @@ function openStatModal(stat) {
     container.appendChild(article);
   });
 
-  // Show the popup using one visibility mechanism
+  // Show the modal before starting the animation
   modal.style.setProperty("display", "flex", "important");
   modal.setAttribute("aria-hidden", "false");
+
+  // Cancel a pending close animation, if any
+  clearTimeout(modal._closeTimer);
+
+  // Reset the animation
+  const panel = modal.querySelector("#stat-modal-panel");
+
+  modal.style.opacity = "0";
+  panel.style.opacity = "0";
+  panel.style.transform = "scale(0.95) translateY(12px)";
+
+  // Force the browser to register the starting state
+  void modal.offsetHeight;
+
+  // Animate popup into view
+  requestAnimationFrame(() => {
+    modal.style.opacity = "1";
+    panel.style.opacity = "1";
+    panel.style.transform = "scale(1) translateY(0)";
+  });
 
   activeStatModal = modal;
   document.body.style.overflow = "hidden";
@@ -266,16 +298,27 @@ function closeStatModal() {
 
   if (!modal) return;
 
-  // Hide popup regardless of Tailwind classes
-  modal.style.setProperty("display", "none", "important");
+  const panel = modal.querySelector("#stat-modal-panel");
+
+  // Animate popup out
+  modal.style.opacity = "0";
+  panel.style.opacity = "0";
+  panel.style.transform = "scale(0.95) translateY(12px)";
+
   modal.setAttribute("aria-hidden", "true");
-
   activeStatModal = null;
-  document.body.style.overflow = "";
 
-  if (previousFocus && previousFocus.isConnected) {
-    previousFocus.focus();
-  }
+  // Wait for animation before hiding
+  clearTimeout(modal._closeTimer);
+
+  modal._closeTimer = setTimeout(() => {
+    modal.style.setProperty("display", "none", "important");
+    document.body.style.overflow = "";
+
+    if (previousFocus && previousFocus.isConnected) {
+      previousFocus.focus();
+    }
+  }, 300);
 }
 
 // ==========================================
@@ -1297,16 +1340,8 @@ document.addEventListener(
       event.preventDefault();
       event.stopPropagation();
 
-      // Close the popup directly
-      modal.style.setProperty("display", "none", "important");
-      modal.setAttribute("aria-hidden", "true");
-
-      activeStatModal = null;
-      document.body.style.overflow = "";
-
-      if (previousFocus && previousFocus.isConnected) {
-        previousFocus.focus();
-      }
+      // Use animated closing instead of instantly hiding
+      closeStatModal();
     }
   },
   true,
