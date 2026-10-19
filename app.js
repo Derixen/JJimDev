@@ -975,7 +975,20 @@ function renderProjectOverview(items, sectionTitle, introText, iconSvg = null) {
     const details = document.createElement("div");
     details.id = `project-details-${index}`;
     details.className = "border-t border-slate-200 px-5 pb-6 pt-5";
-    details.style.display = "none";
+
+    // Smooth accordion animation
+    details.style.overflow = "hidden";
+    details.style.maxHeight = "0px";
+    details.style.opacity = "0";
+    details.style.paddingTop = "0px";
+    details.style.paddingBottom = "0px";
+    details.style.borderTopWidth = "0px";
+
+    details.style.transition =
+      "max-height 450ms ease-in-out, " +
+      "opacity 350ms ease-in-out, " +
+      "padding 450ms ease-in-out, " +
+      "border-width 450ms ease-in-out";
 
     header.setAttribute("aria-controls", details.id);
 
@@ -1028,7 +1041,12 @@ function renderProjectOverview(items, sectionTitle, introText, iconSvg = null) {
     }
 
     function collapseCard() {
-      details.style.display = "none";
+      details.style.maxHeight = "0px";
+      details.style.opacity = "0";
+      details.style.paddingTop = "0px";
+      details.style.paddingBottom = "0px";
+      details.style.borderTopWidth = "0px";
+
       header.setAttribute("aria-expanded", "false");
       arrow.textContent = "+";
       subtitle.textContent = "Click to view project details";
@@ -1036,7 +1054,14 @@ function renderProjectOverview(items, sectionTitle, introText, iconSvg = null) {
     }
 
     function expandCard() {
-      details.style.display = "block";
+      details.style.paddingTop = "20px";
+      details.style.paddingBottom = "24px";
+      details.style.borderTopWidth = "1px";
+      details.style.opacity = "1";
+
+      // Animate to the content's actual height.
+      details.style.maxHeight = details.scrollHeight + 100 + "px";
+
       header.setAttribute("aria-expanded", "true");
       arrow.textContent = "−";
       subtitle.textContent = "Click to collapse";
