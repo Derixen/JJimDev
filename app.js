@@ -687,89 +687,207 @@ function renderCareerCard(item) {
 // ==========================================
 
 function renderTrainingCard(item) {
-  const card = document.createElement("div");
+  const card = document.createElement("article");
 
   card.className =
     "bg-white/90 backdrop-blur-md " +
     "border border-slate-200/90 rounded-2xl " +
-    "p-5 shadow-sm hover:shadow-md " +
+    "p-5 sm:p-6 shadow-sm hover:shadow-md " +
     "transition-all duration-200 text-left mb-4";
 
-  const logo = item.logo
-    ? `
-      <div
-        class="w-12 h-10 rounded-xl bg-white
-               border border-slate-200 p-1
-               flex items-center justify-center shrink-0"
-      >
-        <img
-          src="${escapeHtml(item.logo)}"
-          alt="${escapeHtml(item.vendor || "Vendor")}"
-          class="w-full h-full object-contain"
-        />
-      </div>
-    `
-    : "";
+  // -----------------------------------------
+  // Header: Logo, title, issuer, year
+  // -----------------------------------------
 
-  const year = item.year
-    ? `
-      <div
-        class="px-3 py-1 rounded-lg bg-sky-50
-               border border-sky-200 text-xs
-               font-mono text-sky-700 shrink-0"
-      >
-        ${escapeHtml(item.year)}
-      </div>
-    `
-    : "";
+  const header = document.createElement("div");
+  header.className = "flex flex-wrap items-start justify-between gap-4";
 
-  card.innerHTML = `
-    <div
-      class="flex flex-wrap items-start
-             justify-between gap-4"
-    >
-      <div class="flex items-center gap-3.5">
-        ${logo}
+  const identity = document.createElement("div");
+  identity.className = "flex items-start gap-3.5 flex-1 min-w-0";
 
-        <div>
-          <h3
-            class="text-base font-bold text-slate-900
-                   tracking-tight leading-snug"
-          >
-            ${escapeHtml(item.title)}
-          </h3>
+  if (item.logo) {
+    const logoBox = document.createElement("div");
 
-          ${
-            item.vendor
-              ? `
-                <p
-                  class="text-xs font-semibold
-                         text-slate-400 mt-0.5"
-                >
-                  ${escapeHtml(item.vendor)}
-                </p>
-              `
-              : ""
-          }
-        </div>
-      </div>
+    logoBox.className =
+      "w-12 h-12 rounded-xl bg-white " +
+      "border border-slate-200 p-1.5 " +
+      "flex items-center justify-center shrink-0";
 
-      ${year}
-    </div>
+    const logo = document.createElement("img");
+    logo.src = item.logo;
+    logo.alt = item.issuer || item.vendor || "Certification issuer";
+    logo.className = "w-full h-full object-contain";
 
-    ${
-      item.desc
-        ? `
-          <div
-            class="text-slate-600 text-sm leading-relaxed
-                   mt-3 pt-3 border-t border-slate-100"
-          >
-            ${formatTextWithLinks(item.desc)}
-          </div>
-        `
-        : ""
+    logoBox.appendChild(logo);
+    identity.appendChild(logoBox);
+  }
+
+  const heading = document.createElement("div");
+  heading.className = "min-w-0";
+
+  const title = document.createElement("h3");
+  title.className =
+    "text-lg sm:text-xl font-bold " + "text-slate-800 leading-snug";
+
+  title.textContent = item.title || "Certification";
+
+  const issuer = document.createElement("p");
+  issuer.className = "text-sm font-medium text-slate-500 mt-1";
+
+  issuer.textContent = item.issuer || item.vendor || "";
+
+  heading.appendChild(title);
+  heading.appendChild(issuer);
+  identity.appendChild(heading);
+  header.appendChild(identity);
+
+  if (item.year) {
+    const year = document.createElement("span");
+
+    year.className =
+      "px-3 py-1 rounded-lg bg-sky-50 " +
+      "border border-sky-200 text-xs " +
+      "font-mono font-semibold text-sky-700 shrink-0";
+
+    year.textContent = item.year;
+
+    header.appendChild(year);
+  }
+
+  card.appendChild(header);
+
+  // -----------------------------------------
+  // Credential details
+  // -----------------------------------------
+
+  if (item.exam || item.status || item.score) {
+    const metadata = document.createElement("div");
+
+    metadata.className = "flex flex-wrap items-center gap-2 mt-4";
+
+    if (item.exam) {
+      const exam = document.createElement("span");
+
+      exam.className =
+        "px-2.5 py-1 text-xs font-semibold " +
+        "rounded-lg bg-slate-100 text-slate-600 " +
+        "border border-slate-200";
+
+      exam.textContent = `Exam ${item.exam}`;
+      metadata.appendChild(exam);
     }
+
+    if (item.status) {
+      const status = document.createElement("span");
+
+      status.className =
+        "px-2.5 py-1 text-xs font-semibold " +
+        "rounded-lg bg-sky-50 text-sky-700 " +
+        "border border-sky-200";
+
+      status.textContent = item.status;
+      metadata.appendChild(status);
+    }
+
+    if (item.score) {
+      const score = document.createElement("span");
+
+      score.className =
+        "px-2.5 py-1 text-xs font-semibold " +
+        "rounded-lg bg-slate-100 text-slate-600 " +
+        "border border-slate-200";
+
+      score.textContent = `Score: ${item.score}`;
+      metadata.appendChild(score);
+    }
+
+    card.appendChild(metadata);
+  }
+
+  // -----------------------------------------
+  // Description
+  // -----------------------------------------
+
+  if (item.desc || item.description) {
+    const description = document.createElement("div");
+
+    description.className =
+      "text-sm text-slate-600 leading-relaxed " +
+      "mt-4 pt-4 border-t border-slate-100";
+
+    description.innerHTML = formatTextWithLinks(item.desc || item.description);
+
+    card.appendChild(description);
+  }
+
+  if (item.certificate) {
+    const certificateButton = document.createElement("button");
+
+    certificateButton.type = "button";
+    certificateButton.className =
+      "inline-flex items-center gap-2 mt-4 px-4 py-2 " +
+      "rounded-lg bg-sky-50 border border-sky-200 " +
+      "text-sky-700 text-sm font-semibold " +
+      "hover:bg-sky-100 transition-colors cursor-pointer";
+
+    certificateButton.innerHTML = `
+    <svg xmlns="http://www.w3.org/2000/svg"
+         width="16" height="16" viewBox="0 0 24 24"
+         fill="none" stroke="currentColor"
+         stroke-width="2" stroke-linecap="round"
+         stroke-linejoin="round">
+      <path d="M15 3h6v6"/>
+      <path d="M10 14 21 3"/>
+      <path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"/>
+    </svg>
+    View Certificate
   `;
+
+    certificateButton.addEventListener("click", () => {
+      openModal(item.certificate);
+    });
+
+    card.appendChild(certificateButton);
+  }
+
+  // -----------------------------------------
+  // Optional certificate preview
+  // -----------------------------------------
+
+  if (item.certificateImage) {
+    const footer = document.createElement("div");
+
+    footer.className =
+      "flex items-center justify-between flex-wrap " +
+      "gap-3 mt-5 pt-4 border-t border-slate-100";
+
+    const evidence = document.createElement("span");
+
+    evidence.className = "text-xs text-slate-500 font-medium";
+
+    evidence.textContent = "Certificate available for viewing";
+
+    const button = document.createElement("button");
+    button.type = "button";
+
+    button.className =
+      "inline-flex items-center gap-2 " +
+      "px-4 py-2 rounded-lg " +
+      "bg-sky-50 border border-sky-200 " +
+      "text-sky-700 text-sm font-semibold " +
+      "hover:bg-sky-100 transition-colors " +
+      "focus:outline-none focus:ring-2 focus:ring-sky-500";
+
+    button.textContent = "View Certificate ↗";
+
+    button.addEventListener("click", () => {
+      openModal(item.certificateImage);
+    });
+
+    footer.appendChild(evidence);
+    footer.appendChild(button);
+    card.appendChild(footer);
+  }
 
   return card;
 }

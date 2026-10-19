@@ -359,20 +359,15 @@
           "id": "trainings-completed",
           "text": "Completed Trainings",
           "title": "Professional Development & Coursework Completed",
+
           "description": [
             {
               "title": "The Complete JavaScript Course: From Zero to Expert! (Jonas Schmedtmann)",
               "vendor": "Udemy",
               "year": "2025",
               "logo": "images/udemy.png",
+              "certificate": "",
               "desc": "Deepening core JavaScript mastery covering modern ES6+ features, asynchronous programming (Promises, Async/Await), OOP principles, DOM manipulation, and modern web application architecture."
-            },
-            {
-              "title": "The Complete ASP.NET MVC 5 Course (Mosh Hamedani)",
-              "vendor": "Udemy",
-              "year": "2018",
-              "logo": "images/udemy.png",
-              "desc": "Mastered full-stack web development using ASP.NET MVC 5, focusing on C# backend architecture, RESTful APIs, Entity Framework ORM, SQL database integration, and responsive frontend design."
             },
             {
               "title": "PowerShell 7 & Advanced Automation Series",
@@ -380,6 +375,61 @@
               "year": "2024",
               "logo": "images/jacked.png",
               "desc": "Hands-on training covering PowerShell 7 fundamentals, GUI creation, REST API integration, Active Directory management, custom module development, and PowerShell Universal application building."
+            },
+            {
+              "title": "WorkshopPLUS: Sysinternals Tools and Windows Performance Toolkit",
+              "vendor": "Microsoft",
+              "year": "2019",
+              "logo": "images/microsoft.png",
+              "certificate": "images/certificates/WorkshopPLUS.jpg",
+              "desc": "Advanced technical workshop exploring Microsoft Sysinternals utilities and the Windows Performance Toolkit for system diagnostics, process analysis, performance troubleshooting, and identifying operating system and application bottlenecks."
+            },
+            {
+              "title": "DNS Name Resolution on Clients and Servers (MSNEV)",
+              "vendor": "IQSOFT – John Bryce Training Center",
+              "year": "2019",
+              "logo": "images/iqsoft.png",
+              "certificate": "images/certificates/iqsoft_dns.jpg",
+              "desc": "Technical training focused on DNS name resolution in Windows client and server environments, including DNS configuration, troubleshooting name resolution failures, and understanding network communication dependencies."
+            },
+            {
+              "title": "IP Configuration on Clients and Servers (MSIP)",
+              "vendor": "IQSOFT – John Bryce Training Center",
+              "year": "2019",
+              "logo": "images/iqsoft.png",
+              "certificate": "images/certificates/iqsoft_ipconfig.jpg",
+              "desc": "Technical training covering IP configuration in Windows client and server environments, including TCP/IP networking fundamentals, network interface configuration, connectivity diagnostics, and troubleshooting common IP communication issues."
+            },
+            {
+              "title": "The Complete ASP.NET MVC 5 Course (Mosh Hamedani)",
+              "vendor": "Udemy",
+              "year": "2018",
+              "logo": "images/udemy.png",
+              "certificate": "images/certificates/udemy_aspnet-mvc.png",
+              "desc": "Mastered full-stack web development using ASP.NET MVC 5, focusing on C# backend architecture, RESTful APIs, Entity Framework ORM, SQL database integration, and responsive frontend design."
+            },
+            {
+              "title": "System Center Configuration Manager: Troubleshooting",
+              "vendor": "Microsoft",
+              "year": "2018",
+              "logo": "images/microsoft.png",
+              "certificate": "images/certificates/SCCM_TS.jpg",
+              "desc": "Microsoft technical workshop focused on troubleshooting System Center Configuration Manager environments, diagnosing client and infrastructure issues, investigating deployment failures, and applying systematic problem-resolution techniques."
+            },
+            {
+              "title": "Servicing Windows 10 with SCCM Current Branch",
+              "vendor": "Microsoft",
+              "year": "2018",
+              "logo": "images/microsoft.png",
+              "certificate": "images/certificates/currentbranch.jpg",
+              "desc": "Microsoft technical workshop covering Windows 10 servicing and lifecycle management using System Center Configuration Manager Current Branch, including operating system updates, servicing strategies, and enterprise deployment management."
+            },
+            {
+              "title": "Client Management Suite 7.5: Administration",
+              "vendor": "Symantec",
+              "year": "2015",
+              "logo": "images/symantec.png",
+              "desc": "Professional training in Symantec Altiris Client Management Suite 7.5 administration, covering enterprise endpoint management, software deployment, hardware and software inventory, client configuration, and centralized management of workstation environments."
             },
             {
               "title": "SQL Server Queries (WiseOwl Tutorials)",
@@ -408,31 +458,35 @@
       "title": "Licenses & Certifications",
       "description": [
         {
-          "title": "System Center Configuration Manager: Current Branch",
-          "vendor": "Evosoft (Siemens)",
-          "year": "2018",
-          "logo": "images/microsoft.png",
-          "desc": "Evosoft (Siemens) — Advanced enterprise training on modern SCCM/MECM Current Branch architecture, CMG deployment, and endpoint management."
-        },
-        {
           "title": "Client Management Suite 7.5: Administration",
           "vendor": "Symantec",
           "year": "2015",
+          "status": "Passed",
           "logo": "images/symantec.png",
           "desc": "Acquired comprehensive administration expertise in Altiris Client Management Suite 7.5, specializing in endpoint management and software delivery pipelines."
         },
         {
-          "title": "System Center 2012 Configuration Manager",
-          "vendor": "Training360",
+          "title": "MCTS – System Center 2012 Configuration Manager",
+          "vendor": "Microsoft",
+          "issuer": "Microsoft",
           "year": "2013",
-          "logo": "images/microsoft.png",
-          "desc": "Training360 — Formal enterprise training covering SCCM 2012 site deployment, software packaging, and centralized patch management."
+          "exam": "70-243",
+          "status": "Passed",
+          "score": "781 / 700 required",
+          "logo": "images/microsoft1.png",
+          "certificateImage": "images/certificates/sccm-2012.jpg",
+          "desc": "Successfully passed the official Microsoft certification exam 70-243 on November 7, 2013. The examination covered SCCM infrastructure planning, operating system deployment, application management, software updates, compliance settings, client administration, inventory, and reporting."
         },
         {
-          "title": "Desktop Support Technician (MCDST)",
+          "title": "MCDST – Microsoft Certified Desktop Support Technician",
           "vendor": "ControllTraining Kft.",
+          "issuer": "ControllTraining Kft.",
           "year": "2009",
-          "logo": "images/microsoft.png",
+          "exam": "70-271/272",
+          "status": "Passed",
+          "score": "",
+          "logo": "images/microsoft1.png",
+          "certificateImage": "",
           "desc": "ControllTraining Kft. — Demonstrated core competency in troubleshooting Windows desktop environments, client OS, and remote support."
         }
       ]
