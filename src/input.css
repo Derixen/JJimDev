@@ -7,6 +7,10 @@ body {
   @apply min-h-screen flex items-start justify-center pt-8 font-sans antialiased;
 }
 
+html {
+  scrollbar-gutter: stable;
+}
+
 /* --- 2. Typography Overrides --- */
 h1 {
   @apply text-3xl font-extrabold tracking-tight text-slate-600;
@@ -124,14 +128,6 @@ p {
   justify-content: center;
 }
 
-#stat-modal[aria-hidden="true"] {
-  display: none !important;
-}
-
-#stat-modal[aria-hidden="false"] {
-  display: flex !important;
-}
-
 #stat-modal-panel {
   max-height: 90vh;
   overflow: hidden;
@@ -213,4 +209,23 @@ p {
 /* Better spacing for paragraphs */
 #site-subdescription article p + p {
   margin-top: 0.75rem;
+}
+
+/* Statistics popup backdrop */
+#stat-modal-backdrop {
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  background-color: rgba(2, 6, 23, 0);
+
+  transition:
+    backdrop-filter 350ms ease-in-out,
+    -webkit-backdrop-filter 350ms ease-in-out,
+    background-color 350ms ease-in-out;
+}
+
+/* Activated when popup opens */
+#stat-modal.backdrop-visible #stat-modal-backdrop {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background-color: rgba(2, 6, 23, 0.65);
 }

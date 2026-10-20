@@ -69,7 +69,7 @@ function createStatModal() {
   modal.innerHTML = `
     <div
       id="stat-modal-backdrop"
-      class="absolute inset-0 bg-slate-950/65 backdrop-blur-md"
+      class="absolute inset-0"
     ></div>
 
     <div
@@ -218,14 +218,11 @@ function openStatModal(stat) {
 
   document.getElementById("stat-modal-summary").textContent = stat.label || "";
 
-  // SVG icons come from the website's own JSON.
   document.getElementById("stat-modal-icon").innerHTML = stat.icon || "";
 
   const container = document.getElementById("stat-modal-sections");
-
   container.replaceChildren();
 
-  // Generate content sections from data.json.
   const sections = Array.isArray(stat.sections) ? stat.sections : [];
 
   if (sections.length === 0) {
@@ -245,87 +242,109 @@ function openStatModal(stat) {
       "rounded-2xl border border-slate-200 " + "bg-slate-50 p-5 shadow-sm";
 
     const heading = document.createElement("h3");
-
     heading.className = "text-base font-bold text-slate-900 mb-3";
-
     heading.textContent = section.title || "";
 
     const content = document.createElement("div");
-
     content.className =
-      "text-sm text-slate-600 leading-relaxed " + "whitespace-pre-line";
-
+      "text-sm text-slate-600 leading-relaxed whitespace-pre-line";
     content.textContent = section.content || "";
 
     article.appendChild(heading);
     article.appendChild(content);
-
     container.appendChild(article);
   });
 
-  // Show the modal before starting the animation
-  clearTimeout(modal._closeTimer);
+  // ------------------------------------------
+  // Opening animation
+  // ------------------------------------------
 
   const panel = modal.querySelector("#stat-modal-panel");
 
-  modal.style.transition = "opacity 350ms ease-in-out";
-  panel.style.transition =
-    "opacity 350ms ease-in-out, transform 350ms ease-in-out";
+  // Cancel any pending closing animation.
+  clearTimeout(modal._closeTimer);
 
-  modal.style.opacity = "0";
+  // Cancel any pending opening frames.
+  if (modal._openFrame) {
+    cancelAnimationFrame(modal._openFrame);
+  }
+
+  if (modal._openFrame2) {
+    cancelAnimationFrame(modal._openFrame2);
+  }
+
+  // Reset to the initial animation state.
+  modal.classList.remove("backdrop-visible");
+
+  // Keep the parent fully visible.
+  // The backdrop and popup animate independently.
+  modal.style.transition = "none";
+  modal.style.opacity = "1";
+
+  panel.style.transition =
+    "opacity 350ms ease-in-out, " + "transform 350ms ease-in-out";
+
   panel.style.opacity = "0";
   panel.style.transform = "scale(0.92) translateY(15px)";
 
+  // Display the modal in its unblurred state.
+  modal.setAttribute("aria-hidden", "true");
   modal.style.setProperty("display", "flex", "important");
-  modal.setAttribute("aria-hidden", "false");
 
-  // Force the browser to apply the starting state.
+  // Ensure initial CSS styles are calculated.
   void modal.offsetHeight;
-
-  requestAnimationFrame(() => {
-    modal.style.opacity = "1";
-    panel.style.opacity = "1";
-    panel.style.transform = "scale(1) translateY(0)";
-  });
-
-  // Cancel a pending close animation, if any
-  clearTimeout(modal._closeTimer);
-
-  modal.style.opacity = "0";
-  panel.style.opacity = "0";
-  panel.style.transform = "scale(0.95) translateY(12px)";
-
-  // Force the browser to register the starting state
-  void modal.offsetHeight;
-
-  // Animate popup into view
-  requestAnimationFrame(() => {
-    modal.style.opacity = "1";
-    panel.style.opacity = "1";
-    panel.style.transform = "scale(1) translateY(0)";
-  });
 
   activeStatModal = modal;
   document.body.style.overflow = "hidden";
 
-  document.getElementById("stat-modal-close").focus();
+  // Allow the initial state to render before animating.
+  modal._openFrame = requestAnimationFrame(() => {
+    modal._openFrame2 = requestAnimationFrame(() => {
+      modal.setAttribute("aria-hidden", "false");
+      modal.classList.add("backdrop-visible");
+
+      panel.style.opacity = "1";
+      panel.style.transform = "scale(1) translateY(0)";
+
+      modal._openFrame = null;
+      modal._openFrame2 = null;
+
+      document.getElementById("stat-modal-close").focus();
+    });
+  });
 }
 
 function closeStatModal() {
   const modal = document.getElementById("stat-modal");
+
   if (!modal) return;
 
   const panel = modal.querySelector("#stat-modal-panel");
 
-  modal.style.opacity = "0";
+  // Cancel pending opening animations.
+  if (modal._openFrame) {
+    cancelAnimationFrame(modal._openFrame);
+    modal._openFrame = null;
+  }
+
+  if (modal._openFrame2) {
+    cancelAnimationFrame(modal._openFrame2);
+    modal._openFrame2 = null;
+  }
+
+  clearTimeout(modal._closeTimer);
+
+  // Start the exit animation.
+  modal.classList.remove("backdrop-visible");
+
+  // Fade out the popup, not the entire modal.
   panel.style.opacity = "0";
   panel.style.transform = "scale(0.92) translateY(15px)";
 
   modal.setAttribute("aria-hidden", "true");
   activeStatModal = null;
 
-  clearTimeout(modal._closeTimer);
-
+  // Hide only after the animation finishes.
   modal._closeTimer = setTimeout(() => {
     modal.style.setProperty("display", "none", "important");
     document.body.style.overflow = "";
@@ -333,6 +352,8 @@ function closeStatModal() {
     if (previousFocus && previousFocus.isConnected) {
       previousFocus.focus();
     }
+
+    modal._closeTimer = null;
   }, 350);
 }
 
