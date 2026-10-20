@@ -459,7 +459,8 @@ function renderStatsGrid(stats) {
       "shadow-sm transition-all duration-200 " +
       "cursor-pointer hover:bg-[#ebf5ff] " +
       "hover:border-[#b3d7f5] hover:-translate-y-0.5 " +
-      "hover:shadow-md focus:outline-none " +
+      "hover:shadow-[0_6px_20px_rgba(59,130,246,0.20)] " +
+      "focus:outline-none " +
       "focus:ring-2 focus:ring-sky-500 " +
       "flex flex-col justify-between";
 
