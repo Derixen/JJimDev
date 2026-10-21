@@ -229,3 +229,33 @@ p {
   -webkit-backdrop-filter: blur(12px);
   background-color: rgba(2, 6, 23, 0.65);
 }
+
+/* ==========================================
+   Personal Profile Modal
+   ========================================== */
+
+#profile-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(2, 6, 23, 0);
+
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+
+  transition:
+    backdrop-filter 350ms ease-in-out,
+    -webkit-backdrop-filter 350ms ease-in-out,
+    background-color 350ms ease-in-out;
+}
+
+#profile-modal.profile-visible #profile-modal-backdrop {
+  background-color: rgba(2, 6, 23, 0.65);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+#profile-modal-panel {
+  position: relative;
+  z-index: 10;
+}

@@ -2,6 +2,33 @@
   "siteheading": "Janos Robert Friedrich",
   "mainsubheading": "-Enterprise Systems Architect & Infrastructure Engineer-",
   "sitedescription": "From Tier-1 Support to Enterprise Systems Architect — driven by C# tooling, PowerShell automation, and infrastructure optimization.",
+
+  "profile": {
+    "image": "images/profile.png",
+    "firstName": "Janos",
+    "middleName": "Robert",
+    "lastName": "Friedrich",
+    "nationality": "Hungarian",
+    "country": "Hungary",
+    "job": "Enterprise Systems Architect",
+    "experience": "15+ years",
+    "languages": [
+      {
+        "name": "Hungarian",
+        "level": "Native"
+      },
+      {
+        "name": "German",
+        "level": "Near-native"
+      },
+      {
+        "name": "English",
+        "level": "Fluent"
+      }
+    ],
+    "description": "Enterprise Systems Architect with over 15 years of experience in IT infrastructure, endpoint management, automation and application development."
+  },
+
   "statsGrid": [
     {
       "category": "Automation & Scripting",

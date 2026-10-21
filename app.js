@@ -38,6 +38,255 @@ function closeModal() {
 }
 
 // ==========================================
+// PROFILE POPUP
+// ==========================================
+
+let profileData = null;
+
+function createProfileModal() {
+  let modal = document.getElementById("profile-modal");
+  if (modal) return modal;
+
+  modal = document.createElement("div");
+  modal.id = "profile-modal";
+  modal.className =
+    "fixed inset-0 z-[110] items-center justify-center p-4 sm:p-6";
+
+  modal.style.display = "none";
+  modal.style.opacity = "1";
+
+  modal.setAttribute("role", "dialog");
+  modal.setAttribute("aria-modal", "true");
+  modal.setAttribute("aria-labelledby", "profile-modal-title");
+  modal.setAttribute("aria-hidden", "true");
+
+  const profile = profileData;
+  if (!profile) return null;
+
+  const fullName = [profile.firstName, profile.middleName, profile.lastName]
+    .filter(Boolean)
+    .join(" ");
+
+  modal.innerHTML = `
+    <div id="profile-modal-backdrop"
+         class="absolute inset-0"></div>
+
+    <div id="profile-modal-panel"
+         class="relative z-10 w-full max-w-2xl max-h-[90vh]
+                overflow-y-auto bg-white rounded-3xl
+                border border-slate-200 shadow-2xl">
+
+      <div class="flex items-center justify-between
+                  px-6 py-4 border-b border-slate-200 bg-slate-50">
+
+        <h2 id="profile-modal-title"
+            class="text-xl font-extrabold text-slate-900">
+          Personal Profile
+        </h2>
+
+        <button id="profile-modal-close"
+                type="button"
+                aria-label="Close profile"
+                class="w-10 h-10 rounded-xl bg-white
+                       border border-slate-200 text-slate-500
+                       hover:text-sky-600 hover:bg-sky-50
+                       transition-colors cursor-pointer text-xl">
+          &times;
+        </button>
+      </div>
+
+      <div class="p-6">
+        <div class="flex flex-col sm:flex-row items-center
+                    sm:items-start gap-6 mb-6">
+
+          <img id="profile-modal-image"
+               alt="Profile photograph"
+               class="w-36 h-36 object-cover rounded-2xl
+                      border border-slate-200 shadow-md shrink-0">
+
+          <div class="text-center sm:text-left">
+            <h3 class="text-2xl font-extrabold text-slate-900">
+              ${fullName}
+            </h3>
+            <p class="text-sm text-sky-700 font-semibold mt-2">
+              ${profile.job}
+            </p>
+            <p class="text-sm text-slate-500 mt-2">
+              ${profile.experience}
+            </p>
+          </div>
+        </div>
+
+        <div class="border-t border-slate-200 pt-5">
+          <h3 class="text-sm font-bold text-slate-800 mb-4">
+            Personal Information
+          </h3>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+            ${profileField("First name", profile.firstName)}
+            ${profileField("Middle name", profile.middleName)}
+            ${profileField("Last name", profile.lastName)}
+            ${profileField("Nationality", profile.nationality)}
+            ${profileField("Country of residence", profile.country)}
+            ${profileField("Experience", profile.experience)}
+
+          </div>
+        </div>
+
+        <div class="border-t border-slate-200 mt-6 pt-5">
+          <h3 class="text-sm font-bold text-slate-800 mb-4">
+            Languages
+          </h3>
+
+          <div class="flex flex-col gap-3">
+            ${(profile.languages || [])
+              .map((language) => profileLanguage(language.name, language.level))
+              .join("")}
+          </div>
+        </div>
+
+        <div class="border-t border-slate-200 mt-6 pt-5">
+          <h3 class="text-sm font-bold text-slate-800 mb-2">
+            Professional Background
+          </h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            ${profile.description || ""}
+          </p>
+        </div>
+      </div>
+
+      <div class="px-6 py-4 border-t border-slate-200
+                  bg-slate-50 flex justify-end">
+        <button id="profile-modal-footer-close"
+                type="button"
+                class="px-5 py-2 rounded-xl bg-sky-600
+                       text-white font-semibold text-sm
+                       hover:bg-sky-700 transition-colors
+                       cursor-pointer">
+          Close
+        </button>
+      </div>
+    </div>
+  `;
+
+  document.body.appendChild(modal);
+
+  modal.addEventListener("click", (event) => {
+    if (
+      event.target === modal ||
+      event.target.id === "profile-modal-backdrop" ||
+      event.target.closest("#profile-modal-close, #profile-modal-footer-close")
+    ) {
+      closeProfileModal();
+    }
+  });
+
+  return modal;
+}
+
+function profileField(label, value) {
+  return `
+    <div class="rounded-xl bg-slate-50 border
+                border-slate-100 p-3">
+      <p class="text-xs text-slate-400 mb-1">${label}</p>
+      <p class="text-sm font-semibold text-slate-800">${value}</p>
+    </div>
+  `;
+}
+
+function profileLanguage(language, level) {
+  return `
+    <div class="flex items-center justify-between gap-3
+                rounded-xl bg-slate-50 border border-slate-100
+                px-4 py-3">
+      <span class="text-sm font-semibold text-slate-800">
+        ${language}
+      </span>
+      <span class="text-xs font-semibold text-sky-700
+                   bg-sky-50 border border-sky-200
+                   rounded-full px-3 py-1">
+        ${level}
+      </span>
+    </div>
+  `;
+}
+
+let profilePreviousFocus = null;
+
+function openProfileModal() {
+  const modal = createProfileModal();
+  if (!modal) return;
+  const panel = modal.querySelector("#profile-modal-panel");
+  const image = modal.querySelector("#profile-modal-image");
+
+  clearTimeout(modal._closeTimer);
+
+  if (modal._openFrame) cancelAnimationFrame(modal._openFrame);
+  if (modal._openFrame2) cancelAnimationFrame(modal._openFrame2);
+
+  profilePreviousFocus = document.activeElement;
+  image.src = profileData.image;
+
+  modal.classList.remove("profile-visible");
+
+  panel.style.transition =
+    "opacity 350ms ease-in-out, transform 350ms ease-in-out";
+  panel.style.opacity = "0";
+  panel.style.transform = "scale(0.92) translateY(15px)";
+
+  modal.setAttribute("aria-hidden", "true");
+  modal.style.display = "flex";
+
+  document.body.style.overflow = "hidden";
+
+  void modal.offsetHeight;
+
+  modal._openFrame = requestAnimationFrame(() => {
+    modal._openFrame2 = requestAnimationFrame(() => {
+      modal.setAttribute("aria-hidden", "false");
+      modal.classList.add("profile-visible");
+
+      panel.style.opacity = "1";
+      panel.style.transform = "scale(1) translateY(0)";
+
+      modal.querySelector("#profile-modal-close").focus();
+
+      modal._openFrame = null;
+      modal._openFrame2 = null;
+    });
+  });
+}
+
+function closeProfileModal() {
+  const modal = document.getElementById("profile-modal");
+  if (!modal || modal.style.display === "none") return;
+
+  const panel = modal.querySelector("#profile-modal-panel");
+
+  if (modal._openFrame) cancelAnimationFrame(modal._openFrame);
+  if (modal._openFrame2) cancelAnimationFrame(modal._openFrame2);
+
+  modal.classList.remove("profile-visible");
+
+  panel.style.opacity = "0";
+  panel.style.transform = "scale(0.92) translateY(15px)";
+
+  modal.setAttribute("aria-hidden", "true");
+
+  clearTimeout(modal._closeTimer);
+
+  modal._closeTimer = setTimeout(() => {
+    modal.style.display = "none";
+    document.body.style.overflow = "";
+
+    if (profilePreviousFocus?.isConnected) {
+      profilePreviousFocus.focus();
+    }
+  }, 350);
+}
+
+// ==========================================
 // 2. STATISTICS CARD POPUP
 // ==========================================
 
@@ -363,6 +612,13 @@ function closeStatModal() {
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
+    const profileModal = document.getElementById("profile-modal");
+
+    if (profileModal?.getAttribute("aria-hidden") === "false") {
+      closeProfileModal();
+      return;
+    }
+
     if (activeStatModal) {
       closeStatModal();
     } else {
@@ -1397,6 +1653,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     const data = await response.json();
+
+    profileData = data.profile || null;
 
     // ----------------------------------------
     // Website metadata
