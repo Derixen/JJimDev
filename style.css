@@ -17,6 +17,7 @@
     --color-sky-500: oklch(68.5% 0.169 237.323);
     --color-sky-600: oklch(58.8% 0.158 241.966);
     --color-sky-700: oklch(50% 0.134 242.749);
+    --color-sky-800: oklch(44.3% 0.11 240.79);
     --color-slate-50: oklch(98.4% 0.003 247.858);
     --color-slate-100: oklch(96.8% 0.007 247.896);
     --color-slate-200: oklch(92.9% 0.013 255.508);
@@ -406,6 +407,9 @@
   .h-64 {
     height: calc(var(--spacing) * 64);
   }
+  .h-auto {
+    height: auto;
+  }
   .h-full {
     height: 100%;
   }
@@ -646,6 +650,10 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .border-1 {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
   .border-2 {
     border-style: var(--tw-border-style);
     border-width: 2px;
@@ -699,12 +707,6 @@
   }
   .border-sky-500 {
     border-color: var(--color-sky-500);
-  }
-  .border-sky-500\/30 {
-    border-color: color-mix(in srgb, oklch(68.5% 0.169 237.323) 30%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      border-color: color-mix(in oklab, var(--color-sky-500) 30%, transparent);
-    }
   }
   .border-sky-600 {
     border-color: var(--color-sky-600);
@@ -962,6 +964,9 @@
   }
   .text-center {
     text-align: center;
+  }
+  .text-justify {
+    text-align: justify;
   }
   .text-left {
     text-align: left;
@@ -1248,6 +1253,9 @@
     --tw-ease: var(--ease-in-out);
     transition-timing-function: var(--ease-in-out);
   }
+  .\[text-align-last\:justify\] {
+    text-align-last: justify;
+  }
   .group-hover\:scale-105 {
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
@@ -1280,10 +1288,10 @@
       }
     }
   }
-  .hover\:border-sky-400 {
+  .hover\:border-sky-300 {
     &:hover {
       @media (hover: hover) {
-        border-color: var(--color-sky-400);
+        border-color: var(--color-sky-300);
       }
     }
   }
@@ -1455,9 +1463,9 @@
       box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
     }
   }
-  .focus-visible\:ring-sky-500 {
+  .focus-visible\:ring-sky-800 {
     &:focus-visible {
-      --tw-ring-color: var(--color-sky-500);
+      --tw-ring-color: var(--color-sky-800);
     }
   }
   .focus-visible\:ring-offset-2 {
@@ -1620,8 +1628,6 @@ p {
   line-height: var(--tw-leading, var(--text-sm--line-height));
   --tw-leading: var(--leading-relaxed);
   line-height: var(--leading-relaxed);
-  --tw-font-weight: var(--font-weight-normal);
-  font-weight: var(--font-weight-normal);
   color: var(--color-slate-500);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

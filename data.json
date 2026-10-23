@@ -12,6 +12,7 @@
     "country": "Hungary",
     "job": "Enterprise Systems Architect",
     "experience": "15+ years",
+
     "languages": [
       {
         "name": "Hungarian",
@@ -19,14 +20,22 @@
       },
       {
         "name": "German",
-        "level": "Near-native"
+        "level": "Near-Nativ"
       },
       {
         "name": "English",
         "level": "Fluent"
+      },
+      {
+        "name": "Japanese",
+        "level": "Basic"
+      },
+      {
+        "name": "Dutch",
+        "level": "Basic"
       }
     ],
-    "description": "Enterprise Systems Architect with over 15 years of experience in IT infrastructure, endpoint management, automation and application development."
+    "description": "Enterprise Systems Architect with over 15 years of experience in enterprise IT, specializing in software deployment, endpoint management, and automation.<br><br>My career has been built around SCCM, complemented by extensive hands-on experience in Group Policy management, OS deployment, application packaging, infrastructure administration, and .NET development.<br><br>Today, my primary focus is developing and maintaining an enterprise software ordering platform built on ASP.NET MVC, alongside managing Matrix42 Enterprise Manager and its SDK.<br><br>My strength lies in understanding how systems work beneath the surface, allowing me to troubleshoot complex issues, optimize existing solutions, and develop reliable tools and integrations."
   },
 
   "statsGrid": [
@@ -533,8 +542,9 @@
       "url": "#About",
       "styleClass": "btn-jim btn-jim-slate",
       "title": "About This Site",
-      "image": "images/about.jif",
-      "description": "<h3 class='text-lg font-bold text-slate-900 border-b border-slate-200 pb-1 mb-2'>Architecture & Data Flow</h3><p class='text-slate-600 text-sm leading-relaxed mb-5'>Built with a lightweight, data-driven architecture that completely separates layout from content. All site metadata, navigation buttons, and tool project entries are stored externally in a structured <b><code>data.json</code></b> file.</p><h3 class='text-lg font-bold text-slate-900 border-b border-slate-200 pb-1 mb-2'>Frontend & Styling</h3><p class='text-slate-600 text-sm leading-relaxed mb-5'>Engineered using <b>HTML5</b> and <b>Tailwind CSS v4</b> for a responsive layout. Utilizes utility-first CSS components to maintain consistent typography, button states, and hover effects across desktop and mobile devices.</p><h3 class='text-lg font-bold text-slate-900 border-b border-slate-200 pb-1 mb-2'>Dynamic Rendering</h3><p class='text-slate-600 text-sm leading-relaxed mb-5'>Powered by a custom vanilla <b>JavaScript</b> engine (<code>app.js</code>) that fetches <code>data.json</code> asynchronously on page load to dynamically render interface elements, populate project details, and build interactive dropdown context menus.</p><h3 class='text-lg font-bold text-slate-900 border-b border-slate-200 pb-1 mb-2'>AI Assistance & Development</h3><p class='text-slate-600 text-sm leading-relaxed mb-5'>Designed and refactored with the help of <b>AI assistance (Gemini)</b> to accelerate code iteration, optimize Tailwind CSS utility layouts, refine dynamic JSON parsing, and polish responsive UI styling.</p><h3 class='text-lg font-bold text-slate-900 border-b border-slate-200 pb-1 mb-2'>Hosting & Deployment</h3><p class='text-slate-600 text-sm leading-relaxed'>Zero-framework overhead delivering instant page loads. Version-controlled on <b>GitHub</b> and deployed via <b>GitHub Pages</b> with custom domain integration (<code>jjim.dev</code>).</p>"
+      "image": "images/about.png",
+
+      "description": "<h3 class=\"text-lg font-bold text-slate-900 border-b border-slate-200 pb-1 mb-2\">Why I Built It</h3><p class=\"text-slate-600 text-sm leading-relaxed mb-5\">I originally created this website because I wanted something more personal than a LinkedIn profile or a traditional CV. Anyone can list technologies, certifications, and job titles. But I wanted to show what I've actually worked on, what I've learned along the way, and how I approach problems.</p><p class=\"text-slate-600 text-sm leading-relaxed mb-5\">I'm not particularly interested in making things sound more complicated than they really are. If something works, it works. If it doesn't, well, that's usually where the interesting part begins.</p><h3 class=\"text-lg font-bold text-slate-900 border-b border-slate-200 pb-1 mb-2\">A Little About Me</h3><p class=\"text-slate-600 text-sm leading-relaxed mb-5\">I'm generally a relaxed and calm person. I enjoy a good laugh, and I often use humor to lighten the mood, especially when things get stressful.</p><p class=\"text-slate-600 text-sm leading-relaxed mb-5\">At work, I take my responsibilities seriously, but that doesn't mean everything has to be serious all the time. In my experience, people work better together when they're comfortable enough to ask questions, challenge ideas, and occasionally laugh at their own mistakes.</p><p class=\"text-slate-600 text-sm leading-relaxed mb-5\">I've always been curious about how things work. Simply knowing which button to press has never been enough for me. I want to understand what happens behind that button, why it happens, and what I can do with that knowledge. That curiosity has taken me through quite a few different areas of IT over the years.</p><h3 class=\"text-lg font-bold text-slate-900 border-b border-slate-200 pb-1 mb-2\">How This Website Works</h3><p class=\"text-slate-600 text-sm leading-relaxed mb-5\">The website itself is fairly straightforward. It's built with <b>HTML5</b>, <b>Tailwind CSS</b>, and <b>vanilla JavaScript</b>. Most of the content is stored in a separate <b><code>data.json</code></b> file, which keeps the information independent of the layout and makes it easier to maintain.</p><p class=\"text-slate-600 text-sm leading-relaxed mb-5\">I also used <b>AI assistance</b> during development, particularly for experimenting with designs, refining CSS, and speeding up repetitive tasks. I don't see anything wrong with using tools that make development easier. What matters to me is understanding the result, being able to maintain it, and knowing how to fix it when something breaks. And yes, things did break along the way.</p><h3 class=\"text-lg font-bold text-slate-900 border-b border-slate-200 pb-1 mb-2\">One Last Thing</h3><p class=\"text-slate-600 text-sm leading-relaxed mb-5\">This website isn't meant to suggest that I know everything. After more than 15 years in IT, I'm well aware that there's always something new to learn.</p><p class=\"text-slate-600 text-sm leading-relaxed\">It's simply a collection of my experience, projects, and the things I've enjoyed working on. If you've made it this far, thanks for taking the time to look around!</p>"
     }
   ]
 }

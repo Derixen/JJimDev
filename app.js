@@ -124,12 +124,12 @@ function createProfileModal() {
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
-            ${profileField("First name", profile.firstName)}
-            ${profileField("Middle name", profile.middleName)}
-            ${profileField("Last name", profile.lastName)}
-            ${profileField("Nationality", profile.nationality)}
-            ${profileField("Country of residence", profile.country)}
-            ${profileField("Experience", profile.experience)}
+            ${profileField("First name:", profile.firstName)}
+            ${profileField("Middle name:", profile.middleName)}
+            ${profileField("Last name:", profile.lastName)}
+            ${profileField("Nationality:", profile.nationality)}
+            ${profileField("Country of residence:", profile.country)}
+            ${profileField("Experience:", profile.experience)}
 
           </div>
         </div>
@@ -150,7 +150,7 @@ function createProfileModal() {
           <h3 class="text-sm font-bold text-slate-800 mb-2">
             Professional Background
           </h3>
-          <p class="text-sm text-slate-600 leading-relaxed">
+          <p class="text-sm text-slate-600 leading-relaxed text-justify ">
             ${profile.description || ""}
           </p>
         </div>
@@ -189,8 +189,8 @@ function profileField(label, value) {
   return `
     <div class="rounded-xl bg-slate-50 border
                 border-slate-100 p-3">
-      <p class="text-xs text-slate-400 mb-1">${label}</p>
-      <p class="text-sm font-semibold text-slate-800">${value}</p>
+      <p class="text-xs text-slate-400 font-bold mb-1">${label}</p>
+      <p class="text-sm font-normal text-slate-800">${value}</p>
     </div>
   `;
 }
@@ -927,7 +927,7 @@ function renderCareerCard(item) {
         <img
           src="${escapeHtml(item.imageUrl)}"
           alt="${escapeHtml(item.company)}"
-          class="w-full h-full object-contain"
+          class="block w-full h-auto object-contain"
         />
       </div>
     `
