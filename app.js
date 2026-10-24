@@ -19,6 +19,33 @@
 
 let currentLanguage = localStorage.getItem("siteLanguage") || "en";
 
+const profileTranslations = {
+  en: {
+    title: "Personal Profile",
+    information: "Personal Information",
+    firstName: "First name:",
+    middleName: "Middle name:",
+    lastName: "Last name:",
+    nationality: "Nationality:",
+    country: "Country of residence:",
+    experience: "Experience:",
+    languages: "Languages",
+    background: "Professional Background",
+  },
+  de: {
+    title: "Persönliches Profil",
+    information: "Persönliche Angaben",
+    firstName: "Vorname:",
+    middleName: "Zweiter Vorname:",
+    lastName: "Nachname:",
+    nationality: "Nationalität:",
+    country: "Wohnsitzland:",
+    experience: "Berufserfahrung:",
+    languages: "Sprachen",
+    background: "Beruflicher Hintergrund",
+  },
+};
+
 function initializeLanguageSwitcher() {
   document.documentElement.lang = currentLanguage;
 
@@ -74,6 +101,8 @@ function createProfileModal() {
   let modal = document.getElementById("profile-modal");
   if (modal) return modal;
 
+  const t = profileTranslations[currentLanguage] || profileTranslations.en;
+
   modal = document.createElement("div");
   modal.id = "profile-modal";
   modal.className =
@@ -108,7 +137,7 @@ function createProfileModal() {
 
         <h2 id="profile-modal-title"
             class="text-xl font-extrabold text-slate-900">
-          Personal Profile
+          ${t.title}
         </h2>
 
         <button id="profile-modal-close"
@@ -146,24 +175,24 @@ function createProfileModal() {
 
         <div class="border-t border-slate-200 pt-5">
           <h3 class="text-sm font-bold text-slate-800 mb-4">
-            Personal Information
+            ${t.information}
           </h3>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
-            ${profileField("First name:", profile.firstName)}
-            ${profileField("Middle name:", profile.middleName)}
-            ${profileField("Last name:", profile.lastName)}
-            ${profileField("Nationality:", profile.nationality)}
-            ${profileField("Country of residence:", profile.country)}
-            ${profileField("Experience:", profile.experience)}
+          ${profileField(t.firstName, profile.firstName)}
+          ${profileField(t.middleName, profile.middleName)}
+          ${profileField(t.lastName, profile.lastName)}
+          ${profileField(t.nationality, profile.nationality)}
+          ${profileField(t.country, profile.country)}
+          ${profileField(t.experience, profile.experience)}
 
           </div>
         </div>
 
         <div class="border-t border-slate-200 mt-6 pt-5">
           <h3 class="text-sm font-bold text-slate-800 mb-4">
-            Languages
+            ${t.languages}
           </h3>
 
           <div class="flex flex-col gap-3">
@@ -175,7 +204,7 @@ function createProfileModal() {
 
         <div class="border-t border-slate-200 mt-6 pt-5">
           <h3 class="text-sm font-bold text-slate-800 mb-2">
-            Professional Background
+            ${t.background}
           </h3>
           <p class="text-sm text-slate-600 leading-relaxed text-justify ">
             ${profile.description || ""}
