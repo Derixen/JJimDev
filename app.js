@@ -128,37 +128,36 @@ function createProfileModal() {
          class="absolute inset-0"></div>
 
     <div id="profile-modal-panel"
-         class="relative z-10 w-full max-w-2xl max-h-[90vh]
-                overflow-y-auto bg-white rounded-3xl
+        class="relative z-10 w-full max-w-2xl max-h-[90vh]
+                flex flex-col overflow-hidden bg-white rounded-3xl
                 border border-slate-200 shadow-2xl">
+      <div class="shrink-0 ">
+        <div class="flex items-center justify-between
+                    px-6 py-4 border-b border-slate-200 bg-slate-50">
 
-      <div class="flex items-center justify-between
-                  px-6 py-4 border-b border-slate-200 bg-slate-50">
+          <h2 id="profile-modal-title"
+              class="text-xl font-extrabold text-slate-900">
+            ${t.title}
+          </h2>
 
-        <h2 id="profile-modal-title"
-            class="text-xl font-extrabold text-slate-900">
-          ${t.title}
-        </h2>
-
-        <button id="profile-modal-close"
-                type="button"
-                aria-label="Close profile"
-                class="w-10 h-10 rounded-xl bg-white
-                       border border-slate-200 text-slate-500
-                       hover:text-sky-600 hover:bg-sky-50
-                       transition-colors cursor-pointer text-xl">
-          &times;
-        </button>
-      </div>
-
-      <div class="p-6">
+          <button id="profile-modal-close"
+                  type="button"
+                  aria-label="Close profile"
+                  class="w-10 h-10 rounded-xl bg-white
+                        border border-slate-200 text-slate-500
+                        hover:text-sky-600 hover:bg-sky-50
+                        transition-colors cursor-pointer text-xl">
+            &times;
+          </button>
+        </div>
+      
         <div class="flex flex-col sm:flex-row items-center
-                    sm:items-start gap-6 mb-6">
+                    sm:items-start gap-6 p-6">
 
           <img id="profile-modal-image"
                alt="Profile photograph"
                class="w-36 h-36 object-cover rounded-2xl
-                      border border-slate-200 shadow-md shrink-0">
+                      border border-slate-200 shadow-md ">
 
           <div class="text-center sm:text-left">
             <h3 class="text-2xl font-extrabold text-slate-900">
@@ -172,8 +171,9 @@ function createProfileModal() {
             </p>
           </div>
         </div>
-
-        <div class="border-t border-slate-200 pt-5">
+      </div>
+    <div class="p-6 flex-1 min-h-0 overflow-y-auto">
+        <div class="">
           <h3 class="text-sm font-bold text-slate-800 mb-4">
             ${t.information}
           </h3>
