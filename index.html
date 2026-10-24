@@ -8,8 +8,30 @@
   </head>
   <body>
     <div
-      class="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-5xl mx-auto w-full px-4 mt-8"
+      class="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-5xl mx-auto w-full px-4 mt-0"
     >
+      <!-- Language Switcher -->
+      <div
+        class="col-span-1 md:col-span-4 flex items-center gap-1 bg-slate-100 p-1 rounded-xl border border-slate-200 justify-self-end w-fit"
+        role="group"
+        aria-label="Website language"
+      >
+        <button
+          type="button"
+          data-language="en"
+          class="language-btn px-4 py-1 text-xs font-bold rounded-lg transition-all cursor-pointer"
+        >
+          EN
+        </button>
+
+        <button
+          type="button"
+          data-language="de"
+          class="language-btn px-4 py-1 text-xs font-bold rounded-lg transition-all cursor-pointer"
+        >
+          DE
+        </button>
+      </div>
       <!-- Row 1: Title Container -->
       <div
         class="md:col-span-4 header-card px-6 py-5 flex items-center justify-between gap-4"
@@ -27,24 +49,26 @@
           </p>
         </div>
 
-        <!-- Profile Image (Right Aligned) -->
-        <button
-          type="button"
-          aria-label="View personal profile"
-          onclick="openProfileModal()"
-          class="w-24 h-24 md:w-28 md:h-28 rounded-2xl border-1 border-slate-200/90 shadow-md flex items-center justify-center shrink-0 overflow-hidden group cursor-pointer transition-all duration-300 ease-in-out hover:border-sky-300 hover:shadow-[0_6px_20px_rgba(59,130,246,0.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-800 focus-visible:ring-offset-2"
-        >
-          <img
-            src="images/profile.png"
-            alt="Janos Robert Friedrich"
-            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-            onerror="
-              this.onerror = null;
-              this.parentElement.innerHTML =
-                '<span class=\'text-2xl font-black text-sky-400\'>JF</span>';
-            "
-          />
-        </button>
+        <div class="flex flex-col items-center gap-3 shrink-0">
+          <!-- Profile Image -->
+          <button
+            type="button"
+            aria-label="View personal profile"
+            onclick="openProfileModal()"
+            class="w-24 h-24 md:w-28 md:h-28 rounded-2xl border-1 border-slate-200/90 shadow-md flex items-center justify-center overflow-hidden group cursor-pointer transition-all duration-300 ease-in-out hover:border-sky-300 hover:shadow-[0_6px_20px_rgba(59,130,246,0.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-800 focus-visible:ring-offset-2"
+          >
+            <img
+              src="images/profile.png"
+              alt="Janos Robert Friedrich"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              onerror="
+                this.onerror = null;
+                this.parentElement.innerHTML =
+                  '<span class=\'text-2xl font-black text-sky-400\'>JF</span>';
+              "
+            />
+          </button>
+        </div>
       </div>
 
       <!-- Row 2: Description Box -->

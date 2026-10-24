@@ -1,0 +1,547 @@
+{
+  "siteheading": "Janos Robert Friedrich",
+  "mainsubheading": "– Eintretenprise-Systemarchitekt & Infrastruktur-Ingenieur –",
+  "sitedescription": "Vom First-Level-Support zum Eintretenprise-Systemarchitekten – mit C#-Tools, PowerShell-Automatisierung und der Optimierung von IT-Infrastrukturen.",
+  "profile": {
+    "image": "images/profile.png",
+    "firstName": "Janos",
+    "middleName": "Robert",
+    "lastName": "Friedrich",
+    "nationality": "Ungarisch",
+    "country": "Ungarn",
+    "job": "Eintretenprise-Systemarchitekt",
+    "experience": "Über 15 Jahre",
+    "languages": [
+      {
+        "name": "Ungarisch",
+        "level": "Muttersprache"
+      },
+      {
+        "name": "Deutsch",
+        "level": "Nahezu muttersprachlich"
+      },
+      {
+        "name": "Englisch",
+        "level": "Fließend"
+      },
+      {
+        "name": "Japanisch",
+        "level": "Grundkenntnisse"
+      },
+      {
+        "name": "Niederländisch",
+        "level": "Grundkenntnisse"
+      }
+    ],
+    "description": "Eintretenprise-Systemarchitekt mit über 15 Jahren Erfahrung in der Unternehmens-IT, spezialisiert auf Softwareverteilung, Endgeräteverwaltung und Automatisierung.<br><br>SCCM bildet seit jeher den Schwerpunkt meiner Laufbahn. Ergänzend habe ich umfangreiche praktische Erfahrung mit Gruppenrichtlinien, Betriebssystembereitstellung, Anwendungspaketierung, Infrastrukturadministration und .NET-Entwicklung gesammelt.<br><br>Heute liegt mein Schwerpunkt auf der Entwicklung und Wartung einer unternehmensweiten Softwarebestellplattform auf Basis von ASP.NET MVC sowie auf der Administration des Matrix42 Eintretenprise Managers und seines SDKs.<br><br>Meine Stärke liegt darin, die Funktionsweise von Systemen unter der Oberfläche zu verstehen. Dadurch kann ich komplexe Fehler analysieren, bestehende Lösungen optimieren und zuverlässige Tools und Integrationen entwickeln."
+  },
+  "statsGrid": [
+    {
+      "category": "Automatisierung & Skripting",
+      "value": "PowerShell & SQL",
+      "label": "Fortgeschrittenes T-SQL, VBScript & Batch",
+      "icon": "<svg class='w-4 h-4 text-sky-600' fill='none' stroke='currentColor' stroke-width='2' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' d='M8 9l3 3-3 3m5 0h3M4 6h16a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2z'/></svg>",
+      "sections": [
+        {
+          "title": "PowerShell-Automatisierung",
+          "content": "PowerShell-Skripte für die Unternehmensadministration, wiederholbare Abläufe, Diagnosen und die Fehlerbehebung auf Endgeräten."
+        },
+        {
+          "title": "SQL & Reporting",
+          "content": "Komplexe T-SQL-Abfragen, Datenextraktion und automatisierte Berichterstellung."
+        },
+        {
+          "title": "Legacy- und Integrationsskripte",
+          "content": "VBScript- und Batch-Automatisierung für Systemstart, Benutzeranmeldung und Infrastrukturprozesse."
+        }
+      ]
+    },
+    {
+      "category": "Endgeräteverwaltung",
+      "value": "SCCM & OSD",
+      "label": "ZTI, In-Place-Upgrades & Gruppenrichtlinien",
+      "icon": "<svg class='w-4 h-4 text-sky-600' fill='none' stroke='currentColor' stroke-width='2' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' d='M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10'/></svg>",
+      "sections": [
+        {
+          "title": "Konfigurationsmanagement",
+          "content": "Verwaltung der SCCM-Infrastruktur, Clientzustand, Anwendungspaketierung und Softwareverteilung."
+        },
+        {
+          "title": "Betriebssystembereitstellung",
+          "content": "Zero-Touch-Installation (ZTI), Anpassung von WinPE und Windows-In-Place-Upgrades."
+        },
+        {
+          "title": "Unternehmensrichtlinien",
+          "content": "Konzeption und Optimierung von Gruppenrichtlinien sowie Endgerätekonfiguration."
+        }
+      ]
+    },
+    {
+      "category": "Anwendungsentwicklung",
+      "value": "C# & VB.NET",
+      "label": "OOP-Tools & interne Plattformen",
+      "icon": "<svg class='w-4 h-4 text-sky-600' fill='none' stroke='currentColor' stroke-width='2' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' d='M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4'/></svg>",
+      "sections": [
+        {
+          "title": "C# & .NET",
+          "content": "Objektorientierte C#- und VB.NET-Tools für den Unternehmenssupport und interne Anwendungen."
+        },
+        {
+          "title": "Webanwendungen",
+          "content": "ASP.NET-MVC-Plattformen, Backend-Integrationen und datenbankgestützte Benutzeroberflächen."
+        },
+        {
+          "title": "Desktop-Tools",
+          "content": "PowerShell-WPF- und .NET-GUI-Tools für Administration und Fehlerbehebung."
+        }
+      ]
+    },
+    {
+      "category": "Umfang & Erfahrung",
+      "value": "Über 15 Jahre",
+      "label": "Über 100.000 verwaltete Endgeräte",
+      "icon": "<svg class='w-4 h-4 text-sky-600' fill='none' stroke='currentColor' stroke-width='2' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' d='M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z'/></svg>",
+      "sections": [
+        {
+          "title": "Eintretenprise-Erfahrung",
+          "content": "Über 15 Jahre Erfahrung in Service Desk, System-Engineering und technischer Architektur."
+        },
+        {
+          "title": "Größenordnung der Endgeräte",
+          "content": "Erfahrung in der Betreuung von Unternehmensumgebungen mit mehr als 100.000 verwalteten Endgeräten."
+        },
+        {
+          "title": "Technische Führung",
+          "content": "Technische Führungsverantwortung, Mentoring, Architektur und teamübergreifende Zusammenarbeit."
+        }
+      ]
+    }
+  ],
+  "buttons": [
+    {
+      "text": "Eintreten",
+      "icon": "<svg class='w-4 h-4 text-[#0066b2]' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z'/></svg>",
+      "url": "site.html",
+      "styleClass": "btn-jim btn-jim-slate",
+      "page": "index"
+    },
+    {
+      "text": "Über mich",
+      "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='w-5 h-5' fill='none' viewBox='0 0 24 24' stroke='currentColor' stroke-width='2'><circle cx='12' cy='8' r='4'/><path stroke-linecap='round' stroke-linejoin='round' d='M5 21v-2a7 7 0 0114 0v2'/></svg>",
+      "title": "Über mich",
+      "description": "<div style='position:relative;overflow:hidden;border-radius:16px;padding:30px;margin-bottom:28px;background:linear-gradient(125deg,#eaf4ff 0%,#dbeeff 65%,#c8e5fa 100%);border:1px solid #bfdbfe;box-shadow:0 4px 16px rgba(37,99,166,.06);'><div style='position:absolute;top:-85px;right:-45px;width:250px;height:250px;border:1px solid rgba(37,99,166,.15);border-radius:50%;pointer-events:none;'></div><div style='position:absolute;top:-45px;right:5px;width:170px;height:170px;border:1px solid rgba(37,99,166,.12);border-radius:50%;pointer-events:none;'></div><div style='position:relative;z-index:1;'><div style='color:#2563a6;font-size:11px;font-weight:700;letter-spacing:2px;margin-bottom:12px;'>WILLKOMMEN IN MEINEM PORTFOLIO</div><div style='color:#142c4a;font-size:clamp(20px,2.4vw,27px);font-weight:800;line-height:1.3;margin-bottom:12px;'>From IT Support to<br>Eintretenprise Architecture.</div><div style='color:#506b89;font-size:13px;line-height:1.7;margin-bottom:14px;'>Infrastruktur-Engineering &nbsp;·&nbsp; Automatisierung &nbsp;·&nbsp; Anwendungsentwicklung</div><div style='width:55px;height:2px;background:#60a5fa;margin-bottom:12px;'></div><div style='color:#2563a6;font-size:12px;font-weight:600;line-height:1.6;'>Praktische Lösungen entwickeln. Wissen teilen. Systeme verbessern.</div></div></div><p class='text-slate-600 text-sm leading-relaxed mb-5'>Mein Weg in die IT begann mit einem Hintergrund im Maschinenbau und einer natürlichen Begeisterung für logisches Denken, Problemlösung und das Verständnis technischer Systeme. Aus einer deutschsprachigen Tätigkeit im IT-Support entwickelte sich nach und nach eine Laufbahn mit Schwerpunkt auf Unternehmensinfrastruktur, Automatisierung und Softwareentwicklung.</p><p class='text-slate-600 text-sm leading-relaxed mb-5'>I have always been a <strong>self-directed learner</strong>. Much of my technical knowledge comes from studying existing solutions, learning from experienced colleagues, experimenting with new approaches, and continuously improving what I build. This is how I developed my skills in PowerShell, SQL, C#, VB.NET, and object-oriented programming, eventually progressing from modifying existing scripts to designing my own tools, frameworks, and automation solutions.</p><h3 class='text-lg font-bold text-slate-800 mb-2'>Lernen, Verbessern und Wissen teilen</h3><p class='text-slate-600 text-sm leading-relaxed mb-5'>Throughout my career, I have followed a consistent principle: <strong>learn as much as possible, improve what can be improved, and share that knowledge with others.</strong> I have written hundreds of knowledge articles, documented technical processes, and shared scripts, tools, and solutions with colleagues to make their work easier and help teams become more independent.</p><p class='text-slate-600 text-sm leading-relaxed mb-5'>Ich habe großen Respekt vor Ingenieuren mit umfangreicherer Erfahrung und tieferem Fachwissen. Die Zusammenarbeit mit ihnen hat mich stets motiviert, mich selbst herauszufordern, meinen Horizont zu erweitern und besser zu werden. Ich bin überzeugt, dass Wissen wertvoller wird, wenn man es teilt, statt es für sich zu behalten.</p><h3 class='text-lg font-bold text-slate-800 mb-2'>Meine Arbeitsweise</h3><p class='text-slate-600 text-sm leading-relaxed mb-5'>Ob ich einen Infrastrukturfehler untersuche, ein bestehendes Automatisierungsframework verbessere oder eine neue Anwendung entwickle: Ich gehe stets gleich vor. Zuerst verstehe ich die zugrunde liegenden Mechanismen, dann suche ich nach Verbesserungsmöglichkeiten und entwickle praktische, zuverlässige und wartbare Lösungen.</p><p class='text-base font-semibold text-sky-700 border-l-4 border-sky-500 pl-4 py-2 my-5'>Ich finde, Wissen sollte nicht bei der Person bleiben, die eine Lösung entwickelt hat. Die besten Lösungen sind diejenigen, die andere verstehen, warten und weiterentwickeln können.</p><p class='text-slate-600 text-sm leading-relaxed'>Dieses Portfolio zeigt meinen Weg vom IT-Support zum Eintretenprise-Infrastruktur-Engineering und stellt die Tools, Skripte und Lösungen vor, die ich dabei entwickelt habe.</p>"
+    },
+    {
+      "text": "Beruflicher Werdegang",
+      "icon": "<svg class='w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z'/></svg>",
+      "url": "#General",
+      "styleClass": "btn-jim btn-jim-slate",
+      "page": "site",
+      "title": "Mein beruflicher Werdegang",
+      "description": [
+        {
+          "role": "Technischer Architekt",
+          "statusBadge": "Aktuelle Position",
+          "company": "CGF CounselGroupFrankfurt AG",
+          "imageUrl": "images/cgf.png",
+          "logoText": "CGF",
+          "date": "2022 – Present",
+          "desc": "Serving as Technischer Architekt managing an in-house <strong>ASP.NET MVC deployment platform</strong> for a major European automotive manufacturer. Engineered direct API/SDK integrations with <strong>Matrix42 Eintretenprise Manager</strong> and <strong>SCCM</strong> inside Visual Studio Eintretenprise, enabling real-time application deployment tasks that trigger immediate endpoint agent installations—bypassing traditional SCCM/Intune polling delays while managing full-stack C# backend logic, database operations, and frontend UI.",
+          "techStack": [
+            "C#",
+            "ASP.NET MVC",
+            "Matrix42 API / SDK",
+            "SCCM Polling Bypass",
+            "SQL Server",
+            "Automotive Scale"
+          ]
+        },
+        {
+          "role": "SCCM-Infrastruktur-Ingenieur (L3)",
+          "company": "SwiconGroup",
+          "imageUrl": "images/SwiconGroup.png",
+          "logoText": "SWI",
+          "date": "2020 – 2022",
+          "desc": "Served as Technical Lead across enterprise accounts managing 100,000+ endpoints. Oversaw <strong>SCCM packaging</strong>, WinPE/HTA pre-PXE customization, Zero-Touch OS Deployments (ZTI), and Matrix42 Eintretenprise Server Manager optimization. Engineered full-stack internal platform tools using <strong>C#, ASP.NET MVC, Entity Framework</strong>, and PowerShell WPF GUIs, backed by optimized T-SQL database queries. Led agile workflows in Jira/Git, authored architecture in Confluence, and mentored cross-disciplinary teams.",
+          "techStack": [
+            "SCCM",
+            "WinPE / HTA",
+            "ZTI OSD",
+            "Matrix42",
+            "C# / Entity Framework",
+            "PowerShell WPF",
+            "T-SQL"
+          ]
+        },
+        {
+          "role": "Systemadministrator (SCCM)",
+          "company": "evosoft (Siemens)",
+          "imageUrl": "images/evosoft.png",
+          "logoText": "EVO",
+          "date": "2017 – 2020",
+          "desc": "Managed and optimized an entire <strong>SCCM 2012 R2 environment</strong>—including boundaries, site maintenance, CAS/Primary/Secondary server monitoring, distribution point management, and client health checks. Built LTI/ZTI Task Sequences, complex Windows 10 upgrade packages, USMT solutions, and compliance baselines. Executed Windows 10 Servicing and Office 365 client management via ADRs, while administering multi-domain Group Policies, isolated WSUS servers, and VMware/vSphere environments. Modernized software packaging with PSADT, built custom C#.NET WPF tools, and authored SSRS reports.",
+          "techStack": [
+            "SCCM 2012 R2",
+            "Windows 10 OSD",
+            "PSADT",
+            "Group Policy (GPO)",
+            "VMware / vSphere",
+            "C#.NET WPF",
+            "SSRS"
+          ]
+        },
+        {
+          "role": "Softwareverteilungs-Ingenieur (L2)",
+          "company": "DXC Technology",
+          "imageUrl": "images/DXC_Logo.png",
+          "logoText": "DXC",
+          "date": "2017",
+          "desc": "Served as Technical Lead supporting software distribution infrastructure, OS image deployment, and patch management across <strong>SMS 2003, SCCM 2007/2012/2012 R2, and Altiris 7.5/7.6/8.1</strong> environments. Created captured images using Altiris Image Deployment (Symantec Ghost), optimized Group Policies and logon/startup scripts, and configured OU structures for deployment strategies. Engineered object-oriented .NET GUI applications and framework automation tools for internal and customer use, developed complex SQL queries in SSMS for reporting, and led technical client consultations.",
+          "techStack": [
+            "SCCM / Altiris",
+            "Symantec Ghost",
+            "VB.NET / OOP",
+            "WSUS / Patching",
+            "T-SQL / SSMS",
+            "GPO Optimization"
+          ]
+        },
+        {
+          "role": "ITO Service Delivery Consultant II",
+          "company": "Hewlett Packard Enterprise (HPE)",
+          "imageUrl": "images/HPE.png",
+          "logoText": "HPE",
+          "date": "2012 – 2017",
+          "desc": "Served as Technical Lead for Software Distribution managing multi-customer infrastructure, OS image deployment, and troubleshooting across <strong>SMS 2003, SCCM, and Altiris</strong> environments. Engineered custom capture images via Altiris, directed WSUS/SCCM patch management, and optimized GPO architecture by establishing targeted OU structures and tuning WMI queries. Modernized logon/startup scripts using VBScript and Batch to cut boot times, developed .NET GUI applications for customer frameworks, and delivered technical team trainings.",
+          "techStack": [
+            "SMS 2003 / SCCM",
+            "Altiris",
+            "VBScript / Batch",
+            "GPO Loopback",
+            ".NET GUI Tools",
+            "SQL Reporting"
+          ]
+        },
+        {
+          "role": "Senior Service-Desk-Mitarbeiter (L2)",
+          "company": "HP",
+          "imageUrl": "images/HP.png",
+          "logoText": "HP",
+          "date": "2010 – 2012",
+          "desc": "Elevated to Senior L2 Technical Lead at HP, steering support operations for key enterprise accounts including Monier and Panasonic. Specialized in deciphering systemic infrastructure issues from minimal diagnostics, handling complex escalations, and mentoring cross-functional team members.",
+          "techStack": [
+            "L2 Escalations",
+            "Systemic Diagnostics",
+            "Multi-Account Support",
+            "Technical Mentorship"
+          ]
+        },
+        {
+          "role": "Service-Desk-Analyst",
+          "company": "Getronics",
+          "imageUrl": "images/Getronics.png",
+          "logoText": "GT",
+          "date": "2008 – 2010",
+          "desc": "Delivered multilingual L1/L2 technical support in Deutsch, Englisch, and Niederländisch across major global client accounts, including Sybase, Innospec, Nalco, and Honeywell. Supported internal service desk operations and colleagues, managing ticket resolution and technical troubleshooting across enterprise environments.",
+          "techStack": [
+            "Multilingual Support",
+            "Incident Triage",
+            "Enterprise Service Desk",
+            "Root Cause Analysis"
+          ]
+        },
+        {
+          "role": "Service-Desk-Mitarbeiter",
+          "company": "IT Services Hungary Kft.",
+          "imageUrl": "images/ITSH.png",
+          "logoText": "ITSH",
+          "date": "2008",
+          "desc": "Provided dedicated Deutsch-language Service Desk support for T-Systems Deutschy, handling user support, incident logging, ticket management, and initial technical triage.",
+          "techStack": [
+            "German-Language Support",
+            "T-Systems Domain",
+            "Incident Logging",
+            "Technical Triage"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Meine Tools",
+      "icon": "<svg class='w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M11 4a2 2 0 114 0v1a2 2 0 01-2 2 2 2 0 01-2-2V4zm-6 8a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2H7a2 2 0 01-2-2v-8z'/></svg>",
+      "url": "#Tools",
+      "styleClass": "btn-jim btn-jim-slate",
+      "page": "site",
+      "dropdownItems": [
+        {
+          "id": "tool-pc-info",
+          "text": "PC-Info-Tool",
+          "title": "PC-Informations- und Self-Service-Support-Tool",
+          "image": "images/pc-info-tool.png",
+          "description": "<p class='text-slate-600 text-sm leading-relaxed mb-5'>Conceived, proposed to management, and developed a <strong>VB.NET Windows Forms application</strong> to address a recurring challenge in enterprise IT support: incomplete technical information in incident tickets and repeated communication between users and support engineers. The application was distributed to company endpoints through SCCM and made easily accessible from the desktop and taskbar, allowing users to collect diagnostic information, resolve common issues, and access support resources without requiring technical expertise.</p><h3 class='text-lg font-bold text-slate-800 mb-2'>Systeminformationen mit einem Klick erfassen</h3><p class='text-slate-600 text-sm leading-relaxed mb-5'>Designed a straightforward interface that displays essential endpoint information, including computer identity, operating system details, hardware specifications, storage capacity, and network configuration. A prominent <strong>Copy Information to Clipboard</strong> button allows users to capture the collected information instantly and paste it into an incident ticket or email. This reduces repetitive information requests and gives support engineers useful troubleshooting details from the beginning of an investigation.</p><h3 class='text-lg font-bold text-slate-800 mb-2'>QuickFix: Selbsthilfe für Endanwender</h3><p class='text-slate-600 text-sm leading-relaxed mb-5'>Introduced a dedicated QuickFix tab containing automated solutions for common endpoint problems, including SAP Logon configuration issues involving SAPlogon.ini. Instead of opening a support ticket for a known, repeatable problem, users can select the relevant action and attempt to resolve the issue themselves. This approach makes frequently requested fixes more accessible and reduces unnecessary support interactions.</p><h3 class='text-lg font-bold text-slate-800 mb-2'>Integration von Software- und Supportressourcen</h3><p class='text-slate-600 text-sm leading-relaxed mb-5'>Added a Software tab providing convenient shortcuts to frequently used enterprise resources, including the software self-service portal and the locally installed SCCM Software Center. This gives users a central location for accessing software-related services without needing to remember separate application names or web addresses.</p><h3 class='text-lg font-bold text-slate-800 mb-2'>Automatisierte Endgerätediagnose</h3><p class='text-slate-600 text-sm leading-relaxed mb-5'>Developed a Diagnostics tab that performs general endpoint checks and generates a text-based diagnostic report. Once the checks are complete, the report opens automatically in Notepad, allowing users to review the results or attach them to a support ticket or email. This provides support engineers with additional diagnostic information without requiring users to execute commands manually.</p><h3 class='text-lg font-bold text-slate-800 mb-2'>Unternehmensweite Bereitstellung & Zugänglichkeit</h3><p class='text-slate-600 text-sm leading-relaxed mb-5'>Packaged and distributed the application through SCCM, making it available across managed endpoints. Desktop and taskbar access, clearly separated functional tabs, and an intentionally prominent information-copying button were designed to make the application approachable for users with varying levels of technical experience.</p><p class='text-base font-semibold text-sky-700 border-l-4 border-sky-500 pl-4 py-2 my-5'>The objective was simple: give users the tools to solve common problems themselves and provide support engineers with the information they need, without unnecessary back-and-forth communication.</p><p class='text-slate-500 text-xs mt-4'>Projektdokumentation: https://peskyjim.blogspot.com/p/pc-info-tool.html</p>"
+        },
+        {
+          "id": "tool-ad-query",
+          "text": "AD-Abfrage-Tool",
+          "title": "Active-Directory-Such- und Reporting-Tool",
+          "image": "images/ad-query-tool.png",
+          "description": "<p class='text-slate-600 text-sm leading-relaxed mb-5'>Developed a lightweight <strong>Active Directory search and administration utility</strong> designed to simplify everyday directory lookups without requiring administrators to navigate the full Active Directory Users and Computers (ADUC) interface. The application provides a compact, customizable search environment for retrieving information about users, computers, and groups.</p><h3 class='text-lg font-bold text-slate-800 mb-2'>Flexible Active-Directory-Suche</h3><p class='text-slate-600 text-sm leading-relaxed mb-5'>Supports searches across Active Directory user, computer, and group objects, allowing administrators to select the appropriate search scope. An additional filtering option helps narrow results when investigating specific accounts or directory objects.</p><h3 class='text-lg font-bold text-slate-800 mb-2'>Anpassbare Attributauswahl</h3><p class='text-slate-600 text-sm leading-relaxed mb-5'>Introduced a <strong>Column Select</strong> interface that allows administrators to choose which Active Directory attributes appear in the results. Information such as operating system, last logon timestamp, and other relevant object properties can be displayed without navigating through individual account properties. This makes it easier to focus on the information needed for a particular task.</p><h3 class='text-lg font-bold text-slate-800 mb-2'>Gruppenmitgliedschaften & erweiterte Filter</h3><p class='text-slate-600 text-sm leading-relaxed mb-5'>Includes group membership lookup options and secondary filtering capabilities to support more targeted directory investigations. These features help administrators locate relevant objects and examine directory relationships within a single interface.</p><h3 class='text-lg font-bold text-slate-800 mb-2'>Ergebnisexport mit einem Klick</h3><p class='text-slate-600 text-sm leading-relaxed mb-5'>Search results can be copied directly to the clipboard, including column headers, making it easy to transfer directory information into support tickets, emails, documentation, or spreadsheets without manually collecting individual attributes.</p><p class='text-base font-semibold text-sky-700 border-l-4 border-sky-500 pl-4 py-2 my-5'>A practical administrative utility focused on faster Active Directory lookups, customizable information retrieval, and reducing repetitive manual work.</p><p class='text-slate-500 text-xs mt-4'>Projektdokumentation: https://peskyjim.blogspot.com/p/ad-query-tool.html</p>"
+        },
+        {
+          "id": "tool-ping",
+          "text": "Ping-Tool",
+          "title": "IT – Ping- und Fernadministrations-Tool",
+          "image": "images/ping-tool.png",
+          "description": "<p class='text-slate-600 text-sm leading-relaxed mb-5'>Developed a <strong>multithreaded endpoint monitoring and remote administration utility</strong> designed to simplify everyday troubleshooting for helpdesk engineers and system administrators. The application combines bulk network connectivity testing, endpoint information retrieval, and frequently used remote administration actions within a single desktop interface.</p><h3 class='text-lg font-bold text-slate-800 mb-2'>Parallele Verbindungsüberwachung</h3><p class='text-slate-600 text-sm leading-relaxed mb-5'>Supports monitoring multiple computers simultaneously, using multithreaded ping operations to check network reachability without processing each endpoint sequentially. Results are displayed in a structured table showing hostnames, IP addresses, online or offline status, and fully qualified domain names (FQDNs), allowing administrators to quickly identify unreachable devices.</p><h3 class='text-lg font-bold text-slate-800 mb-2'>Abruf von Endgeräteinformationen</h3><p class='text-slate-600 text-sm leading-relaxed mb-5'>Selecting a computer provides access to additional endpoint details through Windows Management Instrumentation (WMI). The information panel displays relevant system properties, including operating system version, hardware model, last logged-on user, installation date, last boot time, and available disk capacity. This helps support engineers gather useful diagnostic information without manually connecting to each device.</p><h3 class='text-lg font-bold text-slate-800 mb-2'>Integrierte Fernadministration</h3><p class='text-slate-600 text-sm leading-relaxed mb-5'>Includes convenient quick-action buttons for common remote administration tasks. Administrators can retrieve system information using Get Info, open the selected computer's administrative C$ share, or initiate a remote PowerShell session. These shortcuts reduce repetitive manual steps and provide faster access to frequently used troubleshooting tools.</p><h3 class='text-lg font-bold text-slate-800 mb-2'>Zentrale Oberfläche zur Fehlerbehebung</h3><p class='text-slate-600 text-sm leading-relaxed mb-5'>Brings connectivity status, endpoint identification, system information, and remote access options together in one interface. By reducing the need to switch between command-line utilities and administrative consoles, the application makes routine endpoint investigations more efficient and easier to manage.</p><p class='text-base font-semibold text-sky-700 border-l-4 border-sky-500 pl-4 py-2 my-5'>A lightweight troubleshooting utility that helps administrators monitor multiple endpoints, identify connectivity issues, and initiate remote support actions from a single location.</p><p class='text-slate-500 text-xs mt-4'>Projektdokumentation: https://peskyjim.blogspot.com/p/ping-tool.html</p>"
+        },
+        {
+          "id": "tool-adsgu",
+          "text": "AD-Sicherheitsgruppenverwaltung",
+          "title": "Active-Directory-Sicherheitsgruppenverwaltung",
+          "image": "images/adsgu-tool.png",
+          "description": "<p class='text-slate-600 text-sm leading-relaxed mb-5'>Developed a <strong>bulk Active Directory security group management utility</strong> designed to simplify repetitive membership administration. Instead of manually updating individual security groups through Active Directory Users and Computers (ADUC), administrators can manage multiple user or computer objects across multiple target groups through a single desktop interface.</p><h3 class='text-lg font-bold text-slate-800 mb-2'>Massenverwaltung von Gruppenmitgliedschaften</h3><p class='text-slate-600 text-sm leading-relaxed mb-5'>Supports adding or removing multiple Active Directory users and computers from multiple security groups in a single execution. Administrators provide the target objects and group names, select the required operation, and let the application process the requested membership changes. This reduces the repetitive steps involved in large-scale group administration.</p><h3 class='text-lg font-bold text-slate-800 mb-2'>Zentrale Steuerung der Aktionen</h3><p class='text-slate-600 text-sm leading-relaxed mb-5'>Provides dedicated controls for adding objects to groups, removing objects from groups, and clearing the current selection. Separate input lists for directory objects and target groups make it easier to prepare and review bulk membership operations before execution.</p><h3 class='text-lg font-bold text-slate-800 mb-2'>Fehlerbehandlung & Ausführungsrückmeldung</h3><p class='text-slate-600 text-sm leading-relaxed mb-5'>Includes a dedicated error reporting grid that identifies the affected object, target group, and corresponding error. This helps administrators distinguish successful operations from issues such as missing directory objects or existing group memberships, making troubleshooting more straightforward and reducing the need for manual verification.</p><h3 class='text-lg font-bold text-slate-800 mb-2'>Effizienz & Einheitlichkeit im Betrieb</h3><p class='text-slate-600 text-sm leading-relaxed mb-5'>Consolidates repetitive Active Directory membership changes into a consistent administrative workflow. By processing multiple objects and groups together and providing immediate execution feedback, the utility helps reduce manual effort and improves visibility during routine directory maintenance.</p><p class='text-base font-semibold text-sky-700 border-l-4 border-sky-500 pl-4 py-2 my-5'>A practical bulk administration tool that simplifies Active Directory security group updates while providing clear feedback for individual membership operations.</p><p class='text-slate-500 text-xs mt-4'>Projektdokumentation: https://peskyjim.blogspot.com/p/ad-security-group-updater.html</p>"
+        },
+        {
+          "id": "client-support-tool",
+          "text": "Client-Support-Tool",
+          "title": "Eintretenprise-Client-Support-Tool",
+          "image": "images/ClientSupportTool.png",
+          "description": "<p class='text-slate-600 text-sm leading-relaxed mb-4'>A custom-developed enterprise endpoint diagnostics and remediation utility, combining a graphical WPF interface with an extensive PowerShell automation engine. The interface was originally designed using Visual Studio's C# WPF tooling and adapted for PowerShell execution, integrating years of field-tested troubleshooting scripts into a centralized support platform.</p><ul class='list-disc list-inside text-sm text-slate-600 space-y-3'><li><strong>Endgeräte-Zustandsdiagnose:</strong> Computer-name-based BASIC and FULL diagnostic modes provide system information and health checks, including disk space, DNS conflicts, WMI connectivity, and administrative share accessibility. BASIC diagnostics can be triggered directly using the Eintreten key.</li><li><strong>Zweistufige Statusanzeige:</strong> A color-coded execution console displays detailed diagnostic results, while a dedicated visual Status Table provides immediate green/red indicators for rapid issue identification, particularly useful for first-line support personnel.</li><li><strong>Remote-Fehlerbehebung mit einem Klick:</strong> PowerShell-driven administrative actions encapsulate complex, multi-stage repair procedures behind simple GUI controls. Operations such as WMI repository repair, SCCM client recovery, and Windows Update remediation combine service management, execution sequencing, and necessary wait conditions into repeatable workflows.</li><li><strong>Fernadministration:</strong> Integrated controls provide direct access to remote command execution, elevated system sessions, interactive PowerShell sessions, and targeted endpoint management operations.</li><li><strong>Strukturierter Datenabruf:</strong> Dedicated Data Tables display information collected through diagnostic and administrative functions, allowing results to be copied directly into Excel for reporting or further analysis.</li><li><strong>Modularer Funktionsumfang:</strong> Technology-specific tabs, including SCCM management, organize specialized diagnostic and remediation scripts into focused operational workspaces.</li><li><strong>Praxisorientiertes Engineering:</strong> Built around a continuously refined library of PowerShell scripts developed through real-world enterprise troubleshooting, standardizing complex support procedures and reducing the need for repetitive manual intervention.</li></ul><p class='text-xs text-slate-500 mt-5 pt-4 border-t border-slate-200'><strong>Technologien:</strong> PowerShell | WPF | Visual Studio | C# WPF Designer | WMI | SCCM | Windows Endgeräteverwaltung</p>"
+        }
+      ]
+    },
+    {
+      "text": "Meine Skripte",
+      "icon": "<svg class='w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4'/></svg>",
+      "url": "#Scripts",
+      "styleClass": "btn-jim btn-jim-slate",
+      "page": "site",
+      "dropdownItems": [
+        {
+          "id": "StartupLogonScriptHandler",
+          "text": "Anmeldeskript",
+          "title": "Framework für Start- und Anmeldeskripte",
+          "image": "images/logonscript.png",
+          "description": "<p class='text-slate-600 text-sm leading-relaxed mb-5'>Originally inherited as a VBScript-based controller responsible for executing additional VBScript and batch files during user logon, this framework was progressively redesigned into a <strong>centrally managed, Active Directory-driven automation system</strong> supporting both user logon and computer startup operations.</p><h3 class='text-lg font-bold text-slate-800 mb-2'>Gruppenbasierte Skriptzuweisung über Active Directory</h3><p class='text-slate-600 text-sm leading-relaxed mb-5'>Introduced dynamic script targeting using Active Directory security groups. The controller searched for groups within a designated Organizational Unit (OU), checked the current user's group membership, and matched qualifying group names against script filenames stored on the NETLOGON share. Matching scripts were then executed automatically. The same mechanism was implemented for computer startup, using computer group membership instead of user membership. This eliminated the need to maintain individual script assignments and enabled centralized, group-based control over script execution.</p><h3 class='text-lg font-bold text-slate-800 mb-2'>Standardisierte Skriptvorlagen & Ausführungsprotokolle</h3><p class='text-slate-600 text-sm leading-relaxed mb-5'>Developed a reusable script template for new logon and startup automation requests. Submitted scripts were incorporated into the template, which provided standardized execution logging, success or failure reporting, and runtime measurement. This ensured that independently developed scripts followed a consistent operational structure and could be monitored and troubleshot more effectively.</p><h3 class='text-lg font-bold text-slate-800 mb-2'>Zentrale Ausführungsverfolgung & Leistungsoptimierung</h3><p class='text-slate-600 text-sm leading-relaxed mb-5'>Implemented a master execution log that recorded which scripts ran during each logon or startup event, their individual execution times, and the total duration of the complete process. This made it possible to identify slow or failing scripts, investigate performance bottlenecks, and optimize the overall user logon and computer startup experience.</p><h3 class='text-lg font-bold text-slate-800 mb-2'>Technologievergleich: VBScript vs. PowerShell</h3><p class='text-slate-600 text-sm leading-relaxed mb-5'>Evaluated a PowerShell-based implementation of the same framework but found that its initialization overhead increased execution time in this particular environment. Because minimizing logon and startup delays was a primary requirement, VBScript remained the more practical choice for the controller. This reinforced an important engineering principle: <strong>technology selection should be driven by operational requirements and measured performance, not simply by language capabilities.</strong></p><p class='text-base font-semibold text-sky-700 border-l-4 border-sky-500 pl-4 py-2 my-5'>The result was a maintainable, centrally controlled automation framework that improved script targeting, troubleshooting, execution visibility, and logon performance.</p>"
+        },
+        {
+          "id": "sccm-matrix42-framework-tester",
+          "text": "Framework-Tester",
+          "title": "Infrastruktur-Zustandsprüfung",
+          "image": "images/framework-tester-flow.png",
+          "description": "<p class='text-slate-600 text-sm leading-relaxed mb-5'>Designed a <strong>PowerShell-based infrastructure health monitoring framework</strong> to detect operational issues across interconnected enterprise systems and automatically escalate failures through the company's existing incident management infrastructure. The solution runs as a scheduled task on a Windows Server, performing connectivity checks and analyzing logs generated by an existing application environment.</p><h3 class='text-lg font-bold text-slate-800 mb-2'>Automatisierte Infrastruktur-Zustandsprüfungen</h3><p class='text-slate-600 text-sm leading-relaxed mb-5'>Implemented a monitoring approach combining basic connectivity verification between dependent systems with automated analysis of application and infrastructure logs. The framework identifies communication failures and operational errors, providing an additional layer of visibility into system health without requiring manual inspection.</p><h3 class='text-lg font-bold text-slate-800 mb-2'>WMI-basierte Alarmierung & automatische Ticketerstellung</h3><p class='text-slate-600 text-sm leading-relaxed mb-5'>When a monitored check detects a failure, the framework writes a corresponding error code into Windows Management Instrumentation (WMI). An existing company-wide monitoring solution collects this information and automatically generates an IT service management ticket, notifying the team responsible for the affected system. This approach integrates custom health checks with established enterprise alerting and incident management processes.</p><h3 class='text-lg font-bold text-slate-800 mb-2'>Detaillierte Protokollierung & Analyse des Störungsverlaufs</h3><p class='text-slate-600 text-sm leading-relaxed mb-5'>The framework includes standardized execution logging, with health information recorded at five-minute intervals. These records provide a historical view of system behavior, helping engineers identify approximately when an issue began, how long it persisted, and whether the affected components subsequently recovered. This improves troubleshooting and supports more accurate incident analysis.</p><h3 class='text-lg font-bold text-slate-800 mb-2'>Framework-Design, Mentoring & Code-Review</h3><p class='text-slate-600 text-sm leading-relaxed mb-5'>I developed the original concept and provided the reusable PowerShell framework and logging template. The monitoring logic was implemented by a junior engineer under my mentorship. Throughout development, I reviewed the implementation, provided technical guidance, and helped ensure the solution followed the intended architecture and operational requirements. This project demonstrates my approach to technical leadership: <strong>establish a clear foundation, support others in developing their skills, and maintain engineering quality through continuous collaboration.</strong></p><p class='text-base font-semibold text-sky-700 border-l-4 border-sky-500 pl-4 py-2 my-5'>The result was an automated monitoring and escalation framework that connected system-level diagnostics with enterprise incident management, improving operational visibility and reducing reliance on manual health checks.</p>"
+        },
+        {
+          "id": "SQLReportEmailer",
+          "text": "SQL-E-Mail-Tool",
+          "title": "Automatisiertes SQL-Reporting mit HTML-E-Mail-Versand",
+          "image": "images/sqlmailer.png",
+          "description": "<p class='text-slate-600 text-sm leading-relaxed mb-5'>Developed a <strong>PowerShell-based reporting tool</strong> that retrieves administrative rights and support group request data from an enterprise SQL Server database, transforms the results into formatted HTML tables, and distributes them through Microsoft Outlook. The solution automates a repetitive reporting process while keeping data extraction, presentation, and email delivery within a single workflow.</p><h3 class='text-lg font-bold text-slate-800 mb-2'>Automatisierter SQL-Datenabruf</h3><p class='text-slate-600 text-sm leading-relaxed mb-5'>Uses the PowerShell SQLServer module and Invoke-Sqlcmd to execute three targeted T-SQL queries against the AdminRights database. The queries retrieve daily counts of new support group configuration requests, administrative rights requests, and support group insertion requests over the previous seven days. Results are grouped by creation date and ordered chronologically to provide a clear overview of request activity.</p><h3 class='text-lg font-bold text-slate-800 mb-2'>Dynamische Erstellung von HTML-Berichten</h3><p class='text-slate-600 text-sm leading-relaxed mb-5'>A reusable PowerShell function processes the SQL results, standardizes date formatting, and converts the datasets into HTML table fragments. These fragments are inserted into a structured HTML email containing three reporting sections, consistent table styling, and an automatically generated timestamp. When a query returns no results, the corresponding section displays an informative message instead of an empty table.</p><h3 class='text-lg font-bold text-slate-800 mb-2'>E-Mail-Versand über die Outlook-COM-Schnittstelle</h3><p class='text-slate-600 text-sm leading-relaxed mb-5'>Integrates with Microsoft Outlook through the Outlook.Application COM interface to create and send the completed report. The script configures the sender, recipients, subject, and HTML message body before dispatching the email through the active Outlook profile. This allows the reporting workflow to operate using the existing Outlook environment and appropriate mailbox permissions.</p><h3 class='text-lg font-bold text-slate-800 mb-2'>Wiederverwendbare Reporting-Architektur</h3><p class='text-slate-600 text-sm leading-relaxed mb-5'>Separates database queries, data transformation, HTML construction, and email delivery into clearly defined processing stages. The structure can be adapted to additional reporting requirements by modifying the SQL queries and report sections without redesigning the entire workflow.</p><p class='text-base font-semibold text-sky-700 border-l-4 border-sky-500 pl-4 py-2 my-5'>A practical reporting solution that transforms raw SQL data into structured, readable email reports while reducing repetitive manual data collection and formatting.</p>"
+        }
+      ]
+    },
+    {
+      "text": "Unternehmen",
+      "icon": "<svg class='w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'><rect x='3' y='7' width='18' height='14' rx='2' stroke-width='2'/><path d='M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18' stroke-width='2' stroke-linecap='round'/></svg>",
+      "url": "#Companies",
+      "styleClass": "btn-jim btn-jim-slate",
+      "title": "Unternehmen & Unternehmenskunden",
+      "description": "<p class='text-slate-600 text-sm leading-relaxed mb-6'>Im Laufe meiner beruflichen Laufbahn war ich bei verschiedenen internationalen IT-Unternehmen angestellt und habe über meine Arbeitgeber große Kundenumgebungen betreut. Diese Erfahrungen haben mein Wissen über Unternehmensinfrastrukturen, Softwareverteilung, Endgeräteverwaltung und Anwendungsentwicklung geprägt.</p><h3 class='text-lg font-bold text-slate-800 border-b border-slate-200 pb-2 mb-3'>Direkte Arbeitgeber</h3><p class='text-slate-600 text-sm leading-relaxed mb-4'>Unternehmen, bei denen ich im Laufe meiner Karriere direkt angestellt war.</p><div class='grid grid-cols-2 md:grid-cols-3 gap-3 mb-8'><div class='rounded-xl border border-slate-200 bg-slate-50 p-5 text-center'><div class='text-base font-bold text-slate-800'>HP</div></div><div class='rounded-xl border border-slate-200 bg-slate-50 p-5 text-center'><div class='text-base font-bold text-slate-800'>Getronics</div></div><div class='rounded-xl border border-slate-200 bg-slate-50 p-5 text-center'><div class='text-base font-bold text-slate-800'>DXC Technology</div></div><div class='rounded-xl border border-slate-200 bg-slate-50 p-5 text-center'><div class='text-base font-bold text-slate-800'>evosoft</div></div><div class='rounded-xl border border-slate-200 bg-slate-50 p-5 text-center'><div class='text-base font-bold text-slate-800'>Deutsche Telekom</div></div></div><h3 class='text-lg font-bold text-slate-800 border-b border-slate-200 pb-2 mb-3'>Kundenunternehmen</h3><p class='text-slate-600 text-sm leading-relaxed mb-4'>Unternehmenskunden, deren IT-Umgebungen ich über meine Arbeitgeber und Dienstleister betreut habe.</p><div class='grid grid-cols-2 md:grid-cols-3 gap-3 mb-6'><div class='rounded-xl border border-slate-200 bg-slate-50 p-5 text-center'><div class='text-base font-bold text-slate-800'>Monier</div></div><div class='rounded-xl border border-slate-200 bg-slate-50 p-5 text-center'><div class='text-base font-bold text-slate-800'>SKF</div></div><div class='rounded-xl border border-slate-200 bg-slate-50 p-5 text-center'><div class='text-base font-bold text-slate-800'>BMW</div></div><div class='rounded-xl border border-slate-200 bg-slate-50 p-5 text-center'><div class='text-base font-bold text-slate-800'>Panasonic</div></div><div class='rounded-xl border border-slate-200 bg-slate-50 p-5 text-center'><div class='text-base font-bold text-slate-800'>Sybase</div></div><div class='rounded-xl border border-slate-200 bg-slate-50 p-5 text-center'><div class='text-base font-bold text-slate-800'>Honeywell</div></div></div><div class='border-t border-slate-200 pt-4'><p class='text-xs text-slate-500 leading-relaxed'>Die oben genannten Unternehmen spiegeln meine beruflichen Anstellungen und Kundeneinsätze wider. Sie sind weder Sponsoren noch Unterstützer dieser Website. Alle Unternehmensnamen und Marken sind Eigentum ihrer jeweiligen Inhaber.</p></div>"
+    },
+    {
+      "id": "engineering-philosophy",
+      "icon": "<svg class='w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 18V5a3 3 0 0 0-5.8-1.1A4 4 0 0 0 4 11a4 4 0 0 0 2 7.5A3.5 3.5 0 0 0 12 18Zm0 0V5a3 3 0 0 1 5.8-1.1A4 4 0 0 1 20 11a4 4 0 0 1-2 7.5A3.5 3.5 0 0 1 12 18Z'/></svg>",
+      "text": "Philosophie",
+      "title": "Engineering-Philosophie & Führung",
+      "description": "<div style='position:relative;overflow:hidden;border-radius:16px;padding:32px 30px;margin-bottom:28px;background:linear-gradient(125deg,#101d35 0%,#193454 60%,#12557a 100%);color:white;box-shadow:0 8px 24px rgba(15,23,42,.12);'><div style='position:absolute;top:-70px;right:-30px;width:240px;height:240px;border:1px solid rgba(125,211,252,.18);border-radius:50%;pointer-events:none;'></div><div style='position:absolute;top:-35px;right:10px;width:170px;height:170px;border:1px solid rgba(125,211,252,.13);border-radius:50%;pointer-events:none;'></div><div style='position:relative;z-index:1;'><div style='color:#7dd3fc;font-size:11px;font-weight:700;letter-spacing:2px;margin-bottom:12px;'>ENGINEERING-DENKWEISE</div><div style='color:#ffffff;font-size:clamp(20px,2.4vw,27px);font-weight:800;line-height:1.3;margin-bottom:12px;'>Build systems. Develop people.<br>Keep improving.</div><div style='color:#cbd5e1;font-size:13px;line-height:1.7;'>Neugier &nbsp;•&nbsp; Verantwortung &nbsp;•&nbsp; Kontinuierliche Verbesserung</div></div></div><p class='text-slate-600 text-sm leading-relaxed mb-5'>I believe great engineering is built on <strong>curiosity, accountability, and continuous improvement</strong>. Technical knowledge matters, but the willingness to learn, question assumptions, and take ownership of outcomes matters just as much.</p><h3 class='text-lg font-bold text-slate-800 mb-2'>Fehler sind Chancen zur Verbesserung</h3><p class='text-slate-600 text-sm leading-relaxed mb-5'>Ich ermutige Ingenieure, Fehler offen anzusprechen, ihre Ursachen zu untersuchen und aus den gewonnenen Erkenntnissen bessere Lösungen zu entwickeln. Gründlichere Tests, Peer-Reviews, saubere Fehlerbehandlung und vorbeugende Maßnahmen machen aus einem Vorfall eine nachhaltige Verbesserung. Dabei gebe ich Menschen Raum zum Lernen, ohne die Erwartungen an Zuverlässigkeit und Verantwortung aus den Augen zu verlieren.</p><h3 class='text-lg font-bold text-slate-800 mb-2'>Potenzial vor Erfahrung</h3><p class='text-slate-600 text-sm leading-relaxed mb-5'>Erfahrung allein macht noch keinen guten Ingenieur aus. Mir sind Neugier, Motivation, Verantwortungsbewusstsein und Entwicklungsbereitschaft wichtig. Ich fördere Menschen, die Potenzial zeigen, gebe konstruktives Feedback und erkenne ihre Erfolge ausdrücklich an. Jemandem dabei zu helfen, sich zu einem kompetenten, selbstständigen Ingenieur zu entwickeln, gehört für mich zu den schönsten Seiten von Führung.</p><h3 class='text-lg font-bold text-slate-800 mb-2'>Hinterfrage meine Entscheidungen</h3><p class='text-slate-600 text-sm leading-relaxed mb-5'>Ich ermutige Kollegen, meine Entwürfe und technischen Entscheidungen zu hinterfragen. Konstruktiver Widerspruch deckt versteckte Annahmen und mögliche Fehler auf und führt zu besseren Lösungen. Ich brauche keine Menschen, die mir immer zustimmen. Ich schätze Kollegen, die mich zum Nachdenken bringen. Vertrauen in die eigene Kompetenz bedeutet für mich auch, zugeben zu können, wenn jemand anderes recht hat.</p><h3 class='text-lg font-bold text-slate-800 mb-2'>Erst zuhören, dann fundiert entscheiden</h3><p class='text-slate-600 text-sm leading-relaxed mb-5'>In technischen Diskussionen höre ich lieber zuerst zu, bevor ich meine eigenen Schlussfolgerungen vorstelle. Unterschiedliche Perspektiven helfen mir, Probleme einzuordnen, Risiken zu erkennen und fundierte Architekturentscheidungen zu treffen. Mein Ziel ist nicht, als Erster eine Antwort zu haben, sondern eine Lösung beizutragen, die das Gesamtbild berücksichtigt.</p><h3 class='text-lg font-bold text-slate-800 mb-2'>Zuverlässigkeit ist der wahre Erfolg</h3><p class='text-slate-600 text-sm leading-relaxed mb-4'>Für mich zeigt sich erfolgreiche Architektur nicht daran, wie oft ich zur Problemlösung gerufen werde. Entscheidend ist, wie zuverlässig eine Umgebung funktioniert, wie wirksam Fehler verhindert werden und wie eigenständig ein Team die Lösung betreiben und weiterentwickeln kann.</p><p class='text-base font-semibold text-sky-700 border-l-4 border-sky-500 pl-4 py-2 my-5'>Erfolg messe ich nicht daran, wie oft ich etwas reparieren muss, sondern daran, wie zuverlässig die Dinge ohne mein Eingreifen funktionieren.</p><p class='text-slate-600 text-sm leading-relaxed'>Ultimately, my goal is simple: <strong>build dependable systems, develop capable engineers, and create an environment where people are encouraged to learn, challenge, and improve.</strong></p>"
+    },
+    {
+      "text": "Zertifizierungen",
+      "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"8\" r=\"6\"/><path d=\"M8.21 13.89 7 23l5-3 5 3-1.21-9.12\"/></svg>",
+      "url": "#Certifications",
+      "styleClass": "btn-jim btn-jim-slate",
+      "page": "site",
+      "title": "Lizenzen & Zertifizierungen",
+      "description": [
+        {
+          "title": "Client Management Suite 7.5: Administration",
+          "vendor": "Symantec",
+          "year": "2015",
+          "status": "Bestanden",
+          "logo": "images/symantec.png",
+          "desc": "Acquired comprehensive administration expertise in Altiris Client Management Suite 7.5, specializing in endpoint management and software delivery pipelines."
+        },
+        {
+          "title": "MCTS – System Center 2012 Configuration Manager",
+          "vendor": "Microsoft",
+          "issuer": "Microsoft",
+          "year": "2013",
+          "exam": "70-243",
+          "status": "Bestanden",
+          "score": "781 / 700 required",
+          "logo": "images/microsoft1.png",
+          "certificateImage": "images/certificates/sccm-2012.jpg",
+          "desc": "Successfully passed the official Microsoft certification exam 70-243 on November 7, 2013. The examination covered SCCM infrastructure planning, operating system deployment, application management, software updates, compliance settings, client administration, inventory, and reporting."
+        },
+        {
+          "title": "MCDST – Microsoft Certified Desktop Support Technician",
+          "vendor": "ControllTraining Kft.",
+          "issuer": "ControllTraining Kft.",
+          "year": "2009",
+          "exam": "70-271/272",
+          "status": "Bestanden",
+          "score": "",
+          "logo": "images/microsoft1.png",
+          "certificateImage": "",
+          "desc": "ControllTraining Kft. — Demonstrated core competency in troubleshooting Windows desktop environments, client OS, and remote support."
+        }
+      ]
+    },
+    {
+      "text": "Weiterbildungen",
+      "icon": "<svg class='w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 14l9-5-9-5-9 5 9 5z'/><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z'/></svg>",
+      "url": "#Trainings",
+      "styleClass": "btn-jim btn-jim-slate",
+      "page": "site",
+      "dropdownItems": [
+        {
+          "id": "trainings-delivered",
+          "text": "Durchgeführte Schulungen",
+          "title": "Als Dozent durchgeführte Kurse & Workshops",
+          "description": [
+            {
+              "title": "PowerShell-Automatisierung: Von den Grundlagen bis zum Fortgeschrittenenniveau",
+              "vendor": "General",
+              "year": "2017 – present",
+              "logo": "images/instructor.png",
+              "desc": "Designed curriculum and delivered hands-on technical training to upskill enterprise support teams in Advanced PowerShell automation, pipeline processing, custom GUI creation, and bulk-endpoint remediation."
+            },
+            {
+              "title": "Grundlagen der T-SQL-Abfragen und Berichterstellung",
+              "vendor": "General",
+              "year": "2015 – present",
+              "logo": "images/instructor.png",
+              "desc": "Authored and conducted training modules covering T-SQL syntax, database querying, data aggregation, JOIN operations, and building custom reports for endpoint management."
+            },
+            {
+              "title": "Optimierung von Gruppenrichtlinien und Skripten",
+              "vendor": "General",
+              "year": "2014 – present",
+              "logo": "images/instructor.png",
+              "desc": "Led technical workshops focused on Group Policy optimization, Loopback Processing, and modernizing legacy VBScript/Batch logon and startup scripts into standardized enterprise workflows."
+            }
+          ]
+        },
+        {
+          "id": "trainings-completed",
+          "text": "Absolvierte Weiterbildungen",
+          "title": "Absolvierte berufliche Weiterbildungen & Kurse",
+          "description": [
+            {
+              "title": "The Complete JavaScript Course: From Zero to Expert! (Jonas Schmedtmann)",
+              "vendor": "Udemy",
+              "year": "2025",
+              "logo": "images/udemy.png",
+              "certificate": "",
+              "desc": "Deepening core JavaScript mastery covering modern ES6+ features, asynchronous programming (Promises, Async/Await), OOP principles, DOM manipulation, and modern web application architecture."
+            },
+            {
+              "title": "PowerShell 7 & Advanced Automation Series",
+              "vendor": "JackedProgrammer",
+              "year": "2024",
+              "logo": "images/jacked.png",
+              "desc": "Hands-on training covering PowerShell 7 fundamentals, GUI creation, REST API integration, Active Directory management, custom module development, and PowerShell Universal application building."
+            },
+            {
+              "title": "WorkshopPLUS: Sysinternals Tools and Windows Performance Toolkit",
+              "vendor": "Microsoft",
+              "year": "2019",
+              "logo": "images/microsoft.png",
+              "certificate": "images/certificates/WorkshopPLUS.jpg",
+              "desc": "Advanced technical workshop exploring Microsoft Sysinternals utilities and the Windows Performance Toolkit for system diagnostics, process analysis, performance troubleshooting, and identifying operating system and application bottlenecks."
+            },
+            {
+              "title": "DNS Name Resolution on Clients and Servers (MSNEV)",
+              "vendor": "IQSOFT – John Bryce Training Center",
+              "year": "2019",
+              "logo": "images/iqsoft.png",
+              "certificate": "images/certificates/iqsoft_dns.jpg",
+              "desc": "Technical training focused on DNS name resolution in Windows client and server environments, including DNS configuration, troubleshooting name resolution failures, and understanding network communication dependencies."
+            },
+            {
+              "title": "IP Configuration on Clients and Servers (MSIP)",
+              "vendor": "IQSOFT – John Bryce Training Center",
+              "year": "2019",
+              "logo": "images/iqsoft.png",
+              "certificate": "images/certificates/iqsoft_ipconfig.jpg",
+              "desc": "Technical training covering IP configuration in Windows client and server environments, including TCP/IP networking fundamentals, network interface configuration, connectivity diagnostics, and troubleshooting common IP communication issues."
+            },
+            {
+              "title": "The Complete ASP.NET MVC 5 Course (Mosh Hamedani)",
+              "vendor": "Udemy",
+              "year": "2018",
+              "logo": "images/udemy.png",
+              "certificate": "images/certificates/udemy_aspnet-mvc.png",
+              "desc": "Mastered full-stack web development using ASP.NET MVC 5, focusing on C# backend architecture, RESTful APIs, Entity Framework ORM, SQL database integration, and responsive frontend design."
+            },
+            {
+              "title": "System Center Configuration Manager: Troubleshooting",
+              "vendor": "Microsoft",
+              "year": "2018",
+              "logo": "images/microsoft.png",
+              "certificate": "images/certificates/SCCM_TS.jpg",
+              "desc": "Microsoft technical workshop focused on troubleshooting System Center Configuration Manager environments, diagnosing client and infrastructure issues, investigating deployment failures, and applying systematic problem-resolution techniques."
+            },
+            {
+              "title": "Servicing Windows 10 with SCCM Current Branch",
+              "vendor": "Microsoft",
+              "year": "2018",
+              "logo": "images/microsoft.png",
+              "certificate": "images/certificates/currentbranch.jpg",
+              "desc": "Microsoft technical workshop covering Windows 10 servicing and lifecycle management using System Center Configuration Manager Current Branch, including operating system updates, servicing strategies, and enterprise deployment management."
+            },
+            {
+              "title": "Client Management Suite 7.5: Administration",
+              "vendor": "Symantec",
+              "year": "2015",
+              "logo": "images/symantec.png",
+              "desc": "Professional training in Symantec Altiris Client Management Suite 7.5 administration, covering enterprise endpoint management, software deployment, hardware and software inventory, client configuration, and centralized management of workstation environments."
+            },
+            {
+              "title": "SQL Server Queries (WiseOwl Tutorials)",
+              "vendor": "WiseOwl Training",
+              "year": "2014",
+              "logo": "images/wiseowl.png",
+              "desc": "Comprehensive training on T-SQL query design covering fundamental SELECT queries, filtering with WHERE, sorting, aggregations with GROUP BY and HAVING, multi-table JOINs, subqueries, and correlated subqueries."
+            },
+            {
+              "title": "VBScript User's Guide & Scripting Fundamentals",
+              "vendor": "VbsEdit",
+              "year": "2012",
+              "logo": "images/vbsedit.png",
+              "desc": "Foundational training in VBScript core syntax, object manipulation (WScript, COM/WMI classes), Regular Expressions, HTML Applications (HTA), and script debugging for Windows administration."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Kontakt",
+      "icon": "<svg class='w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z'/></svg>",
+      "url": "#Contact",
+      "styleClass": "btn-jim btn-jim-slate",
+      "page": "site",
+      "title": "Kontakt aufnehmen",
+      "description": "<div class='bg-white/90 backdrop-blur-md border border-slate-200/90 rounded-2xl p-3 shadow-sm flex flex-col gap-1.5 text-left'>\n\n  <!-- LinkedIn -->\n  <div class='flex items-center gap-2.5 py-1'>\n    <div class='p-1 rounded-md bg-sky-50 border border-sky-100 text-sky-600 shrink-0'>\n      <svg class='w-3.5 h-3.5' fill='currentColor' viewBox='0 0 24 24'><path d='M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z'/></svg>\n    </div>\n    <div class='leading-none'>\n      <h3 class='text-[11px] font-bold text-slate-800 tracking-tight'>LinkedIn-Profil</h3>\n      <p class='text-[11px] text-slate-600 mt-0.5'>https://linkedin.com/in/janos-friedrich-415aa49b</p>\n    </div>\n  </div>\n\n  <hr class='border-slate-100' />\n\n  <!-- Website -->\n  <div class='flex items-center gap-2.5 py-1'>\n    <div class='p-1 rounded-md bg-sky-50 border border-sky-100 text-sky-600 shrink-0'>\n      <svg class='w-3.5 h-3.5' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1'/></svg>\n    </div>\n    <div class='leading-none'>\n      <h3 class='text-[11px] font-bold text-slate-800 tracking-tight'>Website</h3>\n      <p class='text-[11px] text-slate-600 mt-0.5'>https://jjim.dev <span class='text-[9px] text-slate-400 font-normal'>(Personal)</span></p>\n    </div>\n  </div>\n\n  <hr class='border-slate-100' />\n\n  <!-- Address -->\n  <div class='flex items-center gap-2.5 py-1'>\n    <div class='p-1 rounded-md bg-sky-50 border border-sky-100 text-sky-600 shrink-0'>\n      <svg class='w-3.5 h-3.5' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z'/><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M15 11a3 3 0 11-6 0 3 3 0 016 0z'/></svg>\n    </div>\n    <div class='leading-none'>\n      <h3 class='text-[11px] font-bold text-slate-800 tracking-tight'>Adresse</h3>\n      <p class='text-[11px] text-slate-600 mt-0.5'>Ungarn</p>\n    </div>\n  </div>\n\n  <hr class='border-slate-100' />\n\n  <!-- Email -->\n  <div class='flex items-center gap-2.5 py-1'>\n    <div class='p-1 rounded-md bg-sky-50 border border-sky-100 text-sky-600 shrink-0'>\n      <svg class='w-3.5 h-3.5' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z'/></svg>\n    </div>\n    <div class='leading-none'>\n      <h3 class='text-[11px] font-bold text-slate-800 tracking-tight'>E-Mail</h3>\n      <p class='text-[11px] text-slate-600 mt-0.5'>janos.friedrich@gmail.com</p>\n    </div>\n  </div>\n\n</div>"
+    },
+    {
+      "text": "Über diese Website",
+      "icon": "<svg class='w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z'/></svg>",
+      "url": "#About",
+      "styleClass": "btn-jim btn-jim-slate",
+      "title": "Über diese Website",
+      "image": "images/about1.png",
+      "description": "<h3 class=\"text-lg font-bold text-slate-900 border-b border-slate-200 pb-1 mb-2\">Warum ich diese Website erstellt habe</h3><p class=\"text-slate-600 text-sm leading-relaxed mb-5\">I originally created this website because I wanted something more personal than a LinkedIn profile or a traditional CV. Anyone can list technologies, certifications, and job titles. But I wanted to show what I've actually worked on, what I've learned along the way, and how I approach problems.</p><p class=\"text-slate-600 text-sm leading-relaxed mb-5\">I'm not particularly interested in making things sound more complicated than they really are. If something works, it works. If it doesn't, well, that's usually where the interesting part begins.</p><h3 class=\"text-lg font-bold text-slate-900 border-b border-slate-200 pb-1 mb-2\">Ein bisschen über mich</h3><p class=\"text-slate-600 text-sm leading-relaxed mb-5\">I'm generally a relaxed and calm person. I enjoy a good laugh, and I often use humor to lighten the mood, especially when things get stressful.</p><p class=\"text-slate-600 text-sm leading-relaxed mb-5\">At work, I take my responsibilities seriously, but that doesn't mean everything has to be serious all the time. In my experience, people work better together when they're comfortable enough to ask questions, challenge ideas, and occasionally laugh at their own mistakes.</p><p class=\"text-slate-600 text-sm leading-relaxed mb-5\">I've always been curious about how things work. Simply knowing which button to press has never been enough for me. I want to understand what happens behind that button, why it happens, and what I can do with that knowledge. That curiosity has taken me through quite a few different areas of IT over the years.</p><h3 class=\"text-lg font-bold text-slate-900 border-b border-slate-200 pb-1 mb-2\">How This Website Works</h3><p class=\"text-slate-600 text-sm leading-relaxed mb-5\">The website itself is fairly straightforward. It's built with <b>HTML5</b>, <b>Tailwind CSS</b>, and <b>vanilla JavaScript</b>. Most of the content is stored in a separate <b><code>data.json</code></b> file, which keeps the information independent of the layout and makes it easier to maintain.</p><p class=\"text-slate-600 text-sm leading-relaxed mb-5\">I also used <b>AI assistance</b> during development, particularly for experimenting with designs, refining CSS, and speeding up repetitive tasks. I don't see anything wrong with using tools that make development easier. What matters to me is understanding the result, being able to maintain it, and knowing how to fix it when something breaks. And yes, things did break along the way.</p><h3 class=\"text-lg font-bold text-slate-900 border-b border-slate-200 pb-1 mb-2\">One Last Thing</h3><p class=\"text-slate-600 text-sm leading-relaxed mb-5\">This website isn't meant to suggest that I know everything. After more than 15 years in IT, I'm well aware that there's always something new to learn.</p><p class=\"text-slate-600 text-sm leading-relaxed\">It's simply a collection of my experience, projects, and the things I've enjoyed working on. If you've made it this far, thanks for taking the time to look around!</p>"
+    }
+  ]
+}

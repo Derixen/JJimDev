@@ -17,6 +17,33 @@
 // 1. IMAGE LIGHTBOX
 // ==========================================
 
+let currentLanguage = localStorage.getItem("siteLanguage") || "en";
+
+function initializeLanguageSwitcher() {
+  document.documentElement.lang = currentLanguage;
+
+  document.querySelectorAll(".language-btn").forEach((button) => {
+    const language = button.dataset.language;
+    const isActive = language === currentLanguage;
+
+    button.classList.toggle("bg-sky-600", isActive);
+    button.classList.toggle("text-white", isActive);
+    button.classList.toggle("shadow-sm", isActive);
+
+    button.classList.toggle("text-slate-600", !isActive);
+    button.classList.toggle("hover:bg-slate-200", !isActive);
+
+    button.setAttribute("aria-pressed", String(isActive));
+
+    button.addEventListener("click", () => {
+      if (language === currentLanguage) return;
+
+      localStorage.setItem("siteLanguage", language);
+      window.location.reload();
+    });
+  });
+}
+
 function openModal(imageSrc) {
   const modal = document.getElementById("image-modal");
   const image = document.getElementById("modal-img");
@@ -1645,8 +1672,12 @@ document.addEventListener(
 // ==========================================
 
 document.addEventListener("DOMContentLoaded", async () => {
+  initializeLanguageSwitcher();
+
   try {
-    const response = await fetch("data.json");
+    const jsonFile = currentLanguage === "de" ? "data.de.json" : "data.json";
+
+    const response = await fetch(jsonFile);
 
     if (!response.ok) {
       throw new Error(`Unable to load data.json: ${response.status}`);
