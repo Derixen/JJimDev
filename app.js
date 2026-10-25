@@ -728,20 +728,77 @@ function escapeHtml(value) {
 function formatTextWithLinks(text) {
   if (!text) return "";
 
-  // Existing descriptions contain trusted HTML markup.
-  // Convert plain URLs into clickable links.
-  return String(text).replace(/https?:\/\/[^\s<>"']+/g, (match) => {
-    const url = match.replace(/[.,;!?]+$/, "");
-    const trailing = match.slice(url.length);
+  // Descriptions contain trusted HTML markup.
+  const container = document.createElement("div");
+  container.innerHTML = String(text);
 
-    return (
-      `<a href="${escapeHtml(url)}" ` +
-      `target="_blank" rel="noopener noreferrer" ` +
-      `class="text-sky-600 hover:underline ` +
-      `font-semibold break-all">` +
-      `${escapeHtml(url)}</a>${trailing}`
-    );
-  });
+  // Process text only, never HTML tags or attributes.
+  const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT);
+
+  const textNodes = [];
+  let node;
+
+  while ((node = walker.nextNode())) {
+    // Preserve existing links and other special elements.
+    if (node.parentElement.closest("a, script, style, code, pre")) {
+      continue;
+    }
+
+    textNodes.push(node);
+  }
+
+  // Supports plain URLs and Markdown links.
+  const urlRegex =
+    /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)|(https?:\/\/[^\s<>"']+)/g;
+
+  for (const textNode of textNodes) {
+    const content = textNode.nodeValue;
+    const fragment = document.createDocumentFragment();
+
+    let lastIndex = 0;
+    let match;
+
+    urlRegex.lastIndex = 0;
+
+    while ((match = urlRegex.exec(content)) !== null) {
+      fragment.appendChild(
+        document.createTextNode(content.slice(lastIndex, match.index)),
+      );
+
+      const link = document.createElement("a");
+
+      const isMarkdown = Boolean(match[2]);
+      let url = match[2] || match[3];
+
+      // Remove punctuation accidentally captured after plain URLs.
+      const cleanUrl = isMarkdown ? url : url.replace(/[.,;!?]+$/, "");
+
+      const trailing = url.slice(cleanUrl.length);
+
+      link.href = cleanUrl;
+      link.textContent = isMarkdown ? match[1] : cleanUrl;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+
+      link.className = "text-sky-600 hover:underline font-semibold break-all";
+
+      fragment.appendChild(link);
+
+      if (trailing) {
+        fragment.appendChild(document.createTextNode(trailing));
+      }
+
+      lastIndex = urlRegex.lastIndex;
+    }
+
+    if (lastIndex === 0) continue;
+
+    fragment.appendChild(document.createTextNode(content.slice(lastIndex)));
+
+    textNode.replaceWith(fragment);
+  }
+
+  return container.innerHTML;
 }
 
 // ==========================================
