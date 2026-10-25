@@ -11,26 +11,28 @@
       class="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-5xl mx-auto w-full px-4 mt-0"
     >
       <!-- Language Switcher -->
-      <div
-        class="col-span-1 md:col-span-4 flex items-center gap-1 bg-slate-100 p-1 rounded-xl border border-slate-200 justify-self-end w-fit"
-        role="group"
-        aria-label="Website language"
-      >
-        <button
-          type="button"
-          data-language="en"
-          class="language-btn px-4 py-1 text-xs font-bold rounded-lg transition-all cursor-pointer"
+      <div class="col-span-full w-full flex justify-end">
+        <div
+          class="flex items-center gap-1 bg-slate-100 p-1 rounded-xl border border-slate-200"
+          role="group"
+          aria-label="Website language"
         >
-          EN
-        </button>
+          <button
+            type="button"
+            data-language="en"
+            class="language-btn px-3 py-1.5 text-xs font-bold rounded-lg transition-all cursor-pointer"
+          >
+            EN
+          </button>
 
-        <button
-          type="button"
-          data-language="de"
-          class="language-btn px-4 py-1 text-xs font-bold rounded-lg transition-all cursor-pointer"
-        >
-          DE
-        </button>
+          <button
+            type="button"
+            data-language="de"
+            class="language-btn px-3 py-1.5 text-xs font-bold rounded-lg transition-all cursor-pointer"
+          >
+            DE
+          </button>
+        </div>
       </div>
       <!-- Row 1: Title Container -->
       <div
