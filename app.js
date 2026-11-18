@@ -1584,8 +1584,8 @@ function renderSidebarButtons(buttons) {
       firstButton = anchor;
     }
 
-    const isTools = btn.text === "My Tools";
-    const isScripts = btn.text === "My Scripts";
+    const isTools = btn.url === "#Tools";
+    const isScripts = btn.url === "#Scripts";
     const isProjectSection = isTools || isScripts;
 
     const hasDropdown =
