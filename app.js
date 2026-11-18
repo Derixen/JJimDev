@@ -813,25 +813,13 @@ function renderStatsGrid(stats) {
   container.innerHTML = "";
 
   const grid = document.createElement("div");
+  grid.className = "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5";
 
-  grid.className =
-    "grid grid-cols-1 sm:grid-cols-2 " + "lg:grid-cols-4 gap-3.5";
-
-  stats.forEach((stat) => {
+  stats.forEach((stat, index) => {
     const card = document.createElement("button");
 
     card.type = "button";
-
-    card.className =
-      "text-left w-full bg-white/90 backdrop-blur-md " +
-      "border border-slate-200/90 rounded-2xl p-4 " +
-      "shadow-sm transition-all duration-200 " +
-      "cursor-pointer hover:bg-[#ebf5ff] " +
-      "hover:border-[#b3d7f5] hover:-translate-y-0.5 " +
-      "hover:shadow-[0_6px_20px_rgba(59,130,246,0.20)] " +
-      "focus:outline-none " +
-      "focus:ring-2 focus:ring-sky-500 " +
-      "flex flex-col justify-between";
+    card.className = `stat-premium-card stat-theme-${index % 4}`;
 
     card.setAttribute(
       "aria-label",
@@ -839,36 +827,22 @@ function renderStatsGrid(stats) {
     );
 
     card.innerHTML = `
-      <div
-        class="flex items-center justify-between
-               gap-2 mb-2"
-      >
-        <span
-          class="text-[11px] font-mono font-bold
-                 tracking-wider text-slate-400 uppercase"
-        >
-          ${escapeHtml(stat.category)}
-        </span>
-
-        <div
-          class="p-1.5 rounded-lg bg-sky-50
-                 border border-sky-100/80 shrink-0"
-        >
+      <div class="stat-card-header">
+        <div class="stat-card-icon">
           ${stat.icon || ""}
         </div>
+
+        <span class="stat-card-category">
+          ${escapeHtml(stat.category)}
+        </span>
       </div>
 
-      <div>
-        <div
-          class="text-lg font-extrabold text-slate-900
-                 tracking-tight leading-snug"
-        >
+      <div class="stat-card-content">
+        <div class="stat-card-value">
           ${escapeHtml(stat.value)}
         </div>
 
-        <div
-          class="text-xs font-medium text-slate-500 mt-0.5"
-        >
+        <div class="stat-card-label">
           ${escapeHtml(stat.label)}
         </div>
       </div>

@@ -259,3 +259,248 @@ p {
   position: relative;
   z-index: 10;
 }
+
+/* ==========================================
+   Premium Statistics Cards - Top 4 Only
+   ========================================== */
+
+#stats-grid-container button {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+
+  background: linear-gradient(135deg, #ffffff, #e5f2ff);
+
+  box-shadow:
+    0 4px 12px rgba(15, 23, 42, 0.09),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+
+  transition:
+    transform 250ms ease,
+    box-shadow 250ms ease;
+}
+
+/* Individual card backgrounds */
+#stats-grid-container button:nth-child(1) {
+  background: linear-gradient(125deg, #ffffff 15%, #dcecff);
+}
+
+#stats-grid-container button:nth-child(2) {
+  background: linear-gradient(125deg, #ffffff 15%, #f0e2ff);
+}
+
+#stats-grid-container button:nth-child(3) {
+  background: linear-gradient(125deg, #ffffff 15%, #d9f8ec);
+}
+
+#stats-grid-container button:nth-child(4) {
+  background: linear-gradient(125deg, #ffffff 15%, #fff0d6);
+}
+
+/* Decorative curved background */
+#stats-grid-container button::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 190px;
+  height: 190px;
+  top: -110px;
+  right: -100px;
+  border-radius: 45%;
+  border: 22px solid rgba(255, 255, 255, 0.38);
+  transform: rotate(35deg);
+  pointer-events: none;
+}
+
+/* Icon containers */
+#stats-grid-container button > div:first-child svg {
+  color: white;
+}
+
+/* Hover effect */
+#stats-grid-container button:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 10px 25px rgba(30, 80, 150, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+/* ==========================================
+   PREMIUM STATISTICS CARDS
+   ========================================== */
+
+.stat-premium-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  width: 100%;
+  min-height: 155px;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+
+  text-align: left;
+  cursor: pointer;
+
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.95);
+
+  box-shadow:
+    0 4px 12px rgba(15, 23, 42, 0.09),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+
+  transition:
+    transform 250ms ease,
+    box-shadow 250ms ease;
+}
+
+/* Individual color themes */
+
+.stat-theme-0 {
+  background: linear-gradient(125deg, #ffffff 5%, #dcecff 100%);
+  --stat-accent: #1479e6;
+  --stat-accent-light: #79bdff;
+}
+
+.stat-theme-1 {
+  background: linear-gradient(125deg, #ffffff 5%, #efe1ff 100%);
+  --stat-accent: #7950ed;
+  --stat-accent-light: #b79bff;
+}
+
+.stat-theme-2 {
+  background: linear-gradient(125deg, #ffffff 5%, #d8f8eb 100%);
+  --stat-accent: #19bd68;
+  --stat-accent-light: #7be5a2;
+}
+
+.stat-theme-3 {
+  background: linear-gradient(125deg, #ffffff 5%, #fff0d4 100%);
+  --stat-accent: #f5a400;
+  --stat-accent-light: #ffd36b;
+}
+
+/* Decorative background curves */
+
+.stat-premium-card::before,
+.stat-premium-card::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+  border-radius: 45%;
+  transform: rotate(42deg);
+}
+
+.stat-premium-card::before {
+  width: 220px;
+  height: 130px;
+  right: -105px;
+  top: 25px;
+  background: rgba(255, 255, 255, 0.36);
+}
+
+.stat-premium-card::after {
+  width: 180px;
+  height: 110px;
+  right: -105px;
+  top: 70px;
+  background: rgba(255, 255, 255, 0.22);
+}
+
+/* Header */
+
+.stat-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.stat-card-icon {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+  color: white;
+
+  background: linear-gradient(
+    145deg,
+    var(--stat-accent-light),
+    var(--stat-accent)
+  );
+
+  box-shadow:
+    0 4px 9px rgba(15, 23, 42, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+.stat-card-icon svg {
+  width: 24px;
+  height: 24px;
+  color: white;
+  stroke: currentColor;
+}
+
+.stat-card-category {
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+  color: #526580;
+}
+
+/* Card text */
+
+.stat-card-value {
+  font-size: 20px;
+  font-weight: 850;
+  letter-spacing: -0.035em;
+  line-height: 1.2;
+  color: #0b192c;
+}
+
+.stat-card-label {
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #526580;
+}
+
+/* Hover */
+
+.stat-premium-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 10px 25px rgba(30, 80, 150, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.stat-premium-card:focus-visible {
+  outline: 2px solid #0284c7;
+  outline-offset: 3px;
+}
+
+.stat-premium-card:active {
+  transform: translateY(-1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stat-premium-card {
+    transition: none;
+  }
+}
