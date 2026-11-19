@@ -1,7 +1,46 @@
 /* Standalone printable portfolio summary. No changes to app.js required. */
 (() => {
-  const lang = () =>
-    localStorage.getItem("siteLanguage") === "de" ? "de" : "en";
+  const lang = () => {
+    const selected = localStorage.getItem("siteLanguage") || "en";
+    return ["en", "de", "hu"].includes(selected) ? selected : "en";
+  };
+  const profileText = {
+    en: {
+      kicker: "PROFESSIONAL PROFILE",
+      job: "Enterprise Systems Architect",
+      experience:
+        "Over 15 years of experience in enterprise IT, specializing in software deployment, automation, and application development.",
+      location: "Location",
+      country: "Hungary",
+      email: "Email",
+      linkedin: "LinkedIn",
+      website: "Website",
+    },
+
+    de: {
+      kicker: "BERUFSPROFIL",
+      job: "Enterprise-Systemarchitekt",
+      experience:
+        "Über 15 Jahre Erfahrung in der Enterprise-IT, mit Schwerpunkt auf Softwareverteilung, Automatisierung und Anwendungsentwicklung.",
+      location: "Standort",
+      country: "Ungarn",
+      email: "E-Mail",
+      linkedin: "LinkedIn",
+      website: "Webseite",
+    },
+
+    hu: {
+      kicker: "SZAKMAI PROFIL",
+      job: "Nagyvállalati rendszerarchitekt",
+      experience:
+        "Több mint 15 éves tapasztalat a nagyvállalati informatikában, különös tekintettel a szoftverterítésre, az automatizálásra és az alkalmazásfejlesztésre.",
+      location: "Lakóhely",
+      country: "Magyarország",
+      email: "E-mail",
+      linkedin: "LinkedIn",
+      website: "Weboldal",
+    },
+  };
   const labels = {
     en: {
       button: "Portfolio Summary",
@@ -40,6 +79,25 @@
       technologies: "Technologien",
       years: "Berufserfahrung",
       error: "Portfolio-Daten konnten nicht geladen werden.",
+    },
+    hu: {
+      button: "Portfólió összefoglaló",
+      title: "Portfólió összefoglaló",
+      print: "Nyomtatás",
+      close: "Bezárás",
+      profile: "Szakmai profil",
+      career: "Teljes szakmai pályafutás",
+      tools: "Eszközök és alkalmazások",
+      scripts: "Szkriptek és automatizálás",
+      companies: "Vállalatok és nagyvállalati ügyfelek",
+      certs: "Tanúsítványok",
+      trainings: "Szakmai képzések",
+      delivered: "Megtartott képzések",
+      completed: "Elvégzett képzések",
+      languages: "Nyelvtudás",
+      technologies: "Technológiák",
+      years: "Szakmai tapasztalat",
+      error: "Nem sikerült betölteni a portfólió adatait.",
     },
   };
   const esc = (value) =>
@@ -89,7 +147,13 @@
     const content = document.getElementById("ps-content");
     content.innerHTML = '<p class="ps-loading">Loading…</p>';
     try {
-      const response = await fetch(l === "de" ? "data.de.json" : "data.json");
+      const languageFiles = {
+        en: "data.json",
+        de: "data.de.json",
+        hu: "data.hu.json",
+      };
+
+      const response = await fetch(languageFiles[l]);
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const data = await response.json();
       if (modal.getAttribute("aria-hidden") === "false")
@@ -112,6 +176,7 @@
   }
   function render(data, t) {
     const p = data.profile || {};
+    const pt = profileText[lang()] || profileText.en;
     const fullName =
       [p.firstName, p.middleName, p.lastName].filter(Boolean).join(" ") ||
       data.siteheading ||
@@ -212,6 +277,7 @@
     })();
     return `
     
+
 <div class="ps-profile-header">
 
   <!-- Photo + Professional Information -->
@@ -219,35 +285,31 @@
     <img src="images/profile.png" alt="Profile photograph">
 
     <div class="ps-hero-info">
-      <div class="ps-kicker">PROFESSIONAL PROFILE</div>
+      <div class="ps-kicker">${pt.kicker}</div>
 
       <h1>Janos Robert Friedrich</h1>
-      <h3>Enterprise Systems Architect</h3>
+      <h3>${pt.job}</h3>
 
-      <p>
-        Over 15 years of experience in enterprise IT,
-        specializing in software deployment, automation,
-        and application development.
-      </p>
+      <p>${pt.experience}</p>
     </div>
   </div>
 
   <!-- Full-width Contact Information -->
   <div class="ps-contact">
     <div class="ps-contact-item">
-      <span class="ps-contact-label">Location</span>
-      <span>Budaörs, Hungary</span>
+      <span class="ps-contact-label">${pt.location}</span>
+      <span>Budaörs, ${pt.country}</span>
     </div>
 
     <div class="ps-contact-item">
-      <span class="ps-contact-label">Email</span>
+      <span class="ps-contact-label">${pt.email}</span>
       <a href="mailto:janos.friedrich@gmail.com">
         janos.friedrich@gmail.com
       </a>
     </div>
 
     <div class="ps-contact-item">
-      <span class="ps-contact-label">LinkedIn</span>
+      <span class="ps-contact-label">${pt.linkedin}</span>
       <a href="https://www.linkedin.com/in/janos-friedrich-415aa49b"
          target="_blank" rel="noopener noreferrer">
         linkedin.com/in/janos-friedrich-415aa49b
@@ -255,7 +317,7 @@
     </div>
 
     <div class="ps-contact-item">
-      <span class="ps-contact-label">Website</span>
+      <span class="ps-contact-label">${pt.website}</span>
       <a href="https://jjim.dev"
          target="_blank" rel="noopener noreferrer">
         jjim.dev
@@ -264,6 +326,7 @@
   </div>
 
 </div>
+
 
     <div class="ps-intro">${p.description ? esc(plain(p.description)) : ""}</div>
      ${section(t.languages, languages)}

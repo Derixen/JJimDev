@@ -44,6 +44,18 @@ const profileTranslations = {
     languages: "Sprachen",
     background: "Beruflicher Hintergrund",
   },
+  hu: {
+    title: "Személyes profil",
+    information: "Személyes adatok",
+    firstName: "Keresztnév:",
+    middleName: "Második keresztnév:",
+    lastName: "Vezetéknév:",
+    nationality: "Állampolgárság:",
+    country: "Lakóhely szerinti ország:",
+    experience: "Szakmai tapasztalat:",
+    languages: "Nyelvtudás",
+    background: "Szakmai háttér",
+  },
 };
 
 function initializeLanguageSwitcher() {
@@ -1735,7 +1747,13 @@ document.addEventListener("DOMContentLoaded", async () => {
   initializeLanguageSwitcher();
 
   try {
-    const jsonFile = currentLanguage === "de" ? "data.de.json" : "data.json";
+    const languageFiles = {
+      en: "data.json",
+      de: "data.de.json",
+      hu: "data.hu.json",
+    };
+
+    const jsonFile = languageFiles[currentLanguage] || languageFiles.en;
 
     const response = await fetch(jsonFile);
 
