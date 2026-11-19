@@ -31,6 +31,10 @@ const profileTranslations = {
     experience: "Experience:",
     languages: "Languages",
     background: "Professional Background",
+    professionalProfile: "Professional Profile",
+    location: "Location",
+    email: "Email",
+    website: "Website",
   },
   de: {
     title: "Persönliches Profil",
@@ -43,6 +47,10 @@ const profileTranslations = {
     experience: "Berufserfahrung:",
     languages: "Sprachen",
     background: "Beruflicher Hintergrund",
+    professionalProfile: "Berufliches Profil",
+    location: "Wohnort",
+    email: "E-Mail",
+    website: "Webseite",
   },
   hu: {
     title: "Személyes profil",
@@ -55,6 +63,10 @@ const profileTranslations = {
     experience: "Szakmai tapasztalat:",
     languages: "Nyelvtudás",
     background: "Szakmai háttér",
+    professionalProfile: "Szakmai profil",
+    location: "Lakóhely",
+    email: "E-mail",
+    website: "Weboldal",
   },
 };
 
@@ -163,28 +175,89 @@ function createProfileModal() {
           </button>
         </div>
       
-        <div class="flex flex-col sm:flex-row items-center
-                    sm:items-start gap-6 p-6">
 
-          <img id="profile-modal-image"
-               alt="Profile photograph"
-               class="w-36 h-36 object-cover rounded-2xl
-                      border border-slate-200 shadow-md ">
+<div class="p-6">
 
-          <div class="text-center sm:text-left">
-            <h3 class="text-2xl font-extrabold text-slate-900">
-              ${fullName}
-            </h3>
-            <p class="text-sm text-sky-700 font-semibold mt-2">
-              ${profile.job}
-            </p>
-            <p class="text-sm text-slate-500 mt-2">
-              ${profile.experience}
-            </p>
-          </div>
-        </div>
+  <!-- Photo and professional information -->
+  <div class="flex items-center gap-6">
+
+    <img id="profile-modal-image"
+         alt="Profile photograph"
+         class="w-28 h-28 sm:w-32 sm:h-32
+                object-cover rounded-2xl
+                border border-slate-200 shadow-md shrink-0">
+
+    <div class="min-w-0 text-left">
+
+      <p class="text-[10px] font-extrabold uppercase
+                tracking-widest text-sky-600 mb-2">
+        ${t.professionalProfile}
+      </p>
+
+      <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900">
+        ${fullName}
+      </h3>
+
+      <p class="text-sm text-slate-700 font-semibold mt-1">
+        ${profile.job}
+      </p>
+
+      <p class="text-sm text-slate-500 mt-2 leading-relaxed">
+        ${profile.experience}
+      </p>
+
+    </div>
+  </div>
+
+  <!-- Full-width contact information -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3
+              mt-5 pt-4 border-t border-slate-200 text-xs">
+
+    <div>
+      <p class="text-slate-400 font-bold uppercase text-[10px]">
+        ${t.location}
+      </p>
+      <p class="text-slate-700">Budaörs, Hungary</p>
+    </div>
+
+    <div>
+      <p class="text-slate-400 font-bold uppercase text-[10px]">
+        ${t.email}
+      </p>
+      <a href="mailto:janos.friedrich@gmail.com"
+         class="text-sky-600 hover:underline break-all">
+        janos.friedrich@gmail.com
+      </a>
+    </div>
+
+    <div>
+      <p class="text-slate-400 font-bold uppercase text-[10px]">
+        LinkedIn
+      </p>
+      <a href="https://www.linkedin.com/in/janos-friedrich-415aa49b"
+         target="_blank" rel="noopener noreferrer"
+         class="text-sky-600 hover:underline break-all">
+        linkedin.com/in/janos-friedrich-415aa49b
+      </a>
+    </div>
+
+    <div>
+      <p class="text-slate-400 font-bold uppercase text-[10px]">
+        ${t.website}
+      </p>
+      <a href="https://jjim.dev"
+         target="_blank" rel="noopener noreferrer"
+         class="text-sky-600 hover:underline">
+        jjim.dev
+      </a>
+    </div>
+
+  </div>
+</div>
+
       </div>
     <div class="p-6 flex-1 min-h-0 overflow-y-auto">
+    <div class="border-t border-slate-200 mb-6"></div>
         <div class="">
           <h3 class="text-sm font-bold text-slate-800 mb-4">
             ${t.information}
