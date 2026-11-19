@@ -505,3 +505,59 @@ p {
     transition: none;
   }
 }
+/* Profile contact information */
+#profile-modal .ps-contact {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+#profile-modal .ps-contact-item {
+  background: #f8fafc;
+  border: 1px solid #edf2f7;
+  border-radius: 16px;
+  padding: 16px;
+  min-width: 0;
+}
+
+#profile-modal .ps-contact-label {
+  display: block;
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+#profile-modal .ps-contact-item a {
+  color: #0284c7;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+  text-decoration: none;
+}
+
+#profile-modal .ps-contact-item a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  #profile-modal .ps-contact {
+    grid-template-columns: 1fr;
+  }
+}
+/* Profile modal scrolling fix */
+#profile-modal-panel {
+  display: flex;
+  flex-direction: column;
+  max-height: 90vh;
+  overflow: hidden;
+}
+
+#profile-modal-panel > .flex-1 {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}

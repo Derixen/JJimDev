@@ -155,7 +155,7 @@ function createProfileModal() {
         class="relative z-10 w-full max-w-2xl max-h-[90vh]
                 flex flex-col overflow-hidden bg-white rounded-3xl
                 border border-slate-200 shadow-2xl">
-      <div class="shrink-0 ">
+      <div class="contents">
         <div class="flex items-center justify-between
                     px-6 py-4 border-b border-slate-200 bg-slate-50">
 
@@ -176,7 +176,7 @@ function createProfileModal() {
         </div>
       
 
-<div class="p-6">
+<div class="p-6 flex-1 min-h-0 overflow-y-auto">
 
   <!-- Photo and professional information -->
   <div class="flex items-center gap-6">
@@ -209,55 +209,61 @@ function createProfileModal() {
     </div>
   </div>
 
+ 
   <!-- Full-width contact information -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3
-              mt-5 pt-4 border-t border-slate-200 text-xs">
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4
+              mt-3 mb-3 pt-4 border-t border-slate-200">
 
-    <div>
-      <p class="text-slate-400 font-bold uppercase text-[10px]">
+    <!-- Location -->
+    <div class="bg-slate-50 border border-slate-100
+                rounded-2xl p-4">
+      <p class="text-slate-500 font-bold text-sm mb-2">
         ${t.location}
       </p>
-      <p class="text-slate-700">Budaörs, Hungary</p>
+      <p class="text-slate-600 text-sm">
+        Budaörs, Hungary
+      </p>
     </div>
 
-    <div>
-      <p class="text-slate-400 font-bold uppercase text-[10px]">
+    <!-- Email -->
+    <div class="bg-slate-50 border border-slate-100
+                rounded-2xl p-4">
+      <p class="text-slate-500 font-bold text-sm mb-2">
         ${t.email}
       </p>
       <a href="mailto:janos.friedrich@gmail.com"
-         class="text-sky-600 hover:underline break-all">
+        class="text-sky-600 text-sm hover:underline break-all">
         janos.friedrich@gmail.com
       </a>
     </div>
 
-    <div>
-      <p class="text-slate-400 font-bold uppercase text-[10px]">
+    <!-- LinkedIn -->
+    <div class="bg-slate-50 border border-slate-100
+                rounded-2xl p-4">
+      <p class="text-slate-500 font-bold text-sm mb-2">
         LinkedIn
       </p>
       <a href="https://www.linkedin.com/in/janos-friedrich-415aa49b"
-         target="_blank" rel="noopener noreferrer"
-         class="text-sky-600 hover:underline break-all">
+        target="_blank" rel="noopener noreferrer"
+        class="text-sky-600 text-sm hover:underline break-all">
         linkedin.com/in/janos-friedrich-415aa49b
       </a>
     </div>
 
-    <div>
-      <p class="text-slate-400 font-bold uppercase text-[10px]">
+    <!-- Website -->
+    <div class="bg-slate-50 border border-slate-100
+                rounded-2xl p-4">
+      <p class="text-slate-500 font-bold text-sm mb-2">
         ${t.website}
       </p>
       <a href="https://jjim.dev"
-         target="_blank" rel="noopener noreferrer"
-         class="text-sky-600 hover:underline">
+        target="_blank" rel="noopener noreferrer"
+        class="text-sky-600 text-sm hover:underline">
         jjim.dev
       </a>
     </div>
-
   </div>
-</div>
 
-      </div>
-    <div class="p-6 flex-1 min-h-0 overflow-y-auto">
-    <div class="border-t border-slate-200 mb-6"></div>
         <div class="">
           <h3 class="text-sm font-bold text-slate-800 mb-4">
             ${t.information}
@@ -275,7 +281,7 @@ function createProfileModal() {
           </div>
         </div>
 
-        <div class="border-t border-slate-200 mt-6 pt-5">
+        <div class=" pt-3">
           <h3 class="text-sm font-bold text-slate-800 mb-4">
             ${t.languages}
           </h3>
@@ -287,7 +293,7 @@ function createProfileModal() {
           </div>
         </div>
 
-        <div class="border-t border-slate-200 mt-6 pt-5">
+        <div class="pt-3">
           <h3 class="text-sm font-bold text-slate-800 mb-2">
             ${t.background}
           </h3>
